@@ -2,4 +2,61 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #333;
+    padding: 1rem 2rem;
+    color: #fff;
+    position: relative;
+}
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.navLinks {
+    display: flex;
+    gap: 1.5rem;
+}
+.navLinks a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+.navLinks a:hover {
+    color: #ddd;
+}
+.menuIcon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.menuIcon div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+@media (max-width: 768px) {
+    .navLinks {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #333;
+        padding: 1rem 0;
+        text-align: center;
+    }
+    .navLinks.active {
+        display: flex;
+    }
+    .navLinks a {
+        padding: 0.5rem 0;
+    }
+    .menuIcon {
+        display: flex;
+    }
+    
 }
