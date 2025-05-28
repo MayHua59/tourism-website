@@ -1,36 +1,122 @@
+
 'use client';
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import styles from './Navbar.module.css';
-
+import  navItems  from '../data/navigation'; //dummy data for navigation
 
 const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const toggleMenu = () => {
-        setIsOpen(!isOpen);
-    }
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [openDropdownKey, setOpenDropdownKey] = useState(null); // To Track which dropdown is open on mobile
+    const navRef = useRef(null); // Ref for navbar to detect outside clicks
+
+    // For Mobile View
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(prev => !prev);
+        
+        // if (!isMobileMenuOpen || isMobileMenuOpen) { // This condition can be simplified to just setOpenDropdownKey(null) if menu is closing
+        //     setOpenDropdownKey(null);
+        // }
+        setOpenDropdownKey(null); // Always reset dropdowns when toggling the mobile menu
+    };
+
+    const handleMobileDropdownToggle = (key, event) => {
+         event.stopPropagation(); 
+        setOpenDropdownKey(prevKey => (prevKey === key ? null : key));
+    };
+
+    const closeAllMenus = () => {
+        setIsMobileMenuOpen(false);
+        setOpenDropdownKey(null);
+    };
+
+    // Effect to close mobile menu when clicking outside of it
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (navRef.current && !navRef.current.contains(event.target)) {
+                if (isMobileMenuOpen) { 
+                   closeAllMenus();
+                }
+            }
+        };
+        document.addEventListener("mousedown", handleClickOutside);
+        // Clean Up Function for mousedown event
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [isMobileMenuOpen, navRef]); 
+
   return (
-    <nav className={styles.navbar}>
+    <nav className={styles.navbar} ref={navRef}>
         <div className={styles.logo}>
-        <Link href="/">
-        <span>Your Logo</span>
-        </Link>
+            <Link href="/" onClick={closeAllMenus}>
+            {/* To Replace Actual Logo */}
+                <span>Your Logo</span> 
+            </Link>
         </div>
-        <div className={styles.menuIcon} onClick={toggleMenu}>
-            {/* For hamburger menu icon */}
-            <div></div>
-        <div></div>
-        <div></div>
+        <div className={styles.menuIcon} onClick={toggleMobileMenu} aria-label="Toggle menu" aria-expanded={isMobileMenuOpen}>
+            <div className={`${styles.menuIconBar} ${isMobileMenuOpen ? styles.bar1Open : ''}`}></div>
+            <div className={`${styles.menuIconBar} ${isMobileMenuOpen ? styles.bar2Open : ''}`}></div>
+            <div className={`${styles.menuIconBar} ${isMobileMenuOpen ? styles.bar3Open : ''}`}></div>
         </div>
-        <div className={`${styles.navLinks} ${isOpen? styles.active: ''}`}>
-            <Link href="/destinations" onClick={()=>setIsOpen(false)}>Destinations</Link>
-            <Link href="/destinations" onClick={()=>setIsOpen(false)}>Articles</Link>
-            <Link href="/destinations" onClick={()=>setIsOpen(false)}>Events</Link>
-            <Link href="/destinations" onClick={()=>setIsOpen(false)}>Plan Your Trip</Link>
-            <Link href="/destinations" onClick={()=>setIsOpen(false)}>Myanmar Cultures</Link>
+        <div className={`${styles.navLinksContainer} ${isMobileMenuOpen ? styles.active : ''}`}>
+            {navItems.map((item) => (
+                <div
+                    key={item.id}
+                    className={`${styles.navItem} ${item.dropdown ? styles.hasDropdown : ''}`}
+                >
+                    <div className={styles.navItemContent}>
+                        <Link
+                            href={item.href}
+                            className={styles.navLink}
+                            onClick={(e) => {
+                                if (isMobileMenuOpen && item.dropdown) {
+                                    
+                                    e.preventDefault(); 
+                                    handleMobileDropdownToggle(item.id, e);
+                                    
+                                } else if (isMobileMenuOpen && !item.dropdown) {
+                                    
+                                    closeAllMenus();
+                                }
+                               
+                            }}
+                        >
+                            {item.label}
+                        </Link>
+                        {item.dropdown && (
+                            <button
+                                className={styles.dropdownToggleButton}
+                                onClick={(e) => handleMobileDropdownToggle(item.id, e)}
+                                aria-expanded={openDropdownKey === item.id && isMobileMenuOpen}
+                                aria-label={`Toggle ${item.label} submenu`}
+                            >
+                                <span className={`${styles.dropdownArrow} ${openDropdownKey === item.id && isMobileMenuOpen ? styles.open : ''}`}>▼</span>
+                            </button>
+                        )}
+                    </div>
+
+                    {item.dropdown && (
+                        <div
+                            className={`${styles.dropdownMenu} ${openDropdownKey === item.id && isMobileMenuOpen ? styles.mobileActive : ''}`}
+                        >
+                            {item.dropdown.map((subItem) => (
+                                <Link
+                                    key={subItem.href}
+                                    href={subItem.href}
+                                    className={styles.dropdownLink}
+                                    onClick={closeAllMenus} 
+                                >
+                                    {subItem.label}
+                                </Link>
+                            ))}
+                        </div>
+                    )}
+                </div>
+            ))}
         </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
