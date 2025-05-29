@@ -1,0 +1,155 @@
+.regionDestinationsContainer {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 0; /* Add some padding top and bottom */
+}
+
+/* Region Selector Area */
+.regionSelector {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 0 1rem; /* Padding for smaller screens */
+}
+
+.regionSelector h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.regionButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.regionButton {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 25px; /* Pill shape */
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  outline: none;
+}
+
+.regionButton:hover {
+  background-color: #e0e0e0;
+  border-color: #ccc;
+}
+
+.regionButton.active {
+  background-color: #007bff; /* Example active color */
+  color: white;
+  border-color: #007bff;
+}
+
+/* Region Spotlight Sections */
+.spotlightsContainer {
+  /* This container will hold all spotlight sections.
+     We'll control visibility of individual spotlights. */
+}
+
+.spotlightSection {
+  min-height: 80vh; /* Make spotlight sections substantial */
+  width: 100%;
+  position: relative; /* For background and content positioning */
+  display: flex; /* To center content */
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Clip background image/video */
+  padding: 4rem 1rem; /* Generous padding */
+  box-sizing: border-box;
+  /* Basic transition for appearing/disappearing, can be enhanced */
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0; /* Collapse when hidden */
+  transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out, visibility 0s linear 0.5s;
+}
+
+.spotlightSection.visibleSpotlight {
+  opacity: 1;
+  visibility: visible;
+  max-height: 5000px; /* Large enough to contain content */
+  transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out, visibility 0s linear 0s;
+}
+
+
+.spotlightBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.spotlightOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Darken the background for text readability */
+  z-index: 2;
+}
+
+.spotlightContent {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: white;
+  max-width: 1100px; /* Max width for content within spotlight */
+  margin: 0 auto;
+}
+
+.spotlightRegionName {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.spotlightTagline {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  font-style: italic;
+  opacity: 0.9;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.citiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .regionSelector h2 {
+    font-size: 1.75rem;
+  }
+  .regionButton {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  .spotlightRegionName {
+    font-size: 2.25rem;
+  }
+  .spotlightTagline {
+    font-size: 1.1rem;
+  }
+  .citiesGrid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  .spotlightSection {
+    padding: 3rem 1rem;
+  }
+}
