@@ -10,11 +10,11 @@ export default function Home() {
   return (
     <div>
       <HeroSection/>
-      {/* <Carousel/>
+      <Carousel/>
       <DestinationByRegion/>
       <ArticleSection/>
       <EventsSection/>
-      <CultureSection/> */}
+      <CultureSection/>
     </div>
   );
 }
