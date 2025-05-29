@@ -7,9 +7,9 @@ body {
   background-color: #f9fafb; 
   box-sizing: border-box;
 }
-.main-container {
+/* .main-container {
   padding: 20px;
-}
-.hero-section {
-  padding: 0 !important;
+} */
+.container {
+  padding: 20px;
 }

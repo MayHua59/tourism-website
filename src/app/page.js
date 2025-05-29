@@ -1,3 +1,4 @@
+import ArticleSection from "@/components/ArticleSection";
 import Carousel from "../components/Carousel";
 import HeroSection from "../components/HeroSection";
 import DestinationByRegion from "@/components/DestinationByRegion";
@@ -9,6 +10,7 @@ export default function Home() {
       <HeroSection/>
       <Carousel/>
       <DestinationByRegion/>
+      <ArticleSection/>
     </div>
   );
 }
