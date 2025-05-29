@@ -8,6 +8,14 @@ const nextConfig = {
         port: '',
         pathname: '/**', // Allows any path under this hostname
       },
+      // commondatastorage.googleapis.com
+
+      {
+        protocol: 'https',
+        hostname: 'commondatastorage.googleapis.com',
+        port: '',
+        pathname: '/**', // Allows any path under this hostname
+      },
       // You can add other hostnames here if needed
       // {
       //   protocol: 'https',
