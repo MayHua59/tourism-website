@@ -1,0 +1,43 @@
+.cultureSectionContainer {
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+  background-color: #f4f6f8; 
+}
+
+.sectionTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #2c3e50; 
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.cultureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+@media (max-width: 992px) {
+  .cultureGrid {
+    
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}
+
+
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 1.9rem;
+  }
+  .cultureGrid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cultureGrid {
+    grid-template-columns: 1fr; 
+  }
+}

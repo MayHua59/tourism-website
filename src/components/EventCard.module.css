@@ -1,0 +1,105 @@
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* For consistent height in a grid */
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.imageContainer {
+  width: 100%;
+  height: 220px; /* Adjust as needed */
+  position: relative;
+  background-color: #e9ecef; /* Placeholder */
+}
+
+.dateBadge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  text-align: center;
+  line-height: 1.1;
+  z-index: 1;
+  font-weight: 600;
+}
+
+.dateMonth {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.dateDay {
+  display: block;
+  font-size: 1.5rem;
+}
+
+.cardContent {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Important for flex layout */
+}
+
+.eventName {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.eventLocation {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+}
+
+.eventLocation .icon {
+  margin-right: 0.3rem;
+  font-size: 1rem; /* Adjust icon size if needed */
+}
+
+.eventDescription {
+  font-size: 0.95rem;
+  color: #34495e;
+  line-height: 1.6;
+  flex-grow: 1; /* Pushes the details link to the bottom */
+  margin-bottom: 1rem;
+  /* For text truncation */
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Adjust number of lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.detailsLink {
+  display: inline-block;
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  align-self: flex-start; /* Aligns link to the start if content above doesn't fill space */
+  margin-top: auto; /* Pushes to bottom if description is short */
+  padding-top: 0.5rem; /* Some space above it */
+}
+
+.detailsLink:hover {
+  text-decoration: underline;
+  color: #2980b9;
+}
