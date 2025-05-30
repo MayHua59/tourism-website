@@ -1,0 +1,174 @@
+.container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.pageContainer {
+  composes: container;
+  padding-top: 0; 
+  padding-bottom: 3rem;
+}
+
+.notFoundContainer {
+  composes: container;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.notFoundTitle {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.notFoundLink {
+  color: #2563eb;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.notFoundLink:hover {
+  text-decoration: underline;
+}
+
+.heroSection {
+  position: relative;
+  width: 100%;
+  height: 60vh; 
+  min-height: 300px;
+  max-height: 500px;
+  margin-bottom: 2.5rem;
+}
+
+.heroImage {
+  object-fit: cover;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  color: #ffffff;
+}
+
+.regionName {
+  font-size: 2.5rem; 
+  line-height: 1.2;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  margin-bottom: 0.5rem;
+}
+
+.regionTagline {
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  max-width: 700px;
+}
+
+.citiesSection {
+  composes: container; /* To re-apply container padding if needed within the page */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.citiesSectionTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1f2937; /* text-gray-800 */
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.citiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.cityCard {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+.cityCard:hover {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  transform: translateY(-4px);
+}
+
+.cityImageContainer {
+  position: relative;
+  width: 100%;
+  height: 180px; 
+}
+
+.cityImage {
+  object-fit: cover;
+}
+
+.cityCardContent {
+  padding: 1rem;
+  flex-grow: 1; 
+}
+
+.cityName {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827; /* text-gray-900 */
+  margin-bottom: 0.25rem;
+}
+
+.cityDescription {
+  font-size: 0.875rem;
+  color: #4b5563; /* text-gray-600 */
+  line-height: 1.5;
+  
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: calc(0.875rem * 1.5 * 3); /* Reserve space for 3 lines */
+}
+
+.backLinkContainer {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.backLink {
+  color: #2563eb;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) { 
+  .regionName {
+    font-size: 3.5rem;
+  }
+  .regionTagline {
+    font-size: 1.5rem;
+  }
+  .citiesGrid {
+    gap: 2rem;
+  }
+}

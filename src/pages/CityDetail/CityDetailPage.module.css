@@ -1,0 +1,100 @@
+.container {
+  max-width: 1280px; /* Example: common container width */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;  /* Corresponds to px-4 (16px if 1rem = 16px) */
+  padding-right: 1rem;
+}
+
+.pageContainer {
+  composes: container; /* Inherit base container styles */
+  padding-top: 3rem;    /* Corresponds to py-12 */
+  padding-bottom: 3rem;
+}
+
+.notFoundContainer {
+  composes: container;
+  padding-top: 2rem;    /* Corresponds to py-8 */
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.notFoundTitle {
+  font-size: 1.875rem; /* Corresponds to text-3xl */
+  line-height: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem; /* Corresponds to mb-4 */
+}
+
+.notFoundLink {
+  color: #2563eb; /* Corresponds to text-blue-600 */
+  margin-top: 1rem; /* Corresponds to mt-4 */
+  display: inline-block;
+}
+
+.notFoundLink:hover {
+  text-decoration: underline;
+}
+
+.cityCard {
+  background-color: #ffffff;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); /* shadow-xl */
+  border-radius: 0.5rem; /* rounded-lg */
+  overflow: hidden;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 16rem; /* Corresponds to h-64 */
+}
+
+.cityImage {
+  object-fit: cover;
+}
+
+.contentPadding {
+  padding: 1.5rem; /* Corresponds to p-6 */
+}
+
+.cityName {
+  font-size: 2.25rem; /* Corresponds to text-4xl */
+  line-height: 2.5rem;
+  font-weight: 700;
+  color: #1f2937; /* text-gray-800 */
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+.cityDescription {
+  color: #374151; /* text-gray-700 */
+  line-height: 1.75; /* leading-relaxed */
+  font-size: 1.125rem; /* text-lg */
+  margin-bottom: 1.5rem; /* mb-6 */
+}
+
+.backLinkContainer {
+  margin-top: 3rem; /* mt-12 */
+  text-align: center;
+}
+
+.backLink {
+  color: #2563eb; /* text-blue-600 */
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) { /* md breakpoint */
+  .imageContainer {
+    height: 24rem; /* Corresponds to md:h-96 */
+  }
+  .contentPadding {
+    padding: 2.5rem; /* Corresponds to md:p-10 */
+  }
+  .cityName {
+    font-size: 3rem; /* Corresponds to md:text-5xl */
+    line-height: 1;
+  }
+}
