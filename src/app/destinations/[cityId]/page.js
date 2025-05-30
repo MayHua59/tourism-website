@@ -1,9 +1,9 @@
 import CityDetailPage from "@/pages/CityDetail/CityDetailPage"
 
 const Page =  ({ params }) => {
-  const {city} =  params;
+  const {cityId} =  params;
   return (
-    <CityDetailPage cityId={city}/>
+    <CityDetailPage cityId={cityId}/>
   )
 }
 
