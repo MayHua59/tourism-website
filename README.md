@@ -73,6 +73,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - [ ] /events?featured=true (Home Page မှာ ပြချင်တဲ့ ပွဲတော်များ )
 - [ ] /cultures?featured=true (Home Page မှာ ပြချင်တဲ့ ယဉ်ကျေးမှု အမွေအနှစ်များ )
 
-
 ## Next မှာပဲ mock up api အရင် ရေးလိုက်မယ်။
 
