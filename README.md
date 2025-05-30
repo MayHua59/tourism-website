@@ -75,3 +75,15 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## Next မှာပဲ mock up api အရင် ရေးလိုက်မယ်။
 
+
+## Git Merge
+
+```bash
+git fetch origin 
+git rebase origin/main
+```
+
+
+## Issues
+
+Page routes နဲ့ App Routes

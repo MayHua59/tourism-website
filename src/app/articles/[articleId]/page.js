@@ -1,8 +1,10 @@
+import ArticalDetailPage from '@/pages/ArticleDetail/ArticleDetail'
 import React from 'react'
 
-const Page = () => {
+const Page = ({params}) => {
+  const {articleId} = params
   return (
-    <div>Page</div>
+    <ArticalDetailPage articleId={articleId}/>
   )
 }
 
