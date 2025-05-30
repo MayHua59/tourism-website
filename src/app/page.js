@@ -1,4 +1,4 @@
-import ArticleSection from "@/components/ArticleSection";
+import ArticleSection from "@/components/ArticleSection.jsx";
 import Carousel from "../components/Carousel";
 import HeroSection from "../components/HeroSection";
 import DestinationByRegion from "@/components/DestinationByRegion";

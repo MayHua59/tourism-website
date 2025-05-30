@@ -1,5 +1,5 @@
 import React from 'react';
-import ArticalListPage from '@/pages/ArticleList/ArticleList';
+import ArticalListPage from '@/main-components/ArticleList/ArticleList';
 
 const Page = () => {
   return (
