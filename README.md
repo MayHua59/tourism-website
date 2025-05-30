@@ -39,6 +39,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 - [ ] article category ဆောင်းပါးအမျိုးအစား
 - [ ] article ဆောင်းပါးများ
+- [ ] division မြန်မာနိုင်ငံ အလယ်ပိုင်း လွင်ပြင်၊ ကန်းရိုးတမ်း ပင်လယ်ပြင် စသည်ဖြင့်
 - [ ] region တိုင်းဒေသကြီး / ပြည်နယ် 
 - [ ] city မြို့
 - [ ] township မြို့နယ်
@@ -48,10 +49,29 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - [ ] culture ယဉ်ကျေးမှု အမွေအနှစ်များ
 - [ ] event ပွဲတော်များ
 - [ ] tips and tricks အကြံပြုချက်များ
+- [ ] Itnerary ခရီးစဉ်များ
+- [ ] Activity ကိုယ်လက်လှုပ်ရှား အစီအစဉ်များ ( ရေကူး ၊ ရေငုပ် ၊ လှေလှော် ၊ ပြေးလွှား )
 
+
+- [ ] Transportation
+- [ ] Accommodation
+- [ ] Restaurants
 
 ## Rules
 
 - [ ] Description ကိုတော့ summer note သုံးမယ်။ 
 - [ ] Tags တွေ ပါမယ်။ 
 - [ ] Category ခွဲထားမယ်။ Article Category | Destination Category | Attraction Category | Tag Category 
+
+## APIs
+
+- [ ] /home ( video url ပဲ ပါဉီးမယ် )
+- [ ] /navigations  ( navigation bar မှာ ပြမယ့် nested nav routes )
+- [ ] /carousels ( Slide Show အနေနဲ့ ပြမယ့် Destinations များ )
+- [ ] /division ( မြန်မာနိုင်ငံ အရှေ့အနောက် တောင် မြောက် နဲ့ ခွဲပြထားမယ့် Destination များ )
+- [ ] /articles?featured=true (Home Page မှာ ပြချင်တဲ့ သတင်း / ဆောင်းပါးများ )
+- [ ] /events?featured=true (Home Page မှာ ပြချင်တဲ့ ပွဲတော်များ )
+
+
+## Next မှာပဲ mock up api အရင် ရေးလိုက်မယ်။
+
