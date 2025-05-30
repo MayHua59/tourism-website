@@ -6,7 +6,7 @@ const ArticleCard = ({ article }) => {
   if (!article) return null;
 
   return (
-    <Link href={article.url || `/articles/${article.id}`} passHref>
+    <Link href={`/articles/${article.id}`} passHref>
       <div className={styles.card}>
         <div className={styles.imageContainer}>
           <Image
