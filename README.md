@@ -34,3 +34,16 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Entity List for Tourism Promotion Website 
+
+- [ ] article category ဆောင်းပါးအမျိုးအစား
+- [ ] article ဆောင်းပါးများ
+- [ ] region တိုင်းဒေသကြီး / ပြည်နယ် 
+- [ ] city မြို့
+- [ ] township မြို့နယ်
+- [ ] village ကျေးရွာ
+- [ ] destination ( geographic location , city / region / island / country known for it's tourism value )
+- [ ] attraction လည်ပတ်စရာ နေရာများ ( restaurant / museum / parks , etc )
+- [ ] culture ယဉ်ကျေးမှု အမွေအနှစ်များ
+- [ ] event ပွဲတော်များ
