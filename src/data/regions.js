@@ -17,7 +17,7 @@
     spotlightImage: "https://images.unsplash.com/photo-1500051922829-2175900c4e52?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmFnYW4lMjBtemplesfGVufDB8fDB8fHww&auto=format&fit=crop&w=1920&q=80",
     cities: [
       { id: "bagan", name: "Bagan", description: "Thousands of ancient temples dotting the plains.", image: "https://images.unsplash.com/photo-1552098479-bddc0d0a4119?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFnYW58ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60", url: "/destinations/bagan" },
-      { id: "naypyitaw", name: "Naypyitaw", description: "The modern capital of Myanmar.", image: "https://images.unsplash.com/photo-1618091404809-ffe88899f19a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bmF5cHlpdGF3fGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60", url: "/destinations/naypyitaw" },
+      { id: "naypyidaw", name: "NaypyiDaw", description: "The modern capital of Myanmar.", image: "https://images.unsplash.com/photo-1618091404809-ffe88899f19a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bmF5cHlpdGF3fGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60", url: "/destinations/naypyidaw" },
       { id: "sagaing", name: "Sagaing", description: "Hill dotted with pagodas and monasteries, spiritual center.", image: "https://images.unsplash.com/photo-1627914972750-f8d9c2a3e7e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bXJhdWstdXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60", url: "/destinations/sagaing" },
     ],
   },
