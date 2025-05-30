@@ -46,6 +46,7 @@ export async function getServerSideProps() {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     heroData = await response.json();
+    console.log("Hero data fetched on server:", heroData);
   } catch (err) {
     console.error("Error fetching hero data on server:", err);
     error = err.message;

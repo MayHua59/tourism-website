@@ -1,0 +1,86 @@
+/* app/components/HeroSectionSkeleton.module.css */
+
+.skeletonContainer {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Mimic the height of the actual HeroSection */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Stack video placeholder and content */
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* Light background for the skeleton */
+}
+
+.skeletonVideoPlaceholder {
+  width: 100%;
+  height: 70%; /* Allocate space for the video */
+  background-color: #e0e0e0; /* Medium grey for the video area */
+  position: relative; /* For shimmer effect */
+  overflow: hidden;
+}
+
+.skeletonContent {
+  width: 80%;
+  max-width: 800px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* Space between text lines */
+  background-color: #f0f0f0; /* Match container background */
+  position: relative; /* For shimmer effect */
+  overflow: hidden;
+  margin-top: 20px; /* Space from video placeholder */
+}
+
+.skeletonTitle {
+  width: 70%;
+  height: 30px; /* Height for a title line */
+  background-color: #cccccc; /* Darker grey for text lines */
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeletonDescription {
+  width: 90%;
+  height: 20px; /* Height for a description line */
+  background-color: #cccccc;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeletonDescriptionShort {
+  width: 60%;
+  height: 20px; /* Shorter description line */
+  background-color: #cccccc;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Shimmer Effect */
+.skeletonVideoPlaceholder::after,
+.skeletonTitle::after,
+.skeletonDescription::after,
+.skeletonDescriptionShort::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
