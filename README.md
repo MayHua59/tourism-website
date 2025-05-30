@@ -47,3 +47,11 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - [ ] attraction လည်ပတ်စရာ နေရာများ ( restaurant / museum / parks , etc )
 - [ ] culture ယဉ်ကျေးမှု အမွေအနှစ်များ
 - [ ] event ပွဲတော်များ
+- [ ] tips and tricks အကြံပြုချက်များ
+
+
+## Rules
+
+- [ ] Description ကိုတော့ summer note သုံးမယ်။ 
+- [ ] Tags တွေ ပါမယ်။ 
+- [ ] Category ခွဲထားမယ်။ Article Category | Destination Category | Attraction Category | Tag Category 
