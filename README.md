@@ -66,11 +66,12 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 ## APIs
 
 - [ ] /home ( video url ပဲ ပါဉီးမယ် )
-- [ ] /navigations  ( navigation bar မှာ ပြမယ့် nested nav routes )
+- [ ] /navigations  ( navigation bar မှာ ပြမယ့် nested nav routes ) Heading Bar + Footer Bar
 - [ ] /carousels ( Slide Show အနေနဲ့ ပြမယ့် Destinations များ )
 - [ ] /division ( မြန်မာနိုင်ငံ အရှေ့အနောက် တောင် မြောက် နဲ့ ခွဲပြထားမယ့် Destination များ )
 - [ ] /articles?featured=true (Home Page မှာ ပြချင်တဲ့ သတင်း / ဆောင်းပါးများ )
 - [ ] /events?featured=true (Home Page မှာ ပြချင်တဲ့ ပွဲတော်များ )
+- [ ] /cultures?featured=true (Home Page မှာ ပြချင်တဲ့ ယဉ်ကျေးမှု အမွေအနှစ်များ )
 
 
 ## Next မှာပဲ mock up api အရင် ရေးလိုက်မယ်။
