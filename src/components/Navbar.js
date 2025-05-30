@@ -47,7 +47,7 @@ const Navbar = () => {
     }, [isMobileMenuOpen, navRef]); 
 
   return (
-    <nav className={styles.navbar} ref={navRef}>
+    <nav className={`${styles.navbar} bg-gray-800`} ref={navRef}>
         <div className={styles.logo}>
             <Link href="/" onClick={closeAllMenus}>
             {/* To Replace Actual Logo */}
