@@ -3,11 +3,11 @@
     id: "north",
     name: "Northern Myanmar",
     tagline: "Mystical Mountains & Ancient Kingdoms",
-    spotlightImage: "https://images.unsplash.com/photo-1542840410-19cf35051850?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bXlhbm1hciUyMG1vdW50YWlufGVufDB8fDB8fHww&auto=format&fit=crop&w=1920&q=80",
+    spotlightImage: "https://images.unsplash.com/photo-1583435292794-4803a56c5043",
     cities: [
-      { id: "mandalay", name: "Mandalay", description: "The last royal capital, rich in culture.", image: "https://images.unsplash.com/photo-1591264980702-81a644a35c76?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWFuZGFsYXl8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60", url: "/destinations/mandalay" },
-      { id: "pyinoolwin", name: "Pyin Oo Lwin", description: "Colonial hill station with cool climates.", image: "https://images.unsplash.com/photo-1604724955313-15de3356406e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHlpbiUyMG9vJTIwbHdJbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60", url: "/destinations/pyinoolwin" },
-      { id: "myitkyina", name: "Myitkyina", description: "Capital of Kachin State, gateway to northern adventures.", image: "https://images.unsplash.com/photo-1627914972750-f8d9c2a3e7e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bXJhdWstdXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60", url: "/destinations/myitkyina" },
+      { id: "mandalay", name: "Mandalay", description: "The last royal capital, rich in culture.", image: "https://images.unsplash.com/photo-1583435292794-4803a56c5043", url: "/destinations/mandalay" },
+      { id: "pyinoolwin", name: "Pyin Oo Lwin", description: "Colonial hill station with cool climates.", image: "https://images.unsplash.com/photo-1583435292794-4803a56c5043", url: "/destinations/pyinoolwin" },
+      { id: "myitkyina", name: "Myitkyina", description: "Capital of Kachin State, gateway to northern adventures.", image: "https://images.unsplash.com/photo-1583435292794-4803a56c5043", url: "/destinations/myitkyina" },
     ],
   },
   {
@@ -16,9 +16,9 @@
     tagline: "Ancient Temples & Riverside Life",
     spotlightImage: "https://images.unsplash.com/photo-1500051922829-2175900c4e52?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmFnYW4lMjBtemplesfGVufDB8fDB8fHww&auto=format&fit=crop&w=1920&q=80",
     cities: [
-      { id: "bagan", name: "Bagan", description: "Thousands of ancient temples dotting the plains.", image: "https://images.unsplash.com/photo-1552098479-bddc0d0a4119?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFnYW58ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60", url: "/destinations/bagan" },
-      { id: "naypyidaw", name: "NaypyiDaw", description: "The modern capital of Myanmar.", image: "https://images.unsplash.com/photo-1618091404809-ffe88899f19a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bmF5cHlpdGF3fGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60", url: "/destinations/naypyidaw" },
-      { id: "sagaing", name: "Sagaing", description: "Hill dotted with pagodas and monasteries, spiritual center.", image: "https://images.unsplash.com/photo-1627914972750-f8d9c2a3e7e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bXJhdWstdXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60", url: "/destinations/sagaing" },
+      { id: "bagan", name: "Bagan", description: "Thousands of ancient temples dotting the plains.", image: "https://images.unsplash.com/photo-1584897356466-858d9b6c53d1", url: "/destinations/bagan" },
+      { id: "naypyidaw", name: "NaypyiDaw", description: "The modern capital of Myanmar.", image: "https://images.unsplash.com/photo-1584897356466-858d9b6c53d1", url: "/destinations/naypyidaw" },
+      { id: "sagaing", name: "Sagaing", description: "Hill dotted with pagodas and monasteries, spiritual center.", image: "https://images.unsplash.com/photo-1584897356466-858d9b6c53d1", url: "/destinations/sagaing" },
     ],
   },
   {
