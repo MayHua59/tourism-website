@@ -44,3 +44,10 @@ export const getDestinationBySlug = (slug, destinations) => {
   return destinations.find(destination => destination.slug === slug);
 };
 
+export const getAttractionBySlug = (slug, attractions) => {
+  if (!attractions || !Array.isArray(attractions)) {
+    console.error("Attractions data is not loaded or not an array");
+    return undefined;
+  }
+  return attractions.find(attraction => attraction.slug === slug);
+};
