@@ -13,3 +13,9 @@ export const getArticleById = (id, articles) => {
   }
   return articles.find(article => article.id === id);
 };
+
+
+export const getCultureById = (id, cultures) => {
+  if (!cultures || !Array.isArray(cultures)) return undefined;
+  return cultures.find(culture => culture.id === id);
+};
