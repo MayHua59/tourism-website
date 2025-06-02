@@ -1,4 +1,4 @@
-import { getCultureById } from '../../utils/getById'; 
+import { getCultureById } from '../../utils/getItem'; 
 import { myanmarCulturesData } from '../../data/cultures'; 
 import Image from 'next/image';
 import Link from 'next/link';

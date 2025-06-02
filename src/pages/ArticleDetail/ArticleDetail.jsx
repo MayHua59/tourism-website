@@ -1,4 +1,4 @@
-import { getArticleById } from '@/utils/getById'; 
+import { getArticleById } from '@/utils/getItem'; 
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './ArticleDetail.module.css'; 

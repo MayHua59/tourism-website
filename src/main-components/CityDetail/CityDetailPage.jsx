@@ -1,6 +1,6 @@
 import React from 'react';
 import { citiesData } from '@/data/cities';
-import { getCityById } from '@/utils/getById';
+import { getCityById } from '@/utils/getItem';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './CityDetailPage.module.css';
