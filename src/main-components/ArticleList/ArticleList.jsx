@@ -1,8 +1,10 @@
 'use client'; 
 
 import React, { useState, useEffect, useMemo } from 'react';
-import { articlesData, getUniqueCitiesFromArticles } from '@/data/articles'; 
-import ArticleCard from '@/components/ui/ArticleCard/ArticleCard'; 
+// import { articlesData, getUniqueCitiesFromArticles } from '../dat/data/articles'; 
+import { articlesData, getUniqueCitiesFromArticles } from '../../data/articles'; 
+// import ArticleCard from '@/components/ui/ArticleCard/ArticleCard'; 
+import ArticleCard from '../../components/ui/ArticleCard/ArticleCard'; 
 import styles from './ArticleList.module.css'; 
 
 const ArticalListPage = () => {

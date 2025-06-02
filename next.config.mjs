@@ -16,6 +16,12 @@ const nextConfig = {
         port: '',
         pathname: '/**', // Allows any path under this hostname
       },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '',
+        pathname: '/**', // Allows any path under this hostname
+      },
       // You can add other hostnames here if needed
       // {
       //   protocol: 'https',
@@ -24,6 +30,7 @@ const nextConfig = {
       //   pathname: '/**',
       // },
     ],
+    
   },
 };
 
