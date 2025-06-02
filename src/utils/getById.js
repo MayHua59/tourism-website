@@ -19,3 +19,20 @@ export const getCultureById = (id, cultures) => {
   if (!cultures || !Array.isArray(cultures)) return undefined;
   return cultures.find(culture => culture.id === id);
 };
+/////////// start Get Culture By Slug///////
+// export const getCultureBySlug = (slug) => {
+//   if (!myanmarCulturesData || !Array.isArray(myanmarCulturesData)) {
+//     console.error("myanmarCulturesData is not loaded or not an array");
+//     return undefined;
+//   }
+//   // The slug is the last part of the item.url
+//   return myanmarCulturesData.find(item => {
+//     if (item.url) {
+//       const itemSlug = item.url.substring(item.url.lastIndexOf('/') + 1);
+//       return itemSlug === slug;
+//     }
+//     return false;
+//   });
+// };
+/////////// end Get Culture By Slug///////
+
