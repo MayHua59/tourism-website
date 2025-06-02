@@ -36,3 +36,11 @@ export const getCultureById = (id, cultures) => {
 // };
 /////////// end Get Culture By Slug///////
 
+export const getDestinationBySlug = (slug, destinations) => {
+  if (!destinations || !Array.isArray(destinations)) {
+    console.error("Destinations data is not loaded or not an array");
+    return undefined;
+  }
+  return destinations.find(destination => destination.slug === slug);
+};
+
