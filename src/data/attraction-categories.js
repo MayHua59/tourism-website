@@ -43,7 +43,7 @@ export const attraction_categories = [
   },
   {
     id: 8, // Assuming U Bein Bridge was category 8
-    name: "Iconic Landmarks",
+    name: "Icongit ic Landmarks",
     slug: "iconic-landmarks",
     image_url: "https://placehold.co/600x400?text=Landmarks",
     description: "Visit Myanmar's most famous and recognizable landmarks, each with a unique story."

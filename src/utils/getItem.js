@@ -51,3 +51,10 @@ export const getAttractionBySlug = (slug, attractions) => {
   }
   return attractions.find(attraction => attraction.slug === slug);
 };
+export const getAttractionCategoryBySlug = (slug, categories) => {
+  if (!categories || !Array.isArray(categories)) {
+    console.error("Attraction categories data is not loaded or not an array");
+    return undefined;
+  }
+  return categories.find(category => category.slug === slug);
+};
