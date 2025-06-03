@@ -2,6 +2,7 @@
   padding-top: 2rem;
   padding-bottom: 3rem;
   
+  
 }
 
 .sectionTitle {
@@ -30,6 +31,7 @@
 
 .eventsGrid {
   display: flex; 
+  /* justify-content: center; */
   flex-wrap: nowrap; 
   gap: 1.5rem; 
   padding-left: 1rem; 
