@@ -1,5 +1,5 @@
 import React from 'react';
-// import EventDetailPage from '@/main-components/EventDetail/EventDetailPage';
+import EventDetailPage from '../../../main-components/EventDetail/EventDetail';
 // import { eventsData } from '@/data/events';
 // import { getEventBySlug } from '@/utils/getItem';
 

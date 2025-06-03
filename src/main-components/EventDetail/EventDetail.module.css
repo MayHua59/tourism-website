@@ -1,0 +1,123 @@
+.pageContainer {
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1000px;
+  margin: 20px auto;
+  background-color: #fff;
+}
+
+.eventHeader {
+  position: relative;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 350px;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  color: #fff;
+}
+
+.eventImageWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.eventImageWrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.45) 50%, rgba(0,0,0,0) 100%);
+}
+
+.eventHeaderText {
+  position: relative;
+  z-index: 1;
+  padding: 30px;
+  width: 100%;
+}
+
+.eventName {
+  font-size: 3em;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+}
+
+.breadcrumbs {
+  margin-bottom: 30px;
+  font-size: 0.9em;
+  color: #555;
+}
+.breadcrumbs a {
+  color: #0070f3;
+  text-decoration: none;
+}
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+.breadcrumbs span {
+  font-weight: bold;
+  color: #333;
+}
+
+.eventContentSection {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #fdfdfd;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.eventMeta {
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.eventMeta p {
+  font-size: 1.1em;
+  color: #333;
+  margin: 8px 0;
+}
+.eventMeta strong {
+  color: #111;
+  margin-right: 8px;
+}
+
+.sectionTitle {
+  font-size: 2em;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.eventDescriptionParagraph {
+  font-size: 1.05em;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 1.5em;
+}
+.eventDescriptionParagraph:last-child {
+  margin-bottom: 0;
+}
+
+.backLink {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #6c757d;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+.backLink:hover {
+  background-color: #5a6268;
+}
