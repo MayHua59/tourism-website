@@ -1,6 +1,7 @@
 .cultureSectionContainer {
-  padding-top: 3rem;
-  padding-bottom: 4rem;
+  /* padding-top: 3rem;
+  padding-bottom: 4rem; */
+  padding: 3rem 2rem 4rem 2rem;
   background-color: #f4f6f8; 
 }
 
