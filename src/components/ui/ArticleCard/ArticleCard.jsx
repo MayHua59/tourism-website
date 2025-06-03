@@ -10,7 +10,7 @@ const ArticleCard = ({ article }) => {
       <div className={styles.card}>
         <div className={styles.imageContainer}>
           <Image
-            src={article.image_url || '/placeholder-article.jpg'}
+            src={article.image_url || '/bagan.jpg'}
             alt={article.title}
             layout="fill"
             objectFit="cover"

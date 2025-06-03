@@ -34,7 +34,7 @@ const AttractionCategoryDetailPage = ({ categorySlug }) => {
         {currentCategory.image_url && (
           <div className={styles.categoryImageWrapper}>
             <Image
-              src={"/bagan.jpg"}
+              src={currentCategory.image_url}
               alt={`Image for ${currentCategory.name}`}
               layout="fill"
               objectFit="cover"
@@ -68,7 +68,7 @@ const AttractionCategoryDetailPage = ({ categorySlug }) => {
                   {attraction.image_url && (
                     <div className={styles.itemImageWrapperSmall}>
                       <Image
-                        src={'/bagan.jpg'}
+                        src={attraction.image_url}
                         alt={attraction.name}
                         layout="fill"
                         objectFit="cover"

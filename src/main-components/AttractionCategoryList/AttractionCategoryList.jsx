@@ -24,7 +24,7 @@ const AttractionCategoryListPage = () => {
           <li key={category.id} className={styles.interactiveCard}>
             {category.image_url && (
               <Image
-                src={"/bagan.jpg"}
+                src={category.image_url}
                 alt={`Image for ${category.name}`}
                 className={styles.interactiveImageBg}
                 layout="fill"

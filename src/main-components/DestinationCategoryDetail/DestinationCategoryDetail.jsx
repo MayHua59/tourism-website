@@ -33,7 +33,7 @@ const DestinationCategoryDetailPage = ({ categorySlug }) => {
         {currentCategory.image_url && (
           <div className={styles.categoryImageWrapper}>
             <Image
-              src={"/bagan.jpg"} 
+              src={currentCategory.image_url} 
               alt={`Image for ${currentCategory.name}`}
               layout="fill"
               objectFit="cover"
@@ -67,7 +67,7 @@ const DestinationCategoryDetailPage = ({ categorySlug }) => {
                   {dest.image_url && (
                     <div className={styles.destinationImageWrapper}>
                       <Image
-                        src={"/bagan.jpg"} 
+                        src={dest.image_url} 
                         alt={dest.name}
                         layout="fill"
                         objectFit="cover"

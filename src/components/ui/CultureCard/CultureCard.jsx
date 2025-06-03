@@ -10,7 +10,7 @@ const CultureCard = ({ cultureItem }) => {
       <div className={styles.card}>
         <div className={styles.imageContainer}>
           <Image
-            src={"/bagan.jpg"} //{cultureItem.image_url || '/bagan.jpg'} 
+            src={cultureItem.image_url} //{cultureItem.image_url || '/bagan.jpg'} 
             alt={cultureItem.name}
             layout="fill"
             objectFit="cover"

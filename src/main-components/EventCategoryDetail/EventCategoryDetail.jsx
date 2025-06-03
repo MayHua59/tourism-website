@@ -45,7 +45,7 @@ const EventCategoryDetailPage = ({ categorySlug }) => {
         {currentCategory.image_url && (
           <div className={styles.categoryImageWrapper}>
             <Image
-              src={'/bagan.jpg'}//currentCategory.image_url
+              src={currentCategory.image_url}
               alt={`Image for ${currentCategory.name}`}
               layout="fill"
               objectFit="cover"
@@ -81,7 +81,7 @@ const EventCategoryDetailPage = ({ categorySlug }) => {
                     {event.image_url && (
                       <div className={styles.itemImageWrapperSmall}>
                         <Image
-                          src={'/bagan.jpg'}
+                          src={event.image_url}
                           alt={event.name}
                           layout="fill"
                           objectFit="cover"

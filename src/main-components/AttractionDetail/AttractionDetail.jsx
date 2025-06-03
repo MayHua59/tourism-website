@@ -37,7 +37,7 @@ const AttractionDetailPage = ({ attractionSlug }) => {
         {attraction.image_url && (
           <div className={styles.itemImageWrapper}>
             <Image
-              src={"/bagan.jpg"}
+              src={attraction.image_url}
               alt={`Image for ${attraction.name}`}
               layout="fill"
               objectFit="cover"

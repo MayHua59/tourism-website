@@ -30,7 +30,7 @@ const EventCategoryListPage = () => {
           <div key={category.id} className={styles.interactiveCard}>
             {category.image_url && (
               <Image
-                src={category.image_url}//category.image_url
+                src={category.image_url}
                 alt={`Image for ${category.name}`}
                 className={styles.interactiveImageBg}
                 fill

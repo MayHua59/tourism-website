@@ -46,7 +46,7 @@ const CultureDetailPage = ({cultureId}) => {
         {cultureItem.image_url && (
           <div className={styles.cultureImageContainer}>
             <Image
-              src={'/bagan.jpg'}
+              src={cultureItem.image_url}
               alt={cultureItem.name}
               layout="fill"
               className={styles.cultureImage}

@@ -25,7 +25,7 @@ const DestinationCategoryListPage = () => {
       <Link href={`/destination-categories/${category.slug}`} className={styles.listItemLink}>
         {category.image_url && (
           <Image
-            src={"/bagan.jpg"}
+            src={category.image_url}
             alt={category.name}
             className={styles.listItemThumbnail}
             width={100} // Assuming your CSS for listItemThumbnail implies a 100px width
@@ -48,13 +48,13 @@ const DestinationCategoryListPage = () => {
     <li key={category.id} className={styles.interactiveCard}>
       {category.image_url && (
        <Image
-          src={"/bagan.jpg"}
-          alt={`Background for ${category.name}`} // More descriptive alt text
+          src={category.image_url}
+          alt={`Background for ${category.name}`} 
           className={styles.interactiveImageBg}
           layout="fill" // Makes the image fill the parent container
-          objectFit="cover" // Behaves like background-size: cover
+          objectFit="cover" 
           priority={category.id <= 3} // Optional: Prioritize loading for the first few images
-          // quality={75} // Optional: Adjust image quality (default is 75)
+          
         />
       )}
       <Link href={`/destination-categories/${category.slug}`} className={styles.interactiveLink}>

@@ -30,7 +30,7 @@ const DestinationListPage = () => {
           <div key={destination.id} className={styles.interactiveCard}>
             {destination.image_url && (
               <Image
-                src={'/bagan.jpg'}//destination.image_url
+                src={destination.image_url}
                 alt={`Image for ${destination.name}`}
                 className={styles.interactiveImageBg}
                 layout="fill"
