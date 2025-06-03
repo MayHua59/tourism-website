@@ -19,7 +19,7 @@ const EventCategoryListPage = () => {
   return (
     <div className={styles.pageContainer}>
       <header className={styles.header}>
-        <h1 className={styles.pageTitle}>Myanmar's Event Categories</h1>
+        <h1 className={styles.pageTitle}>Myanmar&rsquo;s Event Categories</h1>
         <p className={styles.pageSubtitle}>
           From vibrant festivals to solemn ceremonies, explore the types of events Myanmar offers.
         </p>
