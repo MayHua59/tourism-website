@@ -6,6 +6,8 @@ export const myanmarCulturesData = [
     image_url: "https://images.unsplash.com/photo-1590498418987-aa4e1e0d2b94?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Replace with your actual image
     url: "/cultures/1", 
     region: "general",
+    culture_category_id: 1,
+    slug: "thingyan-water-festival"
 
   },
   {
@@ -15,6 +17,8 @@ export const myanmarCulturesData = [
     image_url: "https://images.unsplash.com/photo-1590498418987-aa4e1e0d2b94?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Replace
     url: "/cultures/2",
     region: "general",
+    culture_category_id: 2,
+    slug: "traditional-longyi",
 
   },
   {
@@ -24,6 +28,8 @@ export const myanmarCulturesData = [
     image_url: "https://images.unsplash.com/photo-1590498418987-aa4e1e0d2b94?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
     url: "/cultures/3",
     region: "Shan State",
+    culture_category_id: 2,
+    slug: "unique_cuisine",
 
   },
   {
@@ -33,6 +39,8 @@ export const myanmarCulturesData = [
     image_url: "https://images.unsplash.com/photo-1590498418987-aa4e1e0d2b94?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
     url: "/cultures/4",
     region: "Chin",
+    culture_category_id: 2,
+    slug: "traditional-longyi",
 
   },
 ];

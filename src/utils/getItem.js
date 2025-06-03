@@ -58,3 +58,24 @@ export const getAttractionCategoryBySlug = (slug, categories) => {
   }
   return categories.find(category => category.slug === slug);
 };
+export const getCultureCategoryBySlug = (slug, categories) => {
+  if (!categories || !Array.isArray(categories)) {
+    console.error("Culture categories data is not loaded or not an array");
+    return undefined;
+  }
+  return categories.find(category => category.slug === slug);
+};
+export const getEventBySlug = (slug, events) => {
+  if (!events || !Array.isArray(events)) {
+    console.error("Events data is not loaded or not an array");
+    return undefined;
+  }
+  return events.find(event => {
+    if (event.url) {
+      const parts = event.url.split('/');
+      const eventSlugFromUrl = parts[parts.length - 1];
+      return eventSlugFromUrl === slug;
+    }
+    return false;
+  });
+};
