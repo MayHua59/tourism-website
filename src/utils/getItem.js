@@ -79,3 +79,10 @@ export const getEventBySlug = (slug, events) => {
     return false;
   });
 };
+export const getEventCategoryBySlug = (slug, categories) => {
+  if (!categories || !Array.isArray(categories)) {
+    console.error("Event categories data is not loaded or not an array");
+    return undefined;
+  }
+  return categories.find(category => category.slug === slug);
+};
