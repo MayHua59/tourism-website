@@ -3,9 +3,9 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { event_categories } from '../../data/event-categories';
-import { eventsData } from '../../data/events';
-import { getEventCategoryBySlug } from '../../utils/getItem';
+// Removed: import { event_categories } from '../../data/event-categories';
+// Removed: import { eventsData } from '../../data/events';
+// Removed: import { getEventCategoryBySlug } from '../../utils/getItem';
 import styles from './EventCategoryDetail.module.css';
 
 
@@ -13,31 +13,42 @@ const formatDate = (dateString) => {
   if (!dateString) return 'N/A';
   try {
     const date = new Date(dateString);
+    // Ensure the date is valid before formatting
+    if (isNaN(date.getTime())) {
+        return dateString; // Return original string if date is invalid
+    }
     return date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
   } catch (error) {
-    return dateString;
+    console.error("Error formatting date:", dateString, error);
+    return dateString; // Return original string in case of error
   }
 };
 
-const EventCategoryDetailPage = ({ categorySlug }) => {
-  const currentCategory = getEventCategoryBySlug(categorySlug, event_categories);
+// The component now receives categoryData directly
+const EventCategoryDetailPage = ({ categoryData }) => {
+  // The categoryData prop should contain all necessary info, including the events array.
+  // Example structure for categoryData:
+  // {
+  //   id: "some-id",
+  //   slug: "actual-slug-from-api", // if available
+  //   name: "Category Name",
+  //   description: "Category Description",
+  //   image_url: "...",
+  //   events: [
+  //     { id: "event1", name: "Event 1", date: "...", endDate: "...", location: "...", image_url: "...", description: "...", url: "/events/event1-slug" },
+  //     // ... other events
+  //   ]
+  // }
 
-  if (!currentCategory) {
-    return (
-      <div className={styles.pageContainer} style={{ textAlign: 'center' }}>
-        <h1 className={styles.categoryName}>Event Category Not Found</h1>
-        <p>Sorry, we couldn't find the event category: "{categorySlug}".</p>
-        <Link href="/event-categories" className={styles.backLink}> 
-          &larr; Back to All Event Categories
-        </Link>
-      </div>
-    );
-  }
+  // If categoryData is null or undefined (e.g., error handled by parent page),
+  // this component might not even render, or you can add a check here.
+  // However, the parent page.js should ideally handle the "not found" or "error" states.
 
-  
-  const categoryEvents = eventsData.filter(
-    event => event.event_category_id === currentCategory.id
-  );
+  const currentCategory = categoryData; 
+  const categoryEvents = categoryData.events || []; // Access events from the prop
+
+  // The "Not Found" case is now primarily handled by the page.js component
+  // before this component is even rendered with invalid data.
 
   return (
     <div className={styles.pageContainer}>
@@ -49,7 +60,7 @@ const EventCategoryDetailPage = ({ categorySlug }) => {
               alt={`Image for ${currentCategory.name}`}
               layout="fill"
               objectFit="cover"
-              priority
+              priority 
             />
           </div>
         )}
@@ -63,7 +74,7 @@ const EventCategoryDetailPage = ({ categorySlug }) => {
 
       <nav className={styles.breadcrumbs}>
         <Link href="/">Home</Link> &gt;
-        <Link href="/event-categories">Event Categories</Link> &gt; 
+        <Link href="/event-categories">Event Categories</Link> &gt;
         <span>{currentCategory.name}</span>
       </nav>
 
@@ -74,10 +85,11 @@ const EventCategoryDetailPage = ({ categorySlug }) => {
         {categoryEvents.length > 0 ? (
           <ul className={styles.itemsGrid}>
             {categoryEvents.map(event => {
-              const eventSlugFromUrl = event.url ? event.url.split('/').pop() : event.id;
+              
+              const eventLink = event.url || (event.slug ? `/events/${event.slug}` : `/events/${event.id}`);
               return (
                 <li key={event.id} className={styles.itemCard}>
-                  <Link href={`/events/${eventSlugFromUrl}`} className={styles.itemLink}>
+                  <Link href={eventLink} className={styles.itemLink}>
                     {event.image_url && (
                       <div className={styles.itemImageWrapperSmall}>
                         <Image
@@ -115,7 +127,7 @@ const EventCategoryDetailPage = ({ categorySlug }) => {
       </section>
 
       <div style={{ textAlign: 'center', marginTop: '40px' }}>
-        <Link href="/event-categories" className={styles.backLink}> 
+        <Link href="/event-categories" className={styles.backLink}>
           &larr; Explore Other Event Categories
         </Link>
       </div>
