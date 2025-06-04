@@ -3,30 +3,25 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { attraction_categories } from '../../data/attraction-categories';
-import { attractions } from '../../data/attractions'; 
-import { getAttractionCategoryBySlug } from '../../utils/getItem';
 import styles from './AttractionCategoryDetail.module.css'; 
 
-const AttractionCategoryDetailPage = ({ categorySlug }) => {
-  const currentCategory = getAttractionCategoryBySlug(categorySlug, attraction_categories);
+const AttractionCategoryDetailPage = ({ categoryData }) => {
+  
+
+  const currentCategory = categoryData;
+  const categoryAttractions = categoryData.attractions || []; 
 
   if (!currentCategory) {
+    
     return (
       <div className={styles.pageContainer} style={{ textAlign: 'center' }}>
-        <h1 className={styles.categoryName}>Category Not Found</h1>
-        <p>Sorry, we couldn't find the category: "{categorySlug}".</p>
+        <h1>Attraction Category Data Missing</h1>
         <Link href="/attraction-categories" className={styles.backLink}>
-          &larr; Back to All Attraction Categories
+          &larr; Back to Attraction Categories
         </Link>
       </div>
     );
   }
-
-  // Filter attractions that belong to the current category
-  const categoryAttractions = attractions.filter(
-    attraction => attraction.attraction_category_id === currentCategory.id
-  );
 
   return (
     <div className={styles.pageContainer}>
@@ -62,31 +57,35 @@ const AttractionCategoryDetailPage = ({ categorySlug }) => {
         </h2>
         {categoryAttractions.length > 0 ? (
           <ul className={styles.itemsGrid}>
-            {categoryAttractions.map(attraction => (
-              <li key={attraction.id} className={styles.itemCard}>
-                <Link href={`/attractions/${attraction.slug}`} className={styles.itemLink}>
-                  {attraction.image_url && (
-                    <div className={styles.itemImageWrapperSmall}>
-                      <Image
-                        src={attraction.image_url}
-                        alt={attraction.name}
-                        layout="fill"
-                        objectFit="cover"
-                      />
-                    </div>
-                  )}
-                  <div className={styles.itemInfo}>
-                    <h3 className={styles.itemNameSmall}>{attraction.name}</h3>
-                    {attraction.description && (
-                      <p className={styles.itemCardDescription}>
-                        {attraction.description.substring(0, 80)}{attraction.description.length > 80 ? '...' : ''}
-                      </p>
+            {categoryAttractions.map(item => {
+              
+              const itemLink = item.url || (item.slug ? `/attractions/${item.slug}` : `/attractions/${item.id}`);
+              return (
+                <li key={item.id} className={styles.itemCard}>
+                  <Link href={itemLink} className={styles.itemLink}>
+                    {item.image_url && (
+                      <div className={styles.itemImageWrapperSmall}>
+                        <Image
+                          src={item.image_url}
+                          alt={item.name}
+                          layout="fill"
+                          objectFit="cover"
+                        />
+                      </div>
                     )}
-                    <span className={styles.viewItemButton}>View Details &rarr;</span>
-                  </div>
-                </Link>
-              </li>
-            ))}
+                    <div className={styles.itemInfo}>
+                      <h3 className={styles.itemNameSmall}>{item.name}</h3>
+                      {item.short_description && (
+                        <p className={styles.itemCardDescription}>
+                          {item.short_description.substring(0, 80)}{item.short_description.length > 80 ? '...' : ''}
+                        </p>
+                      )}
+                      <span className={styles.viewItemButton}>View Details &rarr;</span>
+                    </div>
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         ) : (
           <p className={styles.noItemsText}>

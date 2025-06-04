@@ -3,38 +3,37 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from './AttractionDetail.module.css'; 
+import styles from './DestinationDetail.module.css'; 
 
 
-// const formatOpeningHours = (hours) => { ... };
 
-const AttractionDetailPage = ({ attractionData }) => {
+const DestinationDetailPage = ({ destinationData }) => {
   
 
-  const item = attractionData;
+  const item = destinationData;
 
   if (!item) {
-   
+    
     return (
       <div className={styles.pageContainer} style={{ textAlign: 'center' }}>
-        <h1>Attraction Data Missing</h1>
-        <Link href="/attractions" className={styles.backLink}> 
-          &larr; Back to Attractions
+        <h1>Destination Data Missing</h1>
+        <Link href="/destinations" className={styles.backLink}> 
+          &larr; Back to Destinations
         </Link>
       </div>
     );
   }
 
-  // // Handle long description (e.g., if it's HTML)
-  // let longDescriptionContent;
-  // if (item.long_description) {
-  //   // Assuming HTML content for long_description
-  //   longDescriptionContent = <div dangerouslySetInnerHTML={{ __html: item.long_description }} />;
-  // } else if (item.description) {
-  //   longDescriptionContent = <p>{item.description}</p>;
-  // } else {
-  //   longDescriptionContent = <p>No detailed description available for this attraction.</p>;
-  // }
+//   // Handle long description (e.g., if it's HTML)
+//   let longDescriptionContent;
+//   if (item.long_description) {
+//     // Assuming HTML content for long_description
+//     longDescriptionContent = <div dangerouslySetInnerHTML={{ __html: item.long_description }} />;
+//   } else if (item.description) {
+//     longDescriptionContent = <p>{item.description}</p>;
+//   } else {
+//     longDescriptionContent = <p>No detailed description available for this destination.</p>;
+//   }
 
   return (
     <div className={styles.pageContainer}>
@@ -52,9 +51,10 @@ const AttractionDetailPage = ({ attractionData }) => {
         )}
         <div className={styles.itemHeaderText}>
           <h1 className={styles.itemName}>{item.name}</h1>
+          {item.region && <p className={styles.itemRegion}>{item.region}</p>}
           {item.category && (
-            <Link href={`/attraction-categories/${item.category.slug || item.category.id}`} className={styles.categoryLink}>
-              Category: {item.category.name}
+            <Link href={`/destination-categories/${item.category.slug || item.category.id}`} className={styles.categoryLink}>
+              Type: {item.category.name}
             </Link>
           )}
         </div>
@@ -62,10 +62,10 @@ const AttractionDetailPage = ({ attractionData }) => {
 
       <nav className={styles.breadcrumbs}>
         <Link href="/">Home</Link> &gt;
-        <Link href="/attraction-categories">Attraction Categories</Link>
+        <Link href="/destination-categories">Destination Categories</Link>
         {item.category && (
           <>
-            &gt; <Link href={`/attraction-categories/${item.category.slug || item.category.id}`}>{item.category.name}</Link>
+            &gt; <Link href={`/destination-categories/${item.category.slug || item.category.id}`}>{item.category.name}</Link>
           </>
         )}
         &gt; <span>{item.name}</span>
@@ -73,12 +73,8 @@ const AttractionDetailPage = ({ attractionData }) => {
 
       <article className={styles.itemContent}>
         <section className={styles.mainDetailsSection}>
-          {item.address && <p><strong>Address:</strong> {item.address}</p>}
-          {item.location && !item.address && <p><strong>Location:</strong> {item.location}</p>}
-          {item.opening_hours && <p><strong>Opening Hours:</strong> {item.opening_hours}</p>}
-          {item.ticket_price && <p><strong>Ticket Price:</strong> {item.ticket_price}</p>}
-          {item.contact_info && <p><strong>Contact:</strong> {item.contact_info}</p>}
-          {item.website && <p><strong>Website:</strong> <a href={item.website} target="_blank" rel="noopener noreferrer">{item.website}</a></p>}
+          {item.best_time_to_visit && <p><strong>Best Time to Visit:</strong> {item.best_time_to_visit}</p>}
+          
         </section>
 
         {item.description && !item.long_description && (
@@ -86,9 +82,35 @@ const AttractionDetailPage = ({ attractionData }) => {
         )}
 
         <section className={styles.descriptionSection}>
-          <h2>About this Attraction</h2>
+          <h2>About {item.name}</h2>
           {longDescriptionContent}
         </section>
+
+        {item.things_to_do && item.things_to_do.length > 0 && (
+          <section className={styles.activitiesSection}>
+            <h2>Things to Do</h2>
+            <ul className={styles.activitiesList}>
+              {item.things_to_do.map((activity, index) => (
+                <li key={index}>{typeof activity === 'string' ? activity : activity.name}</li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {item.nearby_attractions && item.nearby_attractions.length > 0 && (
+          <section className={styles.nearbySection}>
+            <h2>Nearby Attractions</h2>
+            <ul className={styles.nearbyList}>
+              {item.nearby_attractions.map((attraction, index) => (
+                <li key={index}>
+                  <Link href={`/attractions/${attraction.slug || attraction.id}`}>
+                    {attraction.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         {item.images && item.images.length > 0 && (
           <section className={styles.gallerySection}>
@@ -104,11 +126,9 @@ const AttractionDetailPage = ({ attractionData }) => {
           </section>
         )}
 
-        {/* Placeholder for a map if latitude and longitude are available */}
         {item.latitude && item.longitude && (
           <section className={styles.mapSection}>
             <h2>Location Map</h2>
-            {/* You would integrate a map component here, e.g., Google Maps, Leaflet */}
             <div className={styles.mapPlaceholder}>
               Map for {item.name} (Lat: {item.latitude}, Lng: {item.longitude})
               <p><small>Map integration component would go here.</small></p>
@@ -119,12 +139,12 @@ const AttractionDetailPage = ({ attractionData }) => {
 
       <div style={{ textAlign: 'center', marginTop: '40px' }}>
         {item.category ? (
-          <Link href={`/attraction-categories/${item.category.slug || item.category.id}`} className={styles.backLink}>
+          <Link href={`/destination-categories/${item.category.slug || item.category.id}`} className={styles.backLink}>
             &larr; Back to {item.category.name}
           </Link>
         ) : (
-          <Link href="/attraction-categories" className={styles.backLink}>
-            &larr; Back to Attraction Categories
+          <Link href="/destination-categories" className={styles.backLink}>
+            &larr; Back to Destination Categories
           </Link>
         )}
       </div>
@@ -132,4 +152,4 @@ const AttractionDetailPage = ({ attractionData }) => {
   );
 };
 
-export default AttractionDetailPage;
+export default DestinationDetailPage;
