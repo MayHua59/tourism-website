@@ -4,11 +4,11 @@ const navItems = [
     label: "Destinations",
     href: "/destinations", // This can be a link to an overview page
     dropdown: [
-      { label: "Top 10 Destinations", href: "/destinations/top-10" },
-      { label: "Destinations by Region", href: "/destinations/regions" },
-      { label: "Adventure Travel", href: "/destinations/adventure" },
-      { label: "Cultural Hotspots", href: "/destinations/cultural-hotspots" },
-      { label: "Nature & Wildlife", href: "/destinations/nature-wildlife" },
+      { label: "Popular Destinations", href: "/destinations" },
+      { label: "Destination Categories", href: "/destination-categories" },
+      // { label: "Adventure Travel", href: "/destinations/adventure" },
+      // { label: "Cultural Hotspots", href: "/destinations/cultural-hotspots" },
+      // { label: "Nature & Wildlife", href: "/destinations/nature-wildlife" },
     ],
   },
   {
@@ -17,9 +17,9 @@ const navItems = [
     href: "/articles",
     dropdown: [
       { label: "Latest Articles", href: "/articles/latest" },
-      { label: "Travel Tips", href: "/articles/tips" },
-      { label: "Cultural Insights", href: "/articles/culture" },
-      { label: "Food & Drink", href: "/articles/food-drink" },
+      { label: "Article Categories", href: "/article-categories" },
+      // { label: "Cultural Insights", href: "/articles/culture" },
+      // { label: "Food & Drink", href: "/articles/food-drink" },
     ],
   },
    {
@@ -27,9 +27,9 @@ const navItems = [
     label: "Events",
     href: "/events",
     dropdown: [
-        { label: "Upcoming Festivals", href: "/events/festivals" },
-        { label: "Cultural Events", href: "/events/cultural" },
-        { label: "Exhibitions", href: "/events/exhibitions" },
+        { label: "Upcoming Events", href: "/events/upcoming" },
+        { label: "Event Categories", href: "/event-categories" },
+        // { label: "Exhibitions", href: "/events/exhibitions" },
     ]
   },
    {
@@ -48,9 +48,12 @@ const navItems = [
     label: "Myanmar Cultures",
     href: "/myanmar-cultures",
     dropdown: [
-        { label: "Traditions & Customs", href: "/myanmar-cultures/traditions" },
-        { label: "Arts & Crafts", href: "/myanmar-cultures/arts" },
-        { label: "Myanmar Cuisine", href: "/myanmar-cultures/cuisine" },
+        // { label: "Traditions & Customs", href: "/myanmar-cultures/traditions" },
+        // { label: "Arts & Crafts", href: "/myanmar-cultures/arts" },
+        // { label: "Myanmar Cuisine", href: "/myanmar-cultures/cuisine" },
+        { label: "Explore Myanmar Cultures", href: "/cultures" },
+        { label: "Culture Categories", href: "/culture-categories" },
+      
     ]
   },
 ]

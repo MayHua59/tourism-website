@@ -19,30 +19,7 @@ const DestinationCategoryListPage = () => {
   return (
     <div className={styles.pageContainer}>
       <h1 className={styles.pageTitle}>Explore Our Destination Categories</h1>
-      <ul className={styles.categoryList}>
-  {destination_categories.map(category => (
-    <li key={category.id} className={styles.categoryListItem}>
-      <Link href={`/destination-categories/${category.slug}`} className={styles.listItemLink}>
-        {category.image_url && (
-          <Image
-            src={category.image_url}
-            alt={category.name}
-            className={styles.listItemThumbnail}
-            width={100} // Assuming your CSS for listItemThumbnail implies a 100px width
-            height={100} // Assuming your CSS for listItemThumbnail implies a 100px height
-            // objectFit="cover" // Optional: if you want to ensure 'cover' behavior like in CSS
-            // layout="fixed" // Optional: if you know the exact dimensions
-          />
-        )}
-        <div className={styles.listItemContent}>
-          <h2 className={styles.listItemName}>{category.name}</h2>
-          <p className={styles.listItemDescription}>{category.description}</p>
-          <span className={styles.listItemViewLink}>View Destinations &rarr;</span>
-        </div>
-      </Link>
-    </li>
-  ))}
-</ul>
+    
 <ul className={styles.categoryGrid}> {/* Assuming you have a grid container */}
   {destination_categories.map(category => (
     <li key={category.id} className={styles.interactiveCard}>
