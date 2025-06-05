@@ -1,4 +1,4 @@
-.pageContainer {
+/* .pageContainer {
   padding: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   max-width: 1300px;
@@ -107,4 +107,123 @@
 
 .interactiveCard:hover .interactiveViewText {
   opacity: 1;
+} */
+
+/* ******* after API ********* */
+.pageContainer {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.pageTitle {
+  font-size: 2.7rem;
+  margin-bottom: 12px;
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+}
+
+.pageSubtitle {
+  font-size: 1.1rem;
+  text-align: center;
+  color: #5a5a5a;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.attractionsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 28px;
+}
+
+.attractionCardLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.attractionCard {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensures cards in a row have same height */
+}
+
+.attractionCard:hover {
+  transform: translateY(-7px) scale(1.02);
+  box-shadow: 0 9px 25px rgba(0, 0, 0, 0.12);
+}
+
+.attractionImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-color: #e9ecef; /* Placeholder */
+}
+
+.attractionImage {
+  /* Specific image styles if needed */
+}
+
+.attractionInfo {
+  padding: 18px 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.attractionName {
+  font-size: 1.5rem;
+  margin: 0 0 7px 0;
+  color: #212529;
+  font-weight: 600;
+}
+
+.attractionLocation {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.attractionDescription {
+  font-size: 0.9rem;
+  color: #495057;
+  line-height: 1.55;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.viewDetailsButton {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: #007bff;
+  font-weight: 500;
+  text-decoration: none;
+  align-self: flex-start;
+  margin-top: auto; /* Pushes button to the bottom */
+  padding: 5px 0;
+}
+
+.viewDetailsButton:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.noItemsText {
+  text-align: center;
+  font-size: 1.15rem;
+  color: #6c757d;
+  margin-top: 45px;
 }
