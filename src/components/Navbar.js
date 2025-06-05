@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 import styles from './Navbar.module.css';
-import  navItems  from '../data/navigation'; //dummy data for navigation
+import  navItems  from '../data/navigation'; 
+import Image from "next/image"; 
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -50,8 +51,14 @@ const Navbar = () => {
     <nav className={`${styles.navbar} bg-gray-800`} ref={navRef}>
         <div className={styles.logo}>
             <Link href="/" onClick={closeAllMenus}>
-            {/* To Replace Actual Logo */}
-                <span>Your Logo</span> 
+            
+                <Image 
+                  src="/logo.png" 
+                  alt="MOHT Logo" 
+                  width={60} 
+                  height={20} 
+                  priority
+                />
             </Link>
         </div>
         <div className={styles.menuIcon} onClick={toggleMobileMenu} aria-label="Toggle menu" aria-expanded={isMobileMenuOpen}>

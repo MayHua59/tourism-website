@@ -17,7 +17,7 @@ const DestinationByRegion = () => {
   const selectedRegion = regionsData.find(region => region.id === selectedRegionId);
 
   return (
-    <div className={styles.regionDestinationsContainer}>
+    <div className={`${styles.regionDestinationsContainer} container`}>
       
       <div className={styles.regionSelector}>
         <h2>Explore Myanmar by Region</h2>

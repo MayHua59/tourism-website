@@ -2,14 +2,12 @@
 const nextConfig = {
     images: {
     remotePatterns: [
-      {
+       {
         protocol: 'https',
         hostname: 'images.unsplash.com',
         port: '',
         pathname: '/**', // Allows any path under this hostname
       },
-      // commondatastorage.googleapis.com
-
       {
         protocol: 'https',
         hostname: 'commondatastorage.googleapis.com',
@@ -17,18 +15,19 @@ const nextConfig = {
         pathname: '/**', // Allows any path under this hostname
       },
       {
-        protocol: 'http',
+        protocol: 'http', // For localhost, http is fine
         hostname: 'localhost',
-        port: '',
-        pathname: '/**', // Allows any path under this hostname
+        port: '', // Port can be an empty string
+        pathname: '/**', 
       },
-      // You can add other hostnames here if needed
-      // {
-      //   protocol: 'https',
-      //   hostname: 'another-image-provider.com',
-      //   port: '',
-      //   pathname: '/**',
-      // },
+      
+      { 
+        protocol: 'https', 
+        hostname: 'placehold.co',
+        port: '',
+        pathname: '/**',
+      },
+      
     ],
     
   },

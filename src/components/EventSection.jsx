@@ -12,7 +12,7 @@ const EventsSection = () => {
   const sortedEvents = [...eventsData].sort((a, b) => new Date(a.date) - new Date(b.date));
 
   return (
-    <section className={`${styles.eventsSectionContainer} container`}>
+    <section className={`${styles.eventsSectionContainer}`}>
       <h2 className={styles.sectionTitle}>Upcoming Events & Festivals</h2>
       
       <div className={styles.scrollContainer}>

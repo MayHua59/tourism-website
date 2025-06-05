@@ -1,9 +1,23 @@
 import React from 'react';
 import styles from '../components/HeroSection.module.css'; // Adjust path if HeroSection is in a different directory
 import Image from 'next/image';
+import React, { useEffect, useRef } from 'react'; 
 
 // This is a regular React component that receives props
 const HeroSection = ({ heroData }) => {
+   const videoRef = useRef(null); 
+    useEffect(() => {
+    if (heroData && heroData.video_url && videoRef.current) {
+      // Attempt to load and play the video
+      // The `load()` call can be helpful to ensure the new source is picked up if it changes,
+      // though in this gssp case, the component remounts with new props anyway.
+      videoRef.current.load();
+      videoRef.current.play().catch(playError => {
+        console.warn("Video autoplay was prevented:", playError);
+        // You might want to display a play button or other UI indication here
+      });
+    }
+  }, [heroData]);
   if (!heroData || !heroData.video_url || !heroData.image_url) {
     return <div className={styles.noDataContainer}>No hero data available.</div>;
   }
