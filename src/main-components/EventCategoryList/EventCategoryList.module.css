@@ -1,4 +1,4 @@
-.pageContainer {
+/* .pageContainer {
   padding: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   max-width: 1300px;
@@ -46,7 +46,6 @@
   padding: 50px 0;
 }
 
-/* Interactive Card Styles  */
 .interactiveCard {
   background-color: #fff;
   border-radius: 15px;
@@ -135,4 +134,114 @@
 .interactiveCard:hover .interactiveViewText {
   opacity: 1;
   background-color: rgba(255, 255, 255, 0.25);
+} */
+
+/* ***** after API integration**** */
+.pageContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px;
+  font-family: 'Arial', sans-serif;
+}
+
+.pageTitle {
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+}
+
+.pageSubtitle {
+  font-size: 1.05rem;
+  text-align: center;
+  color: #666;
+  margin-bottom: 35px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.categoriesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.categoryCardLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.categoryCard {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.categoryCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.1);
+}
+
+.categoryImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  background-color: #f0f2f5; /* Light placeholder */
+}
+
+.categoryImage {
+  /* Styles for the image itself, if needed beyond layout fill */
+}
+
+.categoryInfo {
+  padding: 18px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.categoryName {
+  font-size: 1.4rem;
+  margin: 0 0 8px 0;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.categoryDescription {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  flex-grow: 1;
+}
+
+.viewCategoryButton {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: #007bff;
+  font-weight: 500;
+  text-decoration: none;
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 6px 0;
+}
+
+.viewCategoryButton:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.noItemsText {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #777;
+  margin-top: 40px;
 }
