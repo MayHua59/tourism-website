@@ -3,12 +3,15 @@ import { NextRequest, NextResponse } from 'next/server';
 
 const EXTERNAL_API_BASE_URL = process.env.EXTERNAL_DESTINATIONS_API_BASE_URL || 'https://hotel.software100.com.mm/api/v1/destinations';
 
+type Params = Promise<{ slug: string }>;
+
 export async function GET(
   req: NextRequest,
-  { params }: { params: { slug: string } } 
+  { params }: { params: Params }
 ) {
-  const { slug } = params; 
 
+  
+  const { slug } = await params;
   if (!slug) {
     return NextResponse.json({ message: 'Destination slug is required.' }, { status: 400 });
   }
