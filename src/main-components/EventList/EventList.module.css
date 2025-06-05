@@ -1,99 +1,4 @@
-/* .pageContainer {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-}
-
-.header {
-  text-align: center;
-  margin-bottom: 2.5rem;
-}
-
-.pageTitle {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #2c3e50;
-  margin-bottom: 0.5rem;
-}
-
-.pageSubtitle {
-  font-size: 1.1rem;
-  color: #7f8c8d;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.filterContainer {
-  margin-bottom: 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-}
-
-.filterLabel {
-  font-size: 1rem;
-  font-weight: 500;
-  color: #34495e;
-}
-
-.filterSelect {
-  padding: 0.6rem 1rem;
-  border: 1px solid #bdc3c7;
-  border-radius: 6px;
-  font-size: 1rem;
-  background-color: #fff;
-  min-width: 200px;
-  cursor: pointer;
-}
-.filterSelect:focus {
-  outline: none;
-  border-color: #3498db;
-  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
-}
-
-.filterOption {
-  text-transform: capitalize;
-}
-
-.eventsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.noItemsMessage {
-  text-align: center;
-  font-size: 1.1rem;
-  color: #7f8c8d;
-  padding: 2rem 0;
-  border: 2px dashed #e0e0e0;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-}
-
-@media (max-width: 768px) {
-  .pageTitle {
-    font-size: 2rem;
-  }
-  .pageSubtitle {
-    font-size: 1rem;
-  }
-  .eventsGrid {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-  .filterContainer {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .filterSelect {
-    width: 100%;
-  }
-} */
- /* ****** after API integration */
- .pageContainer {
+.pageContainer {
   max-width: 1200px;
   margin: 0 auto;
   padding: 25px;
@@ -171,10 +76,41 @@
   font-weight: 600;
 }
 
-.eventDate {
+.eventDates {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.startDate {
   font-size: 0.9rem;
-  color: #777;
+  color: #333;
+  display: flex;
+  align-items: center;
   margin-bottom: 5px;
+  background-color: #d0f0c0; /* Light green background */
+  padding: 5px 8px;
+  border-radius: 5px;
+  width: fit-content; /* Adjust width to content */
+}
+
+.endDate {
+  font-size: 0.9rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  background-color: #f0c0c0; /* Light red background */
+  padding: 5px 8px;
+  border-radius: 5px;
+  width: fit-content; /* Adjust width to content */
+}
+
+.startDate svg,
+.endDate svg {
+  margin-right: 8px;
+  color: #3498db;
+  font-size: 1.1rem;
 }
 
 .eventLocation {

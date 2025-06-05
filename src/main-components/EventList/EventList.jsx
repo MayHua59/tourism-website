@@ -1,86 +1,23 @@
-// 'use client';
-
-// import React, { useState, useEffect, useMemo } from 'react';
-// import { eventsData } from '../../data/events';
-// import { getUniqueLocationsFromEvents } from '../../utils/eventUtils';
-// import EventCard from '../../components/ui/EventCard/EventCard';
-// import styles from './EventList.module.css';
-
-// const EventListPage = () => {
-//   const [selectedLocation, setSelectedLocation] = useState('');
-//   const [filteredEvents, setFilteredEvents] = useState(eventsData);
-
-//   const uniqueLocations = useMemo(() => getUniqueLocationsFromEvents(), []);
-
-//   useEffect(() => {
-//     if (!selectedLocation) {
-//       setFilteredEvents(eventsData);
-//     } else {
-//       setFilteredEvents(
-//         eventsData.filter(item =>
-//           item.location && item.location.toLowerCase().includes(selectedLocation.toLowerCase())
-//         )
-//       );
-//     }
-//   }, [selectedLocation]);
-
-//   const handleLocationChange = (event) => {
-//     setSelectedLocation(event.target.value);
-//   };
-
-//   return (
-//     <div className={styles.pageContainer}>
-//       <header className={styles.header}>
-//         <h1 className={styles.pageTitle}>Upcoming Events & Festivals</h1>
-//         <p className={styles.pageSubtitle}>
-//           Discover vibrant celebrations and cultural events happening across Myanmar.
-//         </p>
-//       </header>
-
-//       <div className={styles.filterContainer}>
-//         <label htmlFor="location-filter" className={styles.filterLabel}>Filter by Location:</label>
-//         <select
-//           id="location-filter"
-//           value={selectedLocation}
-//           onChange={handleLocationChange}
-//           className={styles.filterSelect}
-//         >
-//           <option value="">All Locations</option>
-//           {uniqueLocations.map(location => (
-//             <option key={location} value={location} className={styles.filterOption}>
-//               {location}
-//             </option>
-//           ))}
-//         </select>
-//       </div>
-
-//       {filteredEvents.length > 0 ? (
-//         <div className={styles.eventsGrid}>
-//           {filteredEvents.map(eventItem => (
-//             <EventCard key={eventItem.id} eventItem={eventItem} />
-//           ))}
-//         </div>
-//       ) : (
-//         <p className={styles.noItemsMessage}>
-//           No events found for the selected location.
-//         </p>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default EventListPage;
-// ****** with API integration ***********//
 "use client";
 
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from './EventList.module.css'; 
+import styles from './EventList.module.css';
+import { FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa'; // Import React Icons
 
 const formatDate = (dateString) => {
+  if (!dateString) return 'Date Unavailable';
+
   try {
     const date = new Date(dateString);
+
+    // Check if the date is valid
+    if (isNaN(date.getTime())) {
+      console.error("Invalid date format:", dateString);
+      return 'Date Unavailable';
+    }
+
     return date.toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
@@ -88,7 +25,7 @@ const formatDate = (dateString) => {
     });
   } catch (error) {
     console.error("Error formatting date:", dateString, error);
-    return 'TBD'; 
+    return 'Date Unavailable';
   }
 };
 
@@ -123,15 +60,29 @@ const EventListPage = ({ events }) => {
               )}
               <div className={styles.eventInfo}>
                 <h2 className={styles.eventName}>{event.name}</h2>
-                <p className={styles.eventDate}>Date: {formatDate(event.date)}</p>
-                <p className={styles.eventLocation}>Location: {event.location}</p>
+                <div className={styles.eventDates}>
+                  <div className={styles.startDate}>
+                    <FaCalendarAlt />
+                    <span>Start Date: <span style={{fontWeight: 'bold'}} >{formatDate(event.start_date)}</span></span>
+                  </div>
+                  <div className={styles.endDate}>
+                    <FaCalendarAlt />
+                    <span>End Date: <span style={{fontWeight: 'bold'}} >{formatDate(event.end_date)}</span></span>
+                  </div>
+                </div>
+                <div className={styles.eventLocation}>
+                  <FaMapMarkerAlt />
+                  {event.location}
+                </div>
                 {event.short_description && (
                   <p className={styles.eventDescription}>
                     {event.short_description.substring(0, 80)}
                     {event.short_description.length > 80 ? '...' : ''}
                   </p>
                 )}
-                <span className={styles.viewDetailsButton}>Learn More &rarr;</span>
+                <Link href={`/events/${event.slug}`} className={styles.viewDetailsButton}>
+                  Explore the Event
+                </Link>
               </div>
             </div>
           </Link>
