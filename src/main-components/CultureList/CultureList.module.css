@@ -1,4 +1,4 @@
-.pageContainer {
+/* .pageContainer {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 1rem;
@@ -12,13 +12,13 @@
 .pageTitle {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #2c3e50; /* Dark blue-gray */
+  color: #2c3e50; 
   margin-bottom: 0.5rem;
 }
 
 .pageSubtitle {
   font-size: 1.1rem;
-  color: #7f8c8d; /* Medium gray */
+  color: #7f8c8d; 
   max-width: 600px;
   margin: 0 auto;
 }
@@ -35,12 +35,12 @@
 .filterLabel {
   font-size: 1rem;
   font-weight: 500;
-  color: #34495e; /* Slightly lighter blue-gray */
+  color: #34495e; 
 }
 
 .filterSelect {
   padding: 0.6rem 1rem;
-  border: 1px solid #bdc3c7; /* Light gray border */
+  border: 1px solid #bdc3c7; 
   border-radius: 6px;
   font-size: 1rem;
   background-color: #fff;
@@ -50,7 +50,7 @@
 }
 .filterSelect:focus {
   outline: none;
-  border-color: #3498db; /* Blue border on focus */
+  border-color: #3498db; 
   box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
 }
 
@@ -58,13 +58,13 @@
   text-transform: capitalize;
 }
 
-.culturesGrid { /* Changed from .articlesGrid */
+.culturesGrid { 
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
   gap: 2rem;
 }
 
-.noItemsMessage { /* Changed from .noArticlesMessage */
+.noItemsMessage { 
   text-align: center;
   font-size: 1.1rem;
   color: #7f8c8d;
@@ -74,7 +74,7 @@
   background-color: #f9f9f9;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
   .pageTitle {
     font-size: 2rem;
@@ -88,9 +88,125 @@
   }
   .filterContainer {
     flex-direction: column;
-    align-items: stretch; /* Make select full width on mobile */
+    align-items: stretch; 
   }
   .filterSelect {
     width: 100%;
   }
+} */
+
+/* ****** after API integration */
+.pageContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px;
+  font-family: 'Arial, sans-serif';
+}
+
+.pageTitle {
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+}
+
+.pageSubtitle {
+  font-size: 1.05rem;
+  text-align: center;
+  color: #666;
+  margin-bottom: 35px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cultureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.cultureCardLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.cultureCard {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cultureCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cultureImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  background-color: #f0f2f5; /* Light placeholder */
+}
+
+.cultureImage {
+  /* Styles for the image itself, if needed beyond layout fill */
+}
+
+.cultureInfo {
+  padding: 18px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cultureName {
+  font-size: 1.4rem;
+  margin: 0 0 8px 0;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.cultureType {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+.cultureDescription {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  flex-grow: 1;
+}
+
+.viewDetailsButton {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: #007bff;
+  font-weight: 500;
+  text-decoration: none;
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 6px 0;
+}
+
+.viewDetailsButton:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.noItemsText {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #777;
+  margin-top: 40px;
 }
