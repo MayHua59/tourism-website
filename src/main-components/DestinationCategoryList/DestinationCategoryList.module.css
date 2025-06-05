@@ -1,4 +1,4 @@
-.pageContainer {
+/* .pageContainer {
   padding: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
   max-width: 1300px; 
@@ -65,14 +65,11 @@
 }
 
 .listItemThumbnail {
-  /* Ensure these dimensions match the width/height props in your <Image> component */
-  /* Or remove width/height here if next/image handles it well with its props */
-  /* width: 100px; */ /* Example, adjust or remove */
-  /* height: 100px; */ /* Example, adjust or remove */
+
   object-fit: cover;
   border-radius: 6px;
   margin-right: 20px;
-  flex-shrink: 0; /* Prevent image from shrinking */
+  flex-shrink: 0; 
 }
 
 .listItemContent {
@@ -91,7 +88,7 @@
   color: #555;
   line-height: 1.5;
   margin-bottom: 10px;
-  /* Clamp description to a few lines */
+  
   display: -webkit-box;
   -webkit-line-clamp: 2; 
   -webkit-box-orient: vertical;
@@ -109,16 +106,16 @@
   text-decoration: underline;
 }
 
-/* Styles for the interactive card grid (second list in your JSX) */
+
 .interactiveCard {
-  background-color: #fff; /* This might not be visible if image covers it */
+  background-color: #fff; 
   border-radius: 15px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.1);
   overflow: hidden;
   position: relative;
-  /* transform-style: preserve-3d; */ /* Uncomment if you implement 3D tilt */
+
   transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease;
-  min-height: 350px; /* Ensure cards have some height */
+  min-height: 350px; 
   display: flex;
   flex-direction: column;
 }
@@ -136,36 +133,29 @@
   width: 100%;
   height: 100%;
   padding: 20px; 
-  position: relative; /* For z-indexing content above image */
-  z-index: 2; /* Ensure link and its content are above the background image */
+  position: relative; 
+  z-index: 2; 
 }
 
 .interactiveImageBg {
   
-  z-index: 0; /* Ensure image is behind content */
+  z-index: 0; 
   transition: transform 0.5s ease, filter 0.5s ease;
-  filter: brightness(0.7); /* Initial dimming */
-  /* object-fit: cover; is handled by next/image prop */
+  filter: brightness(0.7); 
 }
 
 .interactiveCard:hover .interactiveImageBg {
-  /* The transform on next/image itself might be tricky if it's a direct child.
-     Often, the transform is applied to a wrapper or the card itself.
-     If next/image is a direct child, its internal structure might interfere.
-     The current JSX structure has <Image> as a direct child of <li>.
-     The hover effect on .interactiveImageBg might need to target the Image component's wrapper if direct CSS doesn't work as expected.
-     For simplicity, the scale effect is on the card itself in .interactiveCard:hover
-  */
-  /* transform: scale(1.15); */ /* This might be better on the card or a wrapper */
-  filter: brightness(0.5); /* Dim further or change effect */
+ 
+  
+  filter: brightness(0.5); 
 }
 
 .interactiveContent {
-  margin-top: auto; /* Pushes content to the bottom */
-  color: #fff; /* Text color for overlay */
+  margin-top: auto; 
+  color: #fff; 
   text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
-  position: relative; /* Ensure content is above the ::before pseudo-element if one was used on parent */
-  z-index: 3; /* Above the link's z-index if needed, or ensure link content is structured well */
+  position: relative; 
+  z-index: 3; 
 }
 
 .interactiveName {
@@ -177,9 +167,9 @@
 .interactiveDescription {
   font-size: 0.95em;
   margin-bottom: 15px;
-  opacity: 0; /* Initially hidden */
+  opacity: 0; 
   transform: translateY(10px);
-  transition: opacity 0.3s ease 0.1s, transform 0.3s ease 0.1s; /* Delayed transition */
+  transition: opacity 0.3s ease 0.1s, transform 0.3s ease 0.1s; 
 }
 
 .interactiveCard:hover .interactiveDescription {
@@ -197,4 +187,114 @@
 }
 .interactiveCard:hover .interactiveViewText {
   opacity: 1;
+} */
+
+/* ******** New CSS after api ******* */
+.pageContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px;
+  font-family: 'Arial', sans-serif;
+}
+
+.pageTitle {
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+}
+
+.pageSubtitle {
+  font-size: 1.05rem;
+  text-align: center;
+  color: #666;
+  margin-bottom: 35px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.categoriesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.categoryCardLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.categoryCard {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.categoryCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.1);
+}
+
+.categoryImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  background-color: #f0f2f5; /* Light placeholder */
+}
+
+.categoryImage {
+  /* Styles for the image itself, if needed beyond layout fill */
+}
+
+.categoryInfo {
+  padding: 18px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.categoryName {
+  font-size: 1.4rem;
+  margin: 0 0 8px 0;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.categoryDescription {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  flex-grow: 1;
+}
+
+.viewDetailsButton {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: #007bff;
+  font-weight: 500;
+  text-decoration: none;
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 6px 0;
+}
+
+.viewDetailsButton:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.noItemsText {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #777;
+  margin-top: 40px;
 }
