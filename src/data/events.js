@@ -238,7 +238,7 @@ export const eventsData = [
     "is_featured": true,
     "division_id": null,
     "region_id": 7,
-    "city_id": null,
+    "city_id": 3,
     "township_id": null,
     "village_id": null,
     "myanmar_event_category_id": 3,

@@ -67,6 +67,9 @@
   font-weight: bold;
   color: #333;
 }
+.calendarIcon {
+  color: #3498db; 
+}
 
 .eventContentSection {
   margin-top: 40px;
@@ -85,10 +88,13 @@
   font-size: 1.1em;
   color: #333;
   margin: 8px 0;
+  display: flex;
+  align-items: center;
 }
 .eventMeta strong {
   color: #111;
   margin-right: 8px;
+  margin-left: 8px;
 }
 
 .sectionTitle {
@@ -120,4 +126,17 @@
 }
 .backLink:hover {
   background-color: #5a6268;
+}
+.startDateHighlight {
+  background-color: #d0f0c0; /* Light green */
+  padding: 2px 5px;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+.endDateHighlight {
+  background-color: #f0c0c0; /* Light red */
+  padding: 2px 5px;
+  border-radius: 3px;
+  margin-left: 5px;
 }
