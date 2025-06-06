@@ -1,44 +1,11 @@
-.pageContainer {
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 30px;
-  font-family: 'Roboto', sans-serif;
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-.header {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.pageTitle {
-  font-size: 2.75em;
-  font-weight: 700;
-  color: #2d3436;
-  margin-bottom: 15px;
-  line-height: 1.2;
-}
-
-.pageSubtitle {
-  font-size: 1.2em;
-  color: #747d8c;
-  line-height: 1.6;
-}
-
-.itemGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 30px;
-}
-
 .interactiveCard {
   position: relative;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease-in-out;
+  width: 100%; /* Ensure all cards have the same width */
+  height: 350px; /* Set a fixed height for all cards */
 }
 
 .interactiveCard:hover {
@@ -52,6 +19,7 @@
   width: 100%;
   height: 100%;
   z-index: 1;
+  object-fit: cover; /* Make sure the image covers the entire area */
 }
 
 .interactiveLink {
@@ -59,17 +27,21 @@
   display: block;
   text-decoration: none;
   z-index: 2;
+  height: 100%; /* Make the link cover the entire card */
 }
 
 .interactiveContent {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%; /* Set the height to 80% of the parent */
   padding: 30px;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%); /* Invert the gradient */
   color: #fff;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start; /* Align content to the top */
 }
 
 .interactiveName {
