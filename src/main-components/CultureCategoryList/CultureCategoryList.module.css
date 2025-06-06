@@ -1,248 +1,103 @@
-/* .pageContainer {
-  padding: 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  max-width: 1300px;
+.pageContainer {
+  max-width: 1200px;
   margin: 0 auto;
-  background-color: #f8f9fa; 
+  padding: 30px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f6f8;
 }
 
 .header {
   text-align: center;
   margin-bottom: 50px;
-  padding: 30px 0;
-  background: linear-gradient(to right, #6a11cb, #2575fc); 
-  color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(106, 17, 203, 0.2);
 }
 
 .pageTitle {
-  font-size: 3em;
+  font-size: 3.2rem;
   font-weight: 700;
-  margin-bottom: 10px;
-  letter-spacing: -1px;
+  color: #333;
+  margin-bottom: 15px;
 }
 
 .pageSubtitle {
-  font-size: 1.3em;
-  color: #e0e0e0;
+  font-size: 1.3rem;
+  color: #555;
   max-width: 700px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .itemGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 35px;
-  list-style: none;
-  padding: 0;
 }
-
-.noItemsText {
-  text-align: center;
-  font-size: 1.2em;
-  color: #6c757d; 
-  padding: 50px 0;
-}
-
 
 .interactiveCard {
+  position: relative;
   background-color: #fff;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 9px 24px rgba(0, 0, 0, 0.09);
   overflow: hidden;
-  position: relative;
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
-  min-height: 400px;
-  display: flex;
-  flex-direction: column;
+  transition: box-shadow 0.3s ease;
 }
 
 .interactiveCard:hover {
-  box-shadow: 0 18px 45px rgba(0,0,0,0.15);
-  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.13);
 }
 
-.interactiveLink {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  text-decoration: none;
-  color: inherit;
+.interactiveImage {
+  object-fit: cover;
+  border-radius: 15px;
   width: 100%;
-  height: 100%;
-  padding: 25px;
+  height: 300px;
+  display: block;
+  transition: opacity 0.3s ease;
   position: relative;
-  z-index: 2;
-  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0) 100%);
-}
-
-.interactiveImageBg {
-  z-index: 0;
-  transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1), filter 0.6s ease;
-  filter: brightness(0.9);
-}
-
-.interactiveCard:hover .interactiveImageBg {
-  transform: scale(1.1);
-  filter: brightness(0.7);
+  z-index: 1;
 }
 
 .interactiveContent {
-  color: #fff;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
-  position: relative;
-  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  z-index: 2;
+}
+
+.interactiveCard:hover .interactiveImage {
+  opacity: 0;
+}
+
+.interactiveCard:hover .interactiveContent {
+  opacity: 1;
 }
 
 .interactiveName {
-  font-size: 2em;
-  font-weight: bold;
-  margin-bottom: 12px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .interactiveDescription {
-  font-size: 0.95em;
-  margin-bottom: 20px;
-  opacity: 0;
-  transform: translateY(15px);
-  transition: opacity 0.4s ease 0.1s, transform 0.4s ease 0.1s;
-  line-height: 1.5;
-  max-height: 0;
-  overflow: hidden;
-}
-
-.interactiveCard:hover .interactiveDescription {
-  opacity: 0.9;
-  transform: translateY(0);
-  max-height: 100px; 
-}
-
-.interactiveViewText {
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  font-size: 0.9em;
-  opacity: 0;
-  transition: opacity 0.4s ease 0.2s;
-  display: inline-block;
-  background-color: rgba(255, 255, 255, 0.15);
-  padding: 8px 12px;
-  border-radius: 5px;
-}
-
-.interactiveCard:hover .interactiveViewText {
-  opacity: 1;
-  background-color: rgba(255, 255, 255, 0.25);
-} */
-
-/* ******** after API integration******** */
-.pageContainer {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 25px;
-  font-family: 'Arial', sans-serif;
-}
-
-.pageTitle {
-  font-size: 2.6rem;
-  margin-bottom: 10px;
-  text-align: center;
-  color: #333;
-  font-weight: bold;
-}
-
-.pageSubtitle {
-  font-size: 1.05rem;
-  text-align: center;
-  color: #666;
-  margin-bottom: 35px;
-  max-width: 650px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.categoriesGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 25px;
-}
-
-.categoryCardLink {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-.categoryCard {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
-  overflow: hidden;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.categoryCard:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.1);
-}
-
-.categoryImageWrapper {
-  position: relative;
-  width: 100%;
-  height: 180px;
-  background-color: #f0f2f5; /* Light placeholder */
-}
-
-.categoryImage {
-  /* Styles for the image itself, if needed beyond layout fill */
-}
-
-.categoryInfo {
-  padding: 18px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.categoryName {
-  font-size: 1.4rem;
-  margin: 0 0 8px 0;
-  color: #2c3e50;
-  font-weight: 600;
-}
-
-.categoryDescription {
-  font-size: 0.9rem;
-  color: #555;
-  line-height: 1.5;
-  margin-bottom: 12px;
-  flex-grow: 1;
-}
-
-.viewCategoryButton {
-  display: inline-block;
-  font-size: 0.85rem;
-  color: #007bff;
-  font-weight: 500;
-  text-decoration: none;
-  align-self: flex-start;
-  margin-top: auto;
-  padding: 6px 0;
-}
-
-.viewCategoryButton:hover {
-  color: #0056b3;
-  text-decoration: underline;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 .noItemsText {
+  font-size: 1.3rem;
+  color: #666;
   text-align: center;
-  font-size: 1.1rem;
-  color: #777;
-  margin-top: 40px;
+  margin-top: 60px;
+  font-style: italic;
 }

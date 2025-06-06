@@ -1,112 +1,55 @@
-// "use client";
-
-// import React from 'react';
-// import Link from 'next/link';
-// import Image from 'next/image';
-// import { culture_categories } from '../../data/culture-categories';
-// import styles from './CultureCategoryList.module.css';
-
-// const CultureCategoryListPage = () => {
-//   if (!culture_categories || culture_categories.length === 0) {
-//     return (
-//       <div className={styles.pageContainer}>
-//         <h1 className={styles.pageTitle}>Culture Categories</h1>
-//         <p className={styles.noItemsText}>No culture categories found. Please check back later.</p>
-//       </div>
-//     );
-//   }
-
-//   return (
-//     <div className={styles.pageContainer}>
-//       <header className={styles.header}>
-//         <h1 className={styles.pageTitle}>Discover Myanmar's Culture</h1>
-//         <p className={styles.pageSubtitle}>
-//           Explore the rich tapestry of traditions, arts, and lifestyles that define Myanmar.
-//         </p>
-//       </header>
-
-//       <div className={styles.itemGrid}>
-//         {culture_categories.map(category => (
-//           <div key={category.id} className={styles.interactiveCard}>
-//             {category.image_url && (
-//               <Image
-//                 src={category.image_url}
-//                 alt={`Image for ${category.name}`}
-//                 className={styles.interactiveImageBg}
-//                 layout="fill"
-//                 objectFit="cover"
-//                 priority={category.id <= 3} // Prioritize loading for the first few images
-//               />
-//             )}
-//             <Link href={`/culture-categories/${category.slug}`} className={styles.interactiveLink}>
-//               <div className={styles.interactiveContent}>
-//                 <h2 className={styles.interactiveName}>{category.name}</h2>
-//                 {category.description && (
-//                     <p className={styles.interactiveDescription}>
-//                         {category.description.substring(0, 100)}{category.description.length > 100 ? '...' : ''}
-//                     </p>
-//                 )}
-//                 <span className={styles.interactiveViewText}>Explore {category.name} &rarr;</span>
-//               </div>
-//             </Link>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default CultureCategoryListPage;
-
-// ******** with API ************//
 "use client";
 
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { cultureCategoriesData } from '../../data/culture-categories';
 import styles from './CultureCategoryList.module.css';
 
-const CultureCategoryListPage = ({ categories }) => {
-  if (!categories || categories.length === 0) {
+const CultureCategoryListPage = () => {
+  if (!cultureCategoriesData || cultureCategoriesData.length === 0) {
     return (
-      <div className={styles.pageContainer} style={{ textAlign: 'center' }}>
+      <div className={styles.pageContainer}>
         <h1 className={styles.pageTitle}>Culture Categories</h1>
-        <p className={styles.noItemsText}>No culture categories found at the moment. Please check back later!</p>
+        <p className={styles.noItemsText}>No culture categories found. Please check back later.</p>
       </div>
     );
   }
 
   return (
     <div className={styles.pageContainer}>
-      <h1 className={styles.pageTitle}>Explore Myanmar by Culture Category</h1>
-      <p className={styles.pageSubtitle}>Discover cultural experiences based on your interests.</p>
-      <div className={styles.categoriesGrid}>
-        {categories.map(category => (
-          <Link key={category.id} href={`/culture-categories/${category.slug}`} className={styles.categoryCardLink}>
-            <div className={styles.categoryCard}>
-              {category.image_url && (
-                <div className={styles.categoryImageWrapper}>
-                  <Image
-                    src={category.image_url}
-                    alt={`Image for ${category.name}`}
-                    layout="fill"
-                    objectFit="cover"
-                    className={styles.categoryImage}
-                  />
-                </div>
-              )}
-              <div className={styles.categoryInfo}>
-                <h2 className={styles.categoryName}>{category.name}</h2>
+      <header className={styles.header}>
+        <h1 className={styles.pageTitle}>Discover Myanmar's Culture</h1>
+        <p className={styles.pageSubtitle}>
+          Explore the rich tapestry of traditions, arts, and lifestyles that define Myanmar.
+        </p>
+      </header>
+
+      <div className={styles.itemGrid}>
+        {cultureCategoriesData.map(category => (
+          <div key={category.id} className={styles.interactiveCard}>
+            {category.image_url && (
+              <Image
+                src={category.image_url}
+                alt={`Image for ${category.name}`}
+                className={styles.interactiveImageBg}
+                fill
+                objectFit="cover"
+                priority={category.id <= 3}
+              />
+            )}
+            <Link href={`/culture-categories/${category.slug}`} className={styles.interactiveLink}>
+              <div className={styles.interactiveContent}>
+                <h2 className={styles.interactiveName}>{category.name}</h2>
                 {category.description && (
-                  <p className={styles.categoryDescription}>
-                    {category.description.substring(0, 100)}
-                    {category.description.length > 100 ? '...' : ''}
+                  <p className={styles.interactiveDescription}>
+                    {category.description.substring(0, 100)}{category.description.length > 100 ? '...' : ''}
                   </p>
                 )}
-                <span className={styles.viewCategoryButton}>Explore Category &rarr;</span>
+                <span className={styles.interactiveViewText}>Explore {category.name} &rarr;</span>
               </div>
-            </div>
-          </Link>
+            </Link>
+          </div>
         ))}
       </div>
     </div>
