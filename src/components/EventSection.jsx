@@ -17,11 +17,11 @@ const EventsSection = () => {
       
       <div className={styles.scrollContainer}>
         <div className={styles.eventsGrid}>
-          {sortedEvents.map((event) => (
+          {/* {sortedEvents.map((event) => (
             <div key={event.id || event.name} className={styles.eventItem}>
               <EventCard event={event} />
             </div>
-          ))}
+          ))} */}
         </div>
       </div>
       {/* View All Events */}

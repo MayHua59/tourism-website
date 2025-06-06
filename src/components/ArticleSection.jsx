@@ -12,9 +12,9 @@ const ArticleSection = () => {
      <section className={`${styles.articlesSectionContainer} container`}>
       <h2 className={styles.sectionTitle}>Travel Inspiration & Articles</h2>
       <div className={styles.articlesGrid}>
-        {articlesData.map((article) => (
+        {/* {articlesData.map((article) => (
           <ArticleCard key={article.id || article.title} article={article} />
-        ))}
+        ))} */}
       </div>
       
        {/* <div className={styles.viewAllContainer}>

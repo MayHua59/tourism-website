@@ -16,7 +16,7 @@ const navItems = [
     label: "Articles",
     href: "/articles",
     dropdown: [
-      { label: "Latest Articles", href: "/articles/latest" },
+      { label: "Latest Articles", href: "/articles" },
       { label: "Article Categories", href: "/article-categories" },
       // { label: "Cultural Insights", href: "/articles/culture" },
       // { label: "Food & Drink", href: "/articles/food-drink" },
