@@ -11,9 +11,9 @@ const CultureSection = () => {
     <section className={`${styles.cultureSectionContainer} container`}>
       <h2 className={styles.sectionTitle}>Immerse in Myanmar's Culture</h2>
       <div className={styles.cultureGrid}>
-        {myanmarCulturesData.map((item) => (
+        {/* {myanmarCulturesData.map((item) => (
           <CultureCard key={item.id || item.name} cultureItem={item} />
-        ))}
+        ))} */}
       </div>
     </section>
   );
