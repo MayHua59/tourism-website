@@ -27,7 +27,7 @@ const navItems = [
     label: "Events",
     href: "/events",
     dropdown: [
-        { label: "Upcoming Events", href: "/events" },
+        { label: "Popular Events", href: "/events" },
         { label: "Event Categories", href: "/event-categories" },
         // { label: "Exhibitions", href: "/events/exhibitions" },
     ]

@@ -1,48 +1,251 @@
-export const eventsData = [
-  {
-    id: "event1",
-    name: "Thingyan Water Festival",
-    date: "2025-04-13", // Use YYYY-MM-DD for easy parsing
-    endDate: "2025-04-16", // Optional: if it's a multi-day event
-    location: "Nationwide",
-    description: "Myanmar's New Year festival, celebrated with joyous water-throwing and traditional performances.",
-    image_url: "https://images.unsplash.com/photo-1583435292794-4803a56c5043", // Replace
-    url: "/events/thingyan-water-festival", // Optional: link to a detailed event page
-    event_category_id: 1,
-  },
-  {
-    id: "event2",
-    name: "Taunggyi Tazaungdaing Festival (Hot Air Balloons)",
-    date: "2024-11-20", // Example past event for styling variety if needed
-    endDate: "2024-11-27",
-    location: "Taunggyi, Shan State",
-    description: "A spectacular festival of lights featuring giant hot air balloons, fireworks, and traditional music.",
-    image_url: "https://images.unsplash.com/photo-1583435292794-4803a56c5043", // Replace
-    url: "/events/taunggyi-tazaungdaing-festival",
-    event_category_id: 2,
-  },
-  {
-    id: "event3",
-    name: "Naga New Year Festival",
-    date: "2025-01-14",
-    endDate: "2025-01-16",
-    location: "Lahe or Layshi, Sagaing Region",
-    description: "Experience the unique cultural heritage of the Naga tribes with traditional dances, music, and rituals.",
-    image_url: "https://images.unsplash.com/photo-1583435292794-4803a56c5043", // Replace with a more representative image if possible
-    url: "/events/naga-new-year-festival",
-    event_category_id: 3,
-  },
-    {
-    id: "event4",
-    name: "Ananda Pagoda Festival",
-    date: "2025-01-05", // Example: Usually in Pyahto (December/January)
-    endDate: "2025-01-19", // Often a two-week festival
-    location: "Bagan, Mandalay Region",
-    description: "One of Bagan's most famous pagoda festivals, featuring traditional markets, alms offerings, and evening entertainment.",
-    image_url: "https://images.unsplash.com/photo-1549999190-f7904acf5272", // Replace with a representative image of Ananda Pagoda or festival
-    url: "/events/ananda-pagoda-festival",
-    event_category_id: 4, // Assuming 'Religious Ceremonies' or similar category
-  }
+// export const eventsData = [
+//   {
+//     id: "event1",
+//     name: "Thingyan Water Festival",
+//     date: "2025-04-13", // Use YYYY-MM-DD for easy parsing
+//     endDate: "2025-04-16", // Optional: if it's a multi-day event
+//     location: "Nationwide",
+//     description: "Myanmar's New Year festival, celebrated with joyous water-throwing and traditional performances.",
+//     image_url: "https://images.unsplash.com/photo-1583435292794-4803a56c5043", // Replace
+//     url: "/events/thingyan-water-festival", // Optional: link to a detailed event page
+//     event_category_id: 1,
+//   },
+//   {
+//     id: "event2",
+//     name: "Taunggyi Tazaungdaing Festival (Hot Air Balloons)",
+//     date: "2024-11-20", // Example past event for styling variety if needed
+//     endDate: "2024-11-27",
+//     location: "Taunggyi, Shan State",
+//     description: "A spectacular festival of lights featuring giant hot air balloons, fireworks, and traditional music.",
+//     image_url: "https://images.unsplash.com/photo-1583435292794-4803a56c5043", // Replace
+//     url: "/events/taunggyi-tazaungdaing-festival",
+//     event_category_id: 2,
+//   },
+//   {
+//     id: "event3",
+//     name: "Naga New Year Festival",
+//     date: "2025-01-14",
+//     endDate: "2025-01-16",
+//     location: "Lahe or Layshi, Sagaing Region",
+//     description: "Experience the unique cultural heritage of the Naga tribes with traditional dances, music, and rituals.",
+//     image_url: "https://images.unsplash.com/photo-1583435292794-4803a56c5043", // Replace with a more representative image if possible
+//     url: "/events/naga-new-year-festival",
+//     event_category_id: 3,
+//   },
+//     {
+//     id: "event4",
+//     name: "Ananda Pagoda Festival",
+//     date: "2025-01-05", // Example: Usually in Pyahto (December/January)
+//     endDate: "2025-01-19", // Often a two-week festival
+//     location: "Bagan, Mandalay Region",
+//     description: "One of Bagan's most famous pagoda festivals, featuring traditional markets, alms offerings, and evening entertainment.",
+//     image_url: "https://images.unsplash.com/photo-1549999190-f7904acf5272", // Replace with a representative image of Ananda Pagoda or festival
+//     url: "/events/ananda-pagoda-festival",
+//     event_category_id: 4, // Assuming 'Religious Ceremonies' or similar category
+//   }
 
   
-];
+// ];
+
+export const eventsData = [
+  {
+    "id": 1,
+    "name": "Thingyan Water Festival",
+    "slug": "thingyan-water-festival",
+    "image_url": "https://i.pinimg.com/736x/7d/ed/64/7ded64933f79e2bd5c5d322563bb0577.jpg",
+    "description": "The Thingyan Water Festival is a cornerstone of Myanmar's annual calendar, eagerly anticipated by locals and visitors alike. It's not just an event, but a vibrant expression of cultural identity and communal spirit, reflecting centuries-old traditions and beliefs. Preparations often begin well in advance, building anticipation throughout the region.\n\nThis particular event is distinguished by its unique customs and ceremonies. Participants often engage in specific rituals, dress in traditional attire, or contribute to collective efforts that highlight the shared heritage. The atmosphere is typically lively and joyous, filled with the sounds of traditional music, laughter, and enthusiastic participation.\n\nBeyond its celebratory aspect, the Thingyan Water Festival holds deep significance, whether it's religious devotion, historical commemoration, or a celebration of local livelihoods and artistry. It serves as an important bridge between generations, ensuring that cultural practices are passed down and preserved for the future. Many journey from afar to be part of these meaningful occasions.\n\nFor visitors, experiencing the Thingyan Water Festival offers an unparalleled opportunity to immerse themselves in authentic Myanmar culture. You can witness firsthand the warmth and hospitality of the people, partake in local festivities, and gain a profound understanding of the country's rich tapestry of traditions. It's an experience that truly transcends typical tourism.\n\nUltimately, the Thingyan Water Festival symbolizes the enduring spirit and cultural richness of Myanmar. It's a testament to the power of community and tradition, leaving a lasting impression on everyone who is fortunate enough to be part of its vibrant unfolding.",
+    "is_active": true,
+    "is_featured": true,
+    "division_id": null,
+    "region_id": null,
+    "city_id": 1,
+    "township_id": null,
+    "village_id": null,
+    "myanmar_event_category_id": 1,
+    "start_date": "2025-04-13T00:00:00.000000Z",
+    "end_date": "2025-04-17T00:00:00.000000Z",
+    "deleted_at": null,
+    "created_at": "2025-06-04T12:57:42.000000Z",
+    "updated_at": "2025-06-04T12:57:42.000000Z"
+  },
+  {
+    "id": 2,
+    "name": "Thadingyut Festival of Lights",
+    "slug": "thadingyut-festival-of-lights",
+    "image_url": "https://i.pinimg.com/736x/26/ef/c8/26efc85f811b8e35abb41aa6bd38aa84.jpg",
+    "description": "The Thadingyut Festival of Lights is a cornerstone of Myanmar's annual calendar, eagerly anticipated by locals and visitors alike. It's not just an event, but a vibrant expression of cultural identity and communal spirit, reflecting centuries-old traditions and beliefs. Preparations often begin well in advance, building anticipation throughout the region.\n\nThis particular event is distinguished by its unique customs and ceremonies. Participants often engage in specific rituals, dress in traditional attire, or contribute to collective efforts that highlight the shared heritage. The atmosphere is typically lively and joyous, filled with the sounds of traditional music, laughter, and enthusiastic participation.\n\nBeyond its celebratory aspect, the Thadingyut Festival of Lights holds deep significance, whether it's religious devotion, historical commemoration, or a celebration of local livelihoods and artistry. It serves as an important bridge between generations, ensuring that cultural practices are passed down and preserved for the future. Many journey from afar to be part of these meaningful occasions.\n\nFor visitors, experiencing the Thadingyut Festival of Lights offers an unparalleled opportunity to immerse themselves in authentic Myanmar culture. You can witness firsthand the warmth and hospitality of the people, partake in local festivities, and gain a profound understanding of the country's rich tapestry of traditions. It's an experience that truly transcends typical tourism.\n\nUltimately, the Thadingyut Festival of Lights symbolizes the enduring spirit and cultural richness of Myanmar. It's a testament to the power of community and tradition, leaving a lasting impression on everyone who is fortunate enough to be part of its vibrant unfolding.",
+    "is_active": true,
+    "is_featured": true,
+    "division_id": null,
+    "region_id": null,
+    "city_id": 2,
+    "township_id": null,
+    "village_id": null,
+    "myanmar_event_category_id": 1,
+    "start_date": "2025-10-06T00:00:00.000000Z",
+    "end_date": "2025-10-08T00:00:00.000000Z",
+    "deleted_at": null,
+    "created_at": "2025-06-04T12:57:42.000000Z",
+    "updated_at": "2025-06-04T12:57:42.000000Z"
+  },
+  {
+    "id": 3,
+    "name": "Kason Full Moon Day",
+    "slug": "kason-full-moon-day",
+    "image_url": "https://i.pinimg.com/736x/22/24/77/22247714b4bca3f5552d18d3e34921ee.jpg",
+    "description": "The Kason Full Moon Day is a cornerstone of Myanmar's annual calendar, eagerly anticipated by locals and visitors alike. It's not just an event, but a vibrant expression of cultural identity and communal spirit, reflecting centuries-old traditions and beliefs. Preparations often begin well in advance, building anticipation throughout the region.\n\nThis particular event is distinguished by its unique customs and ceremonies. Participants often engage in specific rituals, dress in traditional attire, or contribute to collective efforts that highlight the shared heritage. The atmosphere is typically lively and joyous, filled with the sounds of traditional music, laughter, and enthusiastic participation.\n\nBeyond its celebratory aspect, the Kason Full Moon Day holds deep significance, whether it's religious devotion, historical commemoration, or a celebration of local livelihoods and artistry. It serves as an important bridge between generations, ensuring that cultural practices are passed down and preserved for the future. Many journey from afar to be part of these meaningful occasions.\n\nFor visitors, experiencing the Kason Full Moon Day offers an unparalleled opportunity to immerse themselves in authentic Myanmar culture. You can witness firsthand the warmth and hospitality of the people, partake in local festivities, and gain a profound understanding of the country's rich tapestry of traditions. It's an experience that truly transcends typical tourism.\n\nUltimately, the Kason Full Moon Day symbolizes the enduring spirit and cultural richness of Myanmar. It's a testament to the power of community and tradition, leaving a lasting impression on everyone who is fortunate enough to be part of its vibrant unfolding.",
+    "is_active": true,
+    "is_featured": true,
+    "division_id": null,
+    "region_id": null,
+    "city_id": null,
+    "township_id": null,
+    "village_id": null,
+    "myanmar_event_category_id": 1,
+    "start_date": "2025-05-12T00:00:00.000000Z",
+    "end_date": "2025-05-12T00:00:00.000000Z",
+    "deleted_at": null,
+    "created_at": "2025-06-04T12:57:42.000000Z",
+    "updated_at": "2025-06-04T12:57:42.000000Z"
+  },
+  {
+    "id": 4,
+    "name": "Taunggyi Hot Air Balloon Festival",
+    "slug": "taunggyi-hot-air-balloon-festival",
+    "image_url": "https://i.pinimg.com/736x/a3/63/64/a36364f2cdceb0bd55f6ad0de021ca77.jpg",
+    "description": "The Taunggyi Hot Air Balloon Festival is a cornerstone of Myanmar's annual calendar, eagerly anticipated by locals and visitors alike. It's not just an event, but a vibrant expression of cultural identity and communal spirit, reflecting centuries-old traditions and beliefs. Preparations often begin well in advance, building anticipation throughout the region.\n\nThis particular event is distinguished by its unique customs and ceremonies. Participants often engage in specific rituals, dress in traditional attire, or contribute to collective efforts that highlight the shared heritage. The atmosphere is typically lively and joyous, filled with the sounds of traditional music, laughter, and enthusiastic participation.\n\nBeyond its celebratory aspect, the Taunggyi Hot Air Balloon Festival holds deep significance, whether it's religious devotion, historical commemoration, or a celebration of local livelihoods and artistry. It serves as an important bridge between generations, ensuring that cultural practices are passed down and preserved for the future. Many journey from afar to be part of these meaningful occasions.\n\nFor visitors, experiencing the Taunggyi Hot Air Balloon Festival offers an unparalleled opportunity to immerse themselves in authentic Myanmar culture. You can witness firsthand the warmth and hospitality of the people, partake in local festivities, and gain a profound understanding of the country's rich tapestry of traditions. It's an experience that truly transcends typical tourism.\n\nUltimately, the Taunggyi Hot Air Balloon Festival symbolizes the enduring spirit and cultural richness of Myanmar. It's a testament to the power of community and tradition, leaving a lasting impression on everyone who is fortunate enough to be part of its vibrant unfolding.",
+    "is_active": true,
+    "is_featured": true,
+    "division_id": null,
+    "region_id": 7,
+    "city_id": 7,
+    "township_id": null,
+    "village_id": null,
+    "myanmar_event_category_id": 1,
+    "start_date": "2025-11-01T00:00:00.000000Z",
+    "end_date": "2025-11-09T00:00:00.000000Z",
+    "deleted_at": null,
+    "created_at": "2025-06-04T12:57:42.000000Z",
+    "updated_at": "2025-06-04T12:57:42.000000Z"
+  },
+  {
+    "id": 5,
+    "name": "Inle Phaung Daw Oo Pagoda Festival",
+    "slug": "inle-phaung-daw-oo-pagoda-festival",
+    "image_url": "https://i.pinimg.com/736x/cc/5d/c5/cc5dc5c865c1c5ed887b6a38fe9bf52a.jpg",
+    "description": "The Inle Phaung Daw Oo Pagoda Festival is a cornerstone of Myanmar's annual calendar, eagerly anticipated by locals and visitors alike. It's not just an event, but a vibrant expression of cultural identity and communal spirit, reflecting centuries-old traditions and beliefs. Preparations often begin well in advance, building anticipation throughout the region.\n\nThis particular event is distinguished by its unique customs and ceremonies. Participants often engage in specific rituals, dress in traditional attire, or contribute to collective efforts that highlight the shared heritage. The atmosphere is typically lively and joyous, filled with the sounds of traditional music, laughter, and enthusiastic participation.\n\nBeyond its celebratory aspect, the Inle Phaung Daw Oo Pagoda Festival holds deep significance, whether it's religious devotion, historical commemoration, or a celebration of local livelihoods and artistry. It serves as an important bridge between generations, ensuring that cultural practices are passed down and preserved for the future. Many journey from afar to be part of these meaningful occasions.\n\nFor visitors, experiencing the Inle Phaung Daw Oo Pagoda Festival offers an unparalleled opportunity to immerse themselves in authentic Myanmar culture. You can witness firsthand the warmth and hospitality of the people, partake in local festivities, and gain a profound understanding of the country's rich tapestry of traditions. It's an experience that truly transcends typical tourism.\n\nUltimately, the Inle Phaung Daw Oo Pagoda Festival symbolizes the enduring spirit and cultural richness of Myanmar. It's a testament to the power of community and tradition, leaving a lasting impression on everyone who is fortunate enough to be part of its vibrant unfolding.",
+    "is_active": true,
+    "is_featured": true,
+    "division_id": null,
+    "region_id": 7,
+    "city_id": null,
+    "township_id": null,
+    "village_id": null,
+    "myanmar_event_category_id": 1,
+    "start_date": "2025-09-20T00:00:00.000000Z",
+    "end_date": "2025-10-07T00:00:00.000000Z",
+    "deleted_at": null,
+    "created_at": "2025-06-04T12:57:42.000000Z",
+    "updated_at": "2025-06-04T12:57:42.000000Z"
+  },
+  {
+    "id": 6,
+    "name": "Ananda Pagoda Festival (Bagan)",
+    "slug": "ananda-pagoda-festival-bagan",
+    "image_url": "https://i.pinimg.com/736x/b9/67/90/b96790dd851d6ac62cb944690d1a0403.jpg",
+    "description": "The Ananda Pagoda Festival (Bagan) is a cornerstone of Myanmar's annual calendar, eagerly anticipated by locals and visitors alike. It's not just an event, but a vibrant expression of cultural identity and communal spirit, reflecting centuries-old traditions and beliefs. Preparations often begin well in advance, building anticipation throughout the region.\n\nThis particular event is distinguished by its unique customs and ceremonies. Participants often engage in specific rituals, dress in traditional attire, or contribute to collective efforts that highlight the shared heritage. The atmosphere is typically lively and joyous, filled with the sounds of traditional music, laughter, and enthusiastic participation.\n\nBeyond its celebratory aspect, the Ananda Pagoda Festival (Bagan) holds deep significance, whether it's religious devotion, historical commemoration, or a celebration of local livelihoods and artistry. It serves as an important bridge between generations, ensuring that cultural practices are passed down and preserved for the future. Many journey from afar to be part of these meaningful occasions.\n\nFor visitors, experiencing the Ananda Pagoda Festival (Bagan) offers an unparalleled opportunity to immerse themselves in authentic Myanmar culture. You can witness firsthand the warmth and hospitality of the people, partake in local festivities, and gain a profound understanding of the country's rich tapestry of traditions. It's an experience that truly transcends typical tourism.\n\nUltimately, the Ananda Pagoda Festival (Bagan) symbolizes the enduring spirit and cultural richness of Myanmar. It's a testament to the power of community and tradition, leaving a lasting impression on everyone who is fortunate enough to be part of its vibrant unfolding.",
+    "is_active": true,
+    "is_featured": true,
+    "division_id": null,
+    "region_id": null,
+    "city_id": null,
+    "township_id": null,
+    "village_id": null,
+    "myanmar_event_category_id": 1,
+    "start_date": "2025-01-01T00:00:00.000000Z",
+    "end_date": "2025-01-09T00:00:00.000000Z",
+    "deleted_at": null,
+    "created_at": "2025-06-04T12:57:42.000000Z",
+    "updated_at": "2025-06-04T12:57:42.000000Z"
+  },
+  {
+    "id": 7,
+    "name": "Mandalay Kyauktawgyi Pagoda Festival",
+    "slug": "mandalay-kyauktawgyi-pagoda-festival",
+    "image_url": "https://i.pinimg.com/736x/52/dc/08/52dc087deefc12a431d77a28804cfb7e.jpg",
+    "description": "The Mandalay Kyauktawgyi Pagoda Festival is a cornerstone of Myanmar's annual calendar, eagerly anticipated by locals and visitors alike. It's not just an event, but a vibrant expression of cultural identity and communal spirit, reflecting centuries-old traditions and beliefs. Preparations often begin well in advance, building anticipation throughout the region.\n\nThis particular event is distinguished by its unique customs and ceremonies. Participants often engage in specific rituals, dress in traditional attire, or contribute to collective efforts that highlight the shared heritage. The atmosphere is typically lively and joyous, filled with the sounds of traditional music, laughter, and enthusiastic participation.\n\nBeyond its celebratory aspect, the Mandalay Kyauktawgyi Pagoda Festival holds deep significance, whether it's religious devotion, historical commemoration, or a celebration of local livelihoods and artistry. It serves as an important bridge between generations, ensuring that cultural practices are passed down and preserved for the future. Many journey from afar to be part of these meaningful occasions.\n\nFor visitors, experiencing the Mandalay Kyauktawgyi Pagoda Festival offers an unparalleled opportunity to immerse themselves in authentic Myanmar culture. You can witness firsthand the warmth and hospitality of the people, partake in local festivities, and gain a profound understanding of the country's rich tapestry of traditions. It's an experience that truly transcends typical tourism.\n\nUltimately, the Mandalay Kyauktawgyi Pagoda Festival symbolizes the enduring spirit and cultural richness of Myanmar. It's a testament to the power of community and tradition, leaving a lasting impression on everyone who is fortunate enough to be part of its vibrant unfolding.",
+    "is_active": true,
+    "is_featured": true,
+    "division_id": null,
+    "region_id": null,
+    "city_id": 2,
+    "township_id": null,
+    "village_id": null,
+    "myanmar_event_category_id": 1,
+    "start_date": "2025-11-20T00:00:00.000000Z",
+    "end_date": "2025-11-26T00:00:00.000000Z",
+    "deleted_at": null,
+    "created_at": "2025-06-04T12:57:42.000000Z",
+    "updated_at": "2025-06-04T12:57:42.000000Z"
+  },
+  {
+    "id": 8,
+    "name": "Chinlone World Championship",
+    "slug": "chinlone-world-championship",
+    "image_url": "https://i.pinimg.com/736x/b6/bd/a6/b6bda6eae0b23b49c5e26ac3927b45f9.jpg",
+    "description": "The Chinlone World Championship is a cornerstone of Myanmar's annual calendar, eagerly anticipated by locals and visitors alike. It's not just an event, but a vibrant expression of cultural identity and communal spirit, reflecting centuries-old traditions and beliefs. Preparations often begin well in advance, building anticipation throughout the region.\n\nThis particular event is distinguished by its unique customs and ceremonies. Participants often engage in specific rituals, dress in traditional attire, or contribute to collective efforts that highlight the shared heritage. The atmosphere is typically lively and joyous, filled with the sounds of traditional music, laughter, and enthusiastic participation.\n\nBeyond its celebratory aspect, the Chinlone World Championship holds deep significance, whether it's religious devotion, historical commemoration, or a celebration of local livelihoods and artistry. It serves as an important bridge between generations, ensuring that cultural practices are passed down and preserved for the future. Many journey from afar to be part of these meaningful occasions.\n\nFor visitors, experiencing the Chinlone World Championship offers an unparalleled opportunity to immerse themselves in authentic Myanmar culture. You can witness firsthand the warmth and hospitality of the people, partake in local festivities, and gain a profound understanding of the country's rich tapestry of traditions. It's an experience that truly transcends typical tourism.\n\nUltimately, the Chinlone World Championship symbolizes the enduring spirit and cultural richness of Myanmar. It's a testament to the power of community and tradition, leaving a lasting impression on everyone who is fortunate enough to be part of its vibrant unfolding.",
+    "is_active": true,
+    "is_featured": true,
+    "division_id": null,
+    "region_id": null,
+    "city_id": 1,
+    "township_id": null,
+    "village_id": null,
+    "myanmar_event_category_id": 4,
+    "start_date": "2025-08-10T00:00:00.000000Z",
+    "end_date": "2025-08-17T00:00:00.000000Z",
+    "deleted_at": null,
+    "created_at": "2025-06-04T12:57:42.000000Z",
+    "updated_at": "2025-06-04T12:57:42.000000Z"
+  },
+  {
+    "id": 9,
+    "name": "Mya Thein Tan Pagoda Festival (Hpa-an)",
+    "slug": "mya-thein-tan-pagoda-festival-hpa-an",
+    "image_url": "https://i.pinimg.com/736x/88/36/2e/88362e3403c7c22850175d0135b5b38f.jpg",
+    "description": "The Mya Thein Tan Pagoda Festival (Hpa-an) is a cornerstone of Myanmar's annual calendar, eagerly anticipated by locals and visitors alike. It's not just an event, but a vibrant expression of cultural identity and communal spirit, reflecting centuries-old traditions and beliefs. Preparations often begin well in advance, building anticipation throughout the region.\n\nThis particular event is distinguished by its unique customs and ceremonies. Participants often engage in specific rituals, dress in traditional attire, or contribute to collective efforts that highlight the shared heritage. The atmosphere is typically lively and joyous, filled with the sounds of traditional music, laughter, and enthusiastic participation.\n\nBeyond its celebratory aspect, the Mya Thein Tan Pagoda Festival (Hpa-an) holds deep significance, whether it's religious devotion, historical commemoration, or a celebration of local livelihoods and artistry. It serves as an important bridge between generations, ensuring that cultural practices are passed down and preserved for the future. Many journey from afar to be part of these meaningful occasions.\n\nFor visitors, experiencing the Mya Thein Tan Pagoda Festival (Hpa-an) offers an unparalleled opportunity to immerse themselves in authentic Myanmar culture. You can witness firsthand the warmth and hospitality of the people, partake in local festivities, and gain a profound understanding of the country's rich tapestry of traditions. It's an experience that truly transcends typical tourism.\n\nUltimately, the Mya Thein Tan Pagoda Festival (Hpa-an) symbolizes the enduring spirit and cultural richness of Myanmar. It's a testament to the power of community and tradition, leaving a lasting impression on everyone who is fortunate enough to be part of its vibrant unfolding.",
+    "is_active": true,
+    "is_featured": true,
+    "division_id": null,
+    "region_id": 3,
+    "city_id": 9,
+    "township_id": null,
+    "village_id": null,
+    "myanmar_event_category_id": 1,
+    "start_date": "2025-03-05T00:00:00.000000Z",
+    "end_date": "2025-03-12T00:00:00.000000Z",
+    "deleted_at": null,
+    "created_at": "2025-06-04T12:57:42.000000Z",
+    "updated_at": "2025-06-04T12:57:42.000000Z"
+  },
+  {
+    "id": 10,
+    "name": "Traditional Weaving Exhibition (Inle)",
+    "slug": "traditional-weaving-exhibition-inle",
+    "image_url": "https://i.pinimg.com/736x/95/6b/33/956b3309eb98764ea7a1238060fc9f1a.jpg",
+    "description": "The Traditional Weaving Exhibition (Inle) is a cornerstone of Myanmar's annual calendar, eagerly anticipated by locals and visitors alike. It's not just an event, but a vibrant expression of cultural identity and communal spirit, reflecting centuries-old traditions and beliefs. Preparations often begin well in advance, building anticipation throughout the region.\n\nThis particular event is distinguished by its unique customs and ceremonies. Participants often engage in specific rituals, dress in traditional attire, or contribute to collective efforts that highlight the shared heritage. The atmosphere is typically lively and joyous, filled with the sounds of traditional music, laughter, and enthusiastic participation.\n\nBeyond its celebratory aspect, the Traditional Weaving Exhibition (Inle) holds deep significance, whether it's religious devotion, historical commemoration, or a celebration of local livelihoods and artistry. It serves as an important bridge between generations, ensuring that cultural practices are passed down and preserved for the future. Many journey from afar to be part of these meaningful occasions.\n\nFor visitors, experiencing the Traditional Weaving Exhibition (Inle) offers an unparalleled opportunity to immerse themselves in authentic Myanmar culture. You can witness firsthand the warmth and hospitality of the people, partake in local festivities, and gain a profound understanding of the country's rich tapestry of traditions. It's an experience that truly transcends typical tourism.\n\nUltimately, the Traditional Weaving Exhibition (Inle) symbolizes the enduring spirit and cultural richness of Myanmar. It's a testament to the power of community and tradition, leaving a lasting impression on everyone who is fortunate enough to be part of its vibrant unfolding.",
+    "is_active": true,
+    "is_featured": true,
+    "division_id": null,
+    "region_id": 7,
+    "city_id": null,
+    "township_id": null,
+    "village_id": null,
+    "myanmar_event_category_id": 3,
+    "start_date": "2025-07-01T00:00:00.000000Z",
+    "end_date": "2025-07-31T00:00:00.000000Z",
+    "deleted_at": null,
+    "created_at": "2025-06-04T12:57:42.000000Z",
+    "updated_at": "2025-06-04T12:57:42.000000Z"
+  }
+]
