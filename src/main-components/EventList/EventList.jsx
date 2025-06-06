@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './EventList.module.css';
-import { FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa'; // Import React Icons
+import { FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';  
 
 const formatDate = (dateString) => {
   if (!dateString) return 'Date Unavailable';

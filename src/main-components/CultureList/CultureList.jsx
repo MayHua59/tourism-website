@@ -72,6 +72,66 @@
 // export default CultureListPage;
 
 // **** with API *********//
+// "use client";
+
+// import React from 'react';
+// import Link from 'next/link';
+// import Image from 'next/image';
+// import styles from './CultureList.module.css'; 
+
+// const CultureListPage = ({ culturalItems }) => {
+//   if (!culturalItems || culturalItems.length === 0) {
+//     return (
+//       <div className={styles.pageContainer} style={{ textAlign: 'center' }}>
+//         <h1 className={styles.pageTitle}>Explore Myanmar's Culture</h1>
+//         <p className={styles.noItemsText}>No cultural experiences found at the moment. Please check back soon!</p>
+//       </div>
+//     );
+//   }
+
+//   return (
+//     <div className={styles.pageContainer}>
+//       <h1 className={styles.pageTitle}>Immerse Yourself in Myanmar's Culture</h1>
+//       <p className={styles.pageSubtitle}>Discover the traditions, festivals, and historical sites that define Myanmar's rich heritage.</p>
+//       <div className={styles.cultureGrid}>
+//         {culturalItems.map(item => (
+//           <Link key={item.id} href={`/culture/${item.slug}`} className={styles.cultureCardLink}>
+//             <div className={styles.cultureCard}>
+//               {item.image_url && (
+//                 <div className={styles.cultureImageWrapper}>
+//                   <Image
+//                     src={item.image_url}
+//                     alt={`Image for ${item.name}`}
+//                     layout="fill"
+//                     objectFit="cover"
+//                     className={styles.cultureImage}
+//                   />
+//                 </div>
+//               )}
+//               <div className={styles.cultureInfo}>
+//                 <h2 className={styles.cultureName}>{item.name}</h2>
+//                 {item.type && (
+//                   <p className={styles.cultureType}>Type: {item.type}</p>
+//                 )}
+//                 {item.short_description && (
+//                   <p className={styles.cultureDescription}>
+//                     {item.short_description.substring(0, 100)}
+//                     {item.short_description.length > 100 ? '...' : ''}
+//                   </p>
+//                 )}
+//                 <span className={styles.viewDetailsButton}>Experience Culture &rarr;</span>
+//               </div>
+//             </div>
+//           </Link>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default CultureListPage;
+
+// ****** start Section with Static Data ********//
 "use client";
 
 import React from 'react';
@@ -79,54 +139,61 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from './CultureList.module.css'; 
 
-const CultureListPage = ({ culturalItems }) => {
-  if (!culturalItems || culturalItems.length === 0) {
+const CultureList = ({ cultures, villages, townships }) => {
+  if (!cultures || cultures.length === 0) {
     return (
       <div className={styles.pageContainer} style={{ textAlign: 'center' }}>
-        <h1 className={styles.pageTitle}>Explore Myanmar's Culture</h1>
-        <p className={styles.noItemsText}>No cultural experiences found at the moment. Please check back soon!</p>
+        <h1 className={styles.pageTitle}>Myanmar Cultures</h1>
+        <p className={styles.noItemsText}>No cultures found at the moment. Please check back later!</p>
       </div>
     );
   }
 
   return (
     <div className={styles.pageContainer}>
-      <h1 className={styles.pageTitle}>Immerse Yourself in Myanmar's Culture</h1>
-      <p className={styles.pageSubtitle}>Discover the traditions, festivals, and historical sites that define Myanmar's rich heritage.</p>
-      <div className={styles.cultureGrid}>
-        {culturalItems.map(item => (
-          <Link key={item.id} href={`/culture/${item.slug}`} className={styles.cultureCardLink}>
-            <div className={styles.cultureCard}>
-              {item.image_url && (
-                <div className={styles.cultureImageWrapper}>
-                  <Image
-                    src={item.image_url}
-                    alt={`Image for ${item.name}`}
-                    layout="fill"
-                    objectFit="cover"
-                    className={styles.cultureImage}
-                  />
-                </div>
-              )}
-              <div className={styles.cultureInfo}>
-                <h2 className={styles.cultureName}>{item.name}</h2>
-                {item.type && (
-                  <p className={styles.cultureType}>Type: {item.type}</p>
+      <h1 className={styles.pageTitle}>Explore Myanmar Cultures</h1>
+      <p className={styles.pageSubtitle}>Discover the diverse traditions and heritage of Myanmar.</p>
+      <div className={styles.culturesGrid}>
+        {cultures.map(culture => {
+          const village = villages && culture.village_id ? villages.find(v => v.id === culture.village_id) : null;
+          const township = townships && culture.township_id ? townships.find(t => t.id === culture.township_id) : null;
+
+          return (
+            <Link key={culture.id} href={`/cultures/${culture.slug}`} className={styles.cultureCardLink}>
+              <div className={styles.cultureCard}>
+                {culture.image_url && (
+                  <div className={styles.cultureImageWrapper}>
+                    <Image
+                      src={culture.image_url}
+                      alt={`Image for ${culture.name}`}
+                      layout="fill"
+                      objectFit="cover"
+                      className={styles.cultureImage}
+                    />
+                  </div>
                 )}
-                {item.short_description && (
+                <div className={styles.cultureInfo}>
+                  <h2 className={styles.cultureName}>{culture.name}</h2>
+                  {village && (
+                    <p className={styles.cultureVillage}>Village: {village.name}</p>
+                  )}
+                   {township && (
+                    <p className={styles.cultureTownship}>Township: {township.name}</p>
+                  )}
                   <p className={styles.cultureDescription}>
-                    {item.short_description.substring(0, 100)}
-                    {item.short_description.length > 100 ? '...' : ''}
+                    {culture.description.substring(0, 100)}
+                    {culture.description.length > 100 ? '...' : ''}
                   </p>
-                )}
-                <span className={styles.viewDetailsButton}>Experience Culture &rarr;</span>
+                  <span className={styles.viewCultureButton}>Learn More &rarr;</span>
+                </div>
               </div>
-            </div>
-          </Link>
-        ))}
+            </Link>
+          );
+        })}
       </div>
     </div>
   );
 };
 
-export default CultureListPage;
+export default CultureList;
+// ****** end Section with Static Data ********//

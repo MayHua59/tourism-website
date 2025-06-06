@@ -95,12 +95,13 @@
   }
 } */
 
-/* ****** after API integration */
+/*  with Static Data */
+/* CultureList.module.css */
 .pageContainer {
   max-width: 1200px;
   margin: 0 auto;
   padding: 25px;
-  font-family: 'Arial, sans-serif';
+  font-family: 'Arial', sans-serif;
 }
 
 .pageTitle {
@@ -121,7 +122,7 @@
   margin-right: auto;
 }
 
-.cultureGrid {
+.culturesGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 25px;
@@ -174,8 +175,8 @@
   font-weight: 600;
 }
 
-.cultureType {
-  font-size: 0.9rem;
+.cultureVillage {
+  font-size: 1rem;
   color: #777;
   margin-bottom: 8px;
 }
@@ -188,7 +189,7 @@
   flex-grow: 1;
 }
 
-.viewDetailsButton {
+.viewCultureButton {
   display: inline-block;
   font-size: 0.85rem;
   color: #007bff;
@@ -199,7 +200,7 @@
   padding: 6px 0;
 }
 
-.viewDetailsButton:hover {
+.viewCultureButton:hover {
   color: #0056b3;
   text-decoration: underline;
 }
