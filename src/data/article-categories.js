@@ -1,30 +1,42 @@
 export const articleCategoriesData = [
   {
-    id: 1, 
-    name: "Cultural Heritage",
-    slug: "cultural-heritage",
-    description: "Explore Myanmar's rich history, ancient sites, and cultural practices.",
-    image_url: "https://images.unsplash.com/photo-1549999148-16576936c184?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "id": 1,
+    "name": "Cultural Heritage",
+    "slug": "cultural-heritage",
+    "image_url": "https://i.pinimg.com/736x/88/d2/c4/88d2c4d141ec9d0336e818b5cca96d35.jpg",
+    "description": "Explore Myanmar's rich cultural heritage through ancient cities, royal capitals, and living traditions that have been preserved for centuries.",
+    "is_active": true
   },
   {
-    id: 2,
-    name: "Food & Culinary",
-    slug: "food-culinary",
-    description: "Discover the diverse and delicious flavors of Burmese cuisine.",
-    image_url: "https://images.unsplash.com/photo-1604222819004-2759599c2765?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "id": 2,
+    "name": "Archaeological Sites",
+    "slug": "archaeological-sites",
+    "image_url": "https://i.pinimg.com/736x/da/e3/16/dae31697621f6dcaffc337d6eb106394.jpg",
+    "description": "Discover Myanmar's magnificent archaeological wonders including thousands of ancient temples, pagodas, and historical monuments.",
+    "is_active": true
   },
   {
-    id: 3, 
-    name: "Adventure & Nature",
-    slug: "adventure-nature",
-    description: "Embark on exciting treks, explore natural landscapes, and experience Myanmar's great outdoors.",
-    image_url: "https://images.unsplash.com/photo-1501555088652-021faa106b9b?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "id": 3,
+    "name": "Natural Wonders",
+    "slug": "natural-wonders",
+    "image_url": "https://i.pinimg.com/736x/e9/04/dd/e904dd0bcbdcd93896484df40a98d443.jpg",
+    "description": "Experience Myanmar's breathtaking natural landscapes from pristine lakes and rivers to majestic mountains and unique ecosystems.",
+    "is_active": true
   },
   {
-    id: 4, 
-    name: "Travel Guides",
-    slug: "travel-guides",
-    description: "Practical tips, itineraries, and guides for planning your trip to Myanmar.",
-    image_url: "https://images.unsplash.com/photo-1528271537-6462BF4124BA?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "id": 4,
+    "name": "Beach Destinations",
+    "slug": "beach-destinations",
+    "image_url": "https://i.pinimg.com/736x/44/05/62/4405627ff65dd0d4afd417ed1fc904a1.jpg",
+    "description": "Relax in Myanmar's beautiful beach destinations featuring white sandy shores, crystal clear waters, and tropical island paradises.",
+    "is_active": true
+  },
+  {
+    "id": 5,
+    "name": "Local Experiences",
+    "slug": "local-experiences",
+    "image_url": "https://i.pinimg.com/736x/2a/fa/83/2afa8398d9967076473fb062fef3716b.jpg",
+    "description": "Immerse yourself in authentic Myanmar culture through unique local experiences, traditional crafts, and community-based tourism.",
+    "is_active": true
   }
-];
+]

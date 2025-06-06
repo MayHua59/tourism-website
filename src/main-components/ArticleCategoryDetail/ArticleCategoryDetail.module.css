@@ -1,0 +1,159 @@
+.pageContainer {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 30px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.categoryHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+.categoryImageWrapper {
+  position: relative;
+  width: 200px;
+  height: 150px;
+  margin-right: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.categoryImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.categoryHeaderText {
+  flex: 1;
+}
+
+.categoryName {
+  font-size: 2.2em;
+  font-weight: 700;
+  color: #2d3436;
+  margin-bottom: 10px;
+}
+
+.categoryDescription {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.6;
+}
+
+.breadcrumbs {
+  margin-bottom: 20px;
+  font-size: 0.9em;
+  color: #777;
+}
+
+.breadcrumbs a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.itemsSection {
+  margin-top: 30px;
+}
+
+.sectionTitle {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.itemsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.itemCard {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.itemCard:hover {
+  transform: translateY(-5px);
+}
+
+.itemLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: 15px;
+}
+
+.itemImageWrapperSmall {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.itemInfo {
+  padding: 0 10px;
+}
+
+.itemNameSmall {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.itemCardDescription {
+  font-size: 0.95em;
+  color: #666;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.viewItemButton {
+  color: #3498db;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 10px;
+  transition: color 0.2s ease-in-out;
+}
+
+.viewItemButton:hover {
+  color: #2980b9;
+}
+
+.noItemsText {
+  font-style: italic;
+  color: #888;
+  text-align: center;
+  padding: 20px;
+}
+
+.backLink {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+  color: #2980b9;
+}

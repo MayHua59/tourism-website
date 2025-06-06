@@ -12,9 +12,9 @@
   transition: transform 0.2s ease-in-out;
 }
 
-.articleCard:hover {
+/* .articleCard:hover {
   transform: translateY(-5px);
-}
+} */
 
 .articleImageWrapper {
   position: relative;
