@@ -27,29 +27,29 @@ const CultureCategoryListPage = () => {
 
       <div className={styles.itemGrid}>
         {cultureCategoriesData.map(category => (
-          <div key={category.id} className={styles.interactiveCard}>
-            {category.image_url && (
-              <Image
-                src={category.image_url}
-                alt={`Image for ${category.name}`}
-                className={styles.interactiveImageBg}
-                fill
-                objectFit="cover"
-                priority={category.id <= 3}
-              />
-            )}
-            <Link href={`/culture-categories/${category.slug}`} className={styles.interactiveLink}>
-              <div className={styles.interactiveContent}>
-                <h2 className={styles.interactiveName}>{category.name}</h2>
-                {category.description && (
-                  <p className={styles.interactiveDescription}>
-                    {category.description.substring(0, 100)}{category.description.length > 100 ? '...' : ''}
-                  </p>
+          <Link key={category.id} href={`/culture-categories/${category.slug}`} className={styles.categoryLink}>
+            <div className={styles.interactiveCard}>
+              <div className={styles.imageWrapper}>
+                {category.image_url && (
+                  <Image
+                    src={category.image_url}
+                    alt={`Image for ${category.name}`}
+                    className={styles.categoryImage}
+                    fill
+                    objectFit="cover"
+                    priority={category.id <= 3}
+                  />
                 )}
-                <span className={styles.interactiveViewText}>Explore {category.name} &rarr;</span>
               </div>
-            </Link>
-          </div>
+              <div className={styles.categoryContent}>
+                <h2 className={styles.categoryName}>{category.name}</h2>
+                <p className={styles.categoryDescription}>
+                  {category.description ? category.description.substring(0, 100) + (category.description.length > 100 ? '...' : '') : 'No description available.'}
+                </p>
+                <span className={styles.viewMore}>Explore &rarr;</span>
+              </div>
+            </div>
+          </Link>
         ))}
       </div>
     </div>

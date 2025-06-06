@@ -64,9 +64,8 @@
 //   return <CultureCategoryListPage categories={categories} />;
 // };
 
-// export default Page;
-import CultureCategoryListPage from '../../main-components/CultureCategoryList/CultureCategoryList'
-import React from 'react'
+import React from 'react';
+import CultureCategoryListPage from '../../main-components/CultureCategoryList/CultureCategoryList';
 
 const Page = () => {
   return (
