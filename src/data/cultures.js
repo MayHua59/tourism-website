@@ -58,7 +58,7 @@ export const myanmarCulturesData = [
     "city_id": 1,
     "township_id": null,
     "village_id": null,
-    "culture_category_id": null,
+    "culture_category_id": 1,
     "deleted_at": null,
     "created_at": "2025-06-04T12:57:42.000000Z",
     "updated_at": "2025-06-04T12:57:42.000000Z"
@@ -76,7 +76,7 @@ export const myanmarCulturesData = [
     "city_id": null,
     "township_id": null,
     "village_id": null,
-    "culture_category_id": null,
+    "culture_category_id": 2,
     "deleted_at": null,
     "created_at": "2025-06-04T12:57:42.000000Z",
     "updated_at": "2025-06-04T12:57:42.000000Z"
@@ -94,7 +94,7 @@ export const myanmarCulturesData = [
     "city_id": null,
     "township_id": null,
     "village_id": null,
-    "culture_category_id": null,
+    "culture_category_id": 1,
     "deleted_at": null,
     "created_at": "2025-06-04T12:57:42.000000Z",
     "updated_at": "2025-06-04T12:57:42.000000Z"
@@ -112,7 +112,7 @@ export const myanmarCulturesData = [
     "city_id": 16,
     "township_id": null,
     "village_id": null,
-    "culture_category_id": null,
+    "culture_category_id": 2,
     "deleted_at": null,
     "created_at": "2025-06-04T12:57:42.000000Z",
     "updated_at": "2025-06-04T12:57:42.000000Z"
@@ -130,7 +130,7 @@ export const myanmarCulturesData = [
     "city_id": 1,
     "township_id": null,
     "village_id": null,
-    "culture_category_id": null,
+    "culture_category_id": 3,
     "deleted_at": null,
     "created_at": "2025-06-04T12:57:42.000000Z",
     "updated_at": "2025-06-04T12:57:42.000000Z"
@@ -148,7 +148,7 @@ export const myanmarCulturesData = [
     "city_id": 2,
     "township_id": null,
     "village_id": null,
-    "culture_category_id": null,
+    "culture_category_id": 3,
     "deleted_at": null,
     "created_at": "2025-06-04T12:57:42.000000Z",
     "updated_at": "2025-06-04T12:57:42.000000Z"
@@ -166,7 +166,7 @@ export const myanmarCulturesData = [
     "city_id": 1,
     "township_id": null,
     "village_id": null,
-    "culture_category_id": null,
+    "culture_category_id": 2,
     "deleted_at": null,
     "created_at": "2025-06-04T12:57:42.000000Z",
     "updated_at": "2025-06-04T12:57:42.000000Z"
@@ -184,7 +184,7 @@ export const myanmarCulturesData = [
     "city_id": 1,
     "township_id": null,
     "village_id": null,
-    "culture_category_id": null,
+    "culture_category_id": 1,
     "deleted_at": null,
     "created_at": "2025-06-04T12:57:42.000000Z",
     "updated_at": "2025-06-04T12:57:42.000000Z"

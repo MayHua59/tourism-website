@@ -3,30 +3,15 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from './CultureCategoryDetail.module.css'; 
+import styles from './CultureCategoryDetail.module.css';
+import { cultureCategoriesData } from '../../data/culture-categories';
+import { myanmarCulturesData } from '../../data/cultures'; 
+import Breadcrumbs from '../../components/ui/Breadcrumbs/Breadcrumbs';
 
-
-// const formatDate = (dateString) => { ... };
-
-const CultureCategoryDetailPage = ({ categoryData }) => {
-  // categoryData is expected to be an object like:
-  // {
-  //   id: "...",
-  //   slug: "...",
-  //   name: "Category Name",
-  //   description: "Category Description",
-  //   image_url: "...",
-  //   culture_items: [ // Or whatever the array of items is called
-  //     { id: "item1", name: "Culture Item 1", image_url: "...", description: "...", slug: "item1-slug" /* or url */ },
-  //     // ... other items
-  //   ]
-  // }
-
-  const currentCategory = categoryData;
-  const categoryCultureItems = categoryData.culture_items || []; 
+const CultureCategoryDetailPage = ({ slug }) => {
+  const currentCategory = cultureCategoriesData.find(d => d.slug === slug);
 
   if (!currentCategory) {
-    // Fallback, though page.js should handle "Not Found"
     return (
       <div className={styles.pageContainer} style={{ textAlign: 'center' }}>
         <h1>Culture Category Data Missing</h1>
@@ -37,8 +22,17 @@ const CultureCategoryDetailPage = ({ categoryData }) => {
     );
   }
 
+  const categoryCultures = myanmarCulturesData.filter(d => d.culture_category_id === currentCategory.id);
+  
+
+  const segments = [
+    { label: 'Culture Categories', url: '/culture-categories' },
+    { label: currentCategory.name },
+  ];
+
   return (
     <div className={styles.pageContainer}>
+      <Breadcrumbs segments={segments} />
       <header className={styles.categoryHeader}>
         {currentCategory.image_url && (
           <div className={styles.categoryImageWrapper}>
@@ -59,21 +53,14 @@ const CultureCategoryDetailPage = ({ categoryData }) => {
         </div>
       </header>
 
-      <nav className={styles.breadcrumbs}>
-        <Link href="/">Home</Link> &gt;
-        <Link href="/culture-categories">Culture Categories</Link> &gt;
-        <span>{currentCategory.name}</span>
-      </nav>
-
       <section className={styles.itemsSection}>
         <h2 className={styles.sectionTitle}>
-          Items in {currentCategory.name}
+          Cultures in {currentCategory.name}
         </h2>
-        {categoryCultureItems.length > 0 ? (
+        {categoryCultures.length > 0 ? (
           <ul className={styles.itemsGrid}>
-            {categoryCultureItems.map(item => {
-              
-              const itemLink = item.url || (item.slug ? `/culture-items/${item.slug}` : `/culture-items/${item.id}`);
+            {categoryCultures.map(item => {
+              const itemLink = `/cultures/${item.slug}`; 
               return (
                 <li key={item.id} className={styles.itemCard}>
                   <Link href={itemLink} className={styles.itemLink}>
@@ -89,9 +76,9 @@ const CultureCategoryDetailPage = ({ categoryData }) => {
                     )}
                     <div className={styles.itemInfo}>
                       <h3 className={styles.itemNameSmall}>{item.name}</h3>
-                      {item.short_description && ( 
+                      {item.description && (
                         <p className={styles.itemCardDescription}>
-                          {item.short_description.substring(0, 80)}{item.short_description.length > 80 ? '...' : ''}
+                          {item.description.substring(0, 80)}{item.description.length > 80 ? '...' : ''}
                         </p>
                       )}
                       <span className={styles.viewItemButton}>View Details &rarr;</span>
@@ -103,7 +90,7 @@ const CultureCategoryDetailPage = ({ categoryData }) => {
           </ul>
         ) : (
           <p className={styles.noItemsText}>
-            No items currently listed for the "{currentCategory.name}" category.
+            No cultures currently listed for the "{currentCategory.name}" category.
           </p>
         )}
       </section>
