@@ -1,5 +1,11 @@
 const navItems = [
      {
+    id: "home",
+    label: "Home",
+    href: "/", 
+    
+  },
+     {
     id: "destinations",
     label: "Destinations",
     href: "/destinations", // This can be a link to an overview page
