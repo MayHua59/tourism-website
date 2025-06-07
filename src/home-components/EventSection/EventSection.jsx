@@ -1,6 +1,6 @@
 'use client';
-import { eventsData } from '../data/events';
-import EventCard from './EventCard';
+import { eventsData } from '../../data/events';
+import EventCard from '../Cards/EventCard/EventCard';
 import styles from './EventSection.module.css';
 
 const EventsSection = () => {

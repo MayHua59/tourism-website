@@ -1,5 +1,5 @@
-import { myanmarCulturesData } from '../data/cultures'; 
-import CultureCard from './CultureCard';
+import { myanmarCulturesData } from '../../data/cultures'; 
+import CultureCard from '../Cards/CultureCard/CultureCard';
 import styles from './CultureSection.module.css';
 
 const CultureSection = () => {

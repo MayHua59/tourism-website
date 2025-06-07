@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 import styles from './Navbar.module.css';
-import  navItems  from '../data/navigation'; 
+import  navItems  from '../../../data/navigation'; 
 import Image from "next/image"; 
 
 const Navbar = () => {

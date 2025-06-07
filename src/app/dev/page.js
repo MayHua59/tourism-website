@@ -1,10 +1,10 @@
-import ArticleSection from "@/components/ArticleSection";
-import Carousel from "@/components/Carousel";
+import ArticleSection from "@/home-components/ArticleSection/ArticleSection";
+import Carousel from "@/home-components/CarouselSection/CarouselSection";
 // import HeroSection from "@/components/HeroSection";
 // import HeroSectionDev from "@/components/HeroSectionDev";
-import DestinationByRegion from "@/components/DestinationByRegion";
-import EventsSection from "@/components/EventSection";
-import CultureSection from "@/components/CultureSection";
+import DestinationByRegion from "@/home-components/DestinationByRegion/DestinationByRegion";
+import EventsSection from "@/home-components/EventSection/EventSection";
+import CultureSection from "@/home-components/CultureSection/CultureSection";
 // import HeroSection from "../components/HeroSection";
 
 // Let's used server-side rendering for the HeroSection

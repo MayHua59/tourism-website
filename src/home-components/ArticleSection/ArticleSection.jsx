@@ -1,5 +1,5 @@
-import { articlesData } from '../data/articles'; 
-import ArticleCard from './ArticleCard';
+import { articlesData } from '../../data/articles'; 
+import ArticleCard from '../Cards/ArticleCard/ArticleCard';
 import styles from './ArticleSection.module.css';
 
 import React from 'react'

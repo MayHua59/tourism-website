@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react'; 
-import {regionsData} from '../data/regions'; // 
-import CityCard from './CityCard';
+import {regionsData} from '../../data/regions'; // 
+import CityCard from '../Cards/CityCard/CityCard';
 import styles from './DestinationByRegion.module.css';
 
 
