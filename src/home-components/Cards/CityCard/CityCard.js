@@ -5,18 +5,25 @@ import styles from './CityCard.module.css';
 
 
 const CityCard = ({city}) => {
+  const shortDescription = city.description.split(' ').slice(0, 10).join(' ') + (city.description.split(' ').length > 10 ? '...' : '');
   return (
-    <Link href={city.url} passHref>
-        <div className={styles.card}>
-<div className={styles.imageContainer}>
-<Image src={city.image} alt={city.name} layout='fill' objectFit='cover'/>
-</div>
-<div className={styles.cardContent}>
-    <h3 className={styles.cityName}>{city.name}</h3>
-    {city.description && <p className={styles.cityDescription}>{city.description}</p>}
-</div>
+    <div className={styles.cityCard}>
+      <Link href={`/destinations/${city.slug}`} className={styles.cityLink}>
+        <div className={styles.imageWrapper}>
+          <Image
+            src={city.image_url}
+            alt={city.name}
+            layout="fill"
+            objectFit="cover"
+            className={styles.cityImage}
+          />
         </div>
-    </Link>
+        <div className={styles.cityInfo}>
+          <h3 className={styles.cityName}>{city.name}</h3>
+          {/* <p className={styles.cityDescription}>{shortDescription}</p> */}
+        </div>
+      </Link>
+    </div>
   )
 }
 
