@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
         <header>
           <Navbar/>
         </header>
-        <main className="main-container">
+        <main className="main-container content-after-navbar">
           {children}
         </main>
         <Footer/>

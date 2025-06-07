@@ -8,8 +8,25 @@ import Image from "next/image";
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [openDropdownKey, setOpenDropdownKey] = useState(null); // To Track which dropdown is open on mobile
-    const navRef = useRef(null); // Ref for navbar to detect outside clicks
+    const [openDropdownKey, setOpenDropdownKey] = useState(null); 
+    const navRef = useRef(null); 
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     // For Mobile View
     const toggleMobileMenu = () => {
@@ -48,7 +65,7 @@ const Navbar = () => {
     }, [isMobileMenuOpen, navRef]); 
 
   return (
-    <nav className={`${styles.navbar} bg-gray-800`} ref={navRef}>
+    <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''} bg-gray-800`} ref={navRef}>
         <div className={styles.logo}>
             <Link href="/" onClick={closeAllMenus}>
             

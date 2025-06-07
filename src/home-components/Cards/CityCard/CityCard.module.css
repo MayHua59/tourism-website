@@ -30,7 +30,8 @@
 .cityName {
   font-size: 1.35rem;
   font-weight: 700;
-  margin-bottom: 0.6rem;
+  /* margin-bottom: 0.6rem; */
+  margin-top: 0.6rem;
   color: #2c3e50;
 
 }

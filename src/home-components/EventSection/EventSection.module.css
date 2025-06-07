@@ -65,20 +65,20 @@
 
 
 
-.viewAllButtonContainer {
+.viewAllContainer {
   text-align: center;
   margin-top: 2rem;
 }
 
 .viewAllButton {
+  display: inline-block;
+  padding: 0.75rem 2rem;
   background-color: #007bff; 
   color: white;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 0.375rem;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
 }
 
 .viewAllButton:hover {

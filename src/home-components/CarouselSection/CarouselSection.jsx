@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image'; 
 import styles from './CarouselSection.module.css';
-import  carouselItems  from '../../data/carousel';
+import  carouselItems  from '../../data/homepage-data/carousel';
 
 
 const Carousel = () => {
@@ -25,7 +25,7 @@ const Carousel = () => {
     useEffect(()=>{
         const timer = setTimeout(()=>{
             goToNext()
-        }, 5000);
+        }, 3000);
         return () => clearTimeout(timer)
 
     },[currentIndex])

@@ -42,3 +42,22 @@
     grid-template-columns: 1fr; 
   }
 }
+.viewAllContainer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.viewAllButton {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background-color: #007bff; 
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.viewAllButton:hover {
+  background-color: #0056b3; 
+}

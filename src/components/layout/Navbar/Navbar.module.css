@@ -2,13 +2,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1F2937;
-  padding: 1rem 2rem;
+  /* background-color: #1F2937; */
+  background-color: rgba(31, 41, 55, 1);
+  padding: 0.5rem 2rem;
   color: white;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
-  /* position: sticky; */
-  /* top: 0; */
+  transition: background-color 0.3s ease;
+}
+.navbar.scrolled {
+  background-color: rgba(31, 41, 55, 0.8); 
 }
 
 .logo a {

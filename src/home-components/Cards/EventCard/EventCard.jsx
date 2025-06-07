@@ -27,6 +27,7 @@ const EventCard = ({ event }) => {
   const displayDate = formatDate(event.date, event.endDate);
 
   return (
+    <Link href={`/events/${event.slug}`} passHref>
     <div className={styles.card}>
       <div className={styles.imageContainer}>
         <Image
@@ -36,8 +37,8 @@ const EventCard = ({ event }) => {
           objectFit="cover"
         />
         <div className={styles.dateBadge}>
-          <span className={styles.dateMonth}>{new Date(event.date).toLocaleDateString('en-US', { month: 'short' }).toUpperCase()}</span>
-          <span className={styles.dateDay}>{new Date(event.date).getDate()}</span>
+          <span className={styles.dateMonth}>{new Date(event.start_date).toLocaleDateString('en-US', { month: 'short' }).toUpperCase()}</span>
+          <span className={styles.dateDay}>{new Date(event.start_date).getDate()}</span>
         </div>
       </div>
       <div className={styles.cardContent}>
@@ -51,6 +52,7 @@ const EventCard = ({ event }) => {
         )}
       </div>
     </div>
+    </Link>
   );
 };
 

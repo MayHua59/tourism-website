@@ -1,7 +1,8 @@
 'use client';
-import { eventsData } from '../../data/events';
+import { eventsData } from '../../data/homepage-data/events';
 import EventCard from '../Cards/EventCard/EventCard';
 import styles from './EventSection.module.css';
+import Link from 'next/link';
 
 const EventsSection = () => {
   if (!eventsData || eventsData.length === 0) {
@@ -9,7 +10,7 @@ const EventsSection = () => {
   }
 
   //  Sort events by date
-  const sortedEvents = [...eventsData].sort((a, b) => new Date(a.date) - new Date(b.date));
+  const sortedEvents = [...eventsData].sort((a, b) => new Date(a.start_date) - new Date(b.end_date));
 
   return (
     <section className={`${styles.eventsSectionContainer}`}>
@@ -17,19 +18,21 @@ const EventsSection = () => {
       
       <div className={styles.scrollContainer}>
         <div className={styles.eventsGrid}>
-          {/* {sortedEvents.map((event) => (
+          {sortedEvents.map((event) => (
             <div key={event.id || event.name} className={styles.eventItem}>
               <EventCard event={event} />
             </div>
-          ))} */}
+          ))}
         </div>
       </div>
-      {/* View All Events */}
-      {/* 
-      <div className={styles.viewAllButtonContainer}>
-        <button className={styles.viewAllButton}>View All Events</button>
-      </div> 
-      */}
+      
+      
+      <div className={styles.viewAllContainer}>
+        <Link href="/articles" className={styles.viewAllButton}>
+          View All Events
+        </Link>
+      </div>
+     
     </section>
   );
 };
