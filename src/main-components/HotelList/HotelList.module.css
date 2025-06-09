@@ -1,0 +1,17 @@
+.hotelListContainer {
+  padding: 20px;
+  text-align: center;
+}
+
+.hotelListTitle {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.hotelGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 20px;
+  justify-content: center;
+}

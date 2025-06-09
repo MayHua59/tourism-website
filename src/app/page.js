@@ -4,6 +4,7 @@ import HeroSection from "../home-components/HeroSection/HeroSection";
 import DestinationByRegion from "../home-components/DestinationByRegion/DestinationByRegion";
 import EventsSection from "../home-components/EventSection/EventSection";
 import CultureSection from "../home-components/CultureSection/CultureSection";
+import HotelSection from "../home-components/HotelSection/HotelSection";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <ArticleSection/>
       <EventsSection/>
       <CultureSection/>
+      <HotelSection/>
     </div>
   );
 }
