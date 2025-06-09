@@ -44,10 +44,10 @@ const navItems = [
     href: "/plan-your-trip",
     dropdown: [
         // { label: "Visa Information", href: "/plan-your-trip/visa" },
-        { label: "Hotels", href: "/plan-your-trip/hotels" },
+        { label: "Hotels", href: "/hotels" },
         // { label: "Accommodation", href: "/plan-your-trip/accommodation" },
-        { label: "Transportation", href: "/plan-your-trip/transportation" },
-        { label: "Restaurants", href: "/plan-your-trip/restaurants" },
+        { label: "Transportation", href: "/transportations" },
+        { label: "Restaurants", href: "/restaurants" },
     ]
   },
   {
