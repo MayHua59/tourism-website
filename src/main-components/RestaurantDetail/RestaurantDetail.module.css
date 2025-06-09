@@ -1,0 +1,125 @@
+.restaurantDetailPage {
+  padding: 30px;
+  max-width: 1200px;
+  margin: 20px auto;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: grid; 
+  grid-template-columns: 2fr 1fr; 
+  grid-gap: 30px;
+}
+
+.restaurantName {
+  font-size: 3rem;
+  color: #444;
+  text-align: left; 
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  grid-column: 1 / span 2; 
+}
+
+.imageGallery {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  grid-column: 1; 
+  margin: 0 auto 20px 0;
+}
+
+.heroImage {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.restaurantOverview {
+  display: flex;
+  justify-content: flex-start; 
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  grid-column: 1; 
+}
+
+.cuisine,
+.location {
+  font-size: 1.2rem;
+  color: #777;
+  margin: 0 15px 0 0; 
+  display: flex;
+  align-items: center;
+}
+
+.cuisine svg,
+.location svg {
+  margin-right: 8px;
+  color: #e44d26;
+}
+
+.restaurantDescription {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  grid-column: 1; 
+}
+
+.restaurantDescription h2 {
+  font-size: 2rem;
+  color: #34495e;
+  margin-bottom: 15px;
+}
+
+.restaurantDescription p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.sidebar {
+  grid-column: 2; 
+  position: relative; 
+}
+
+.menuSection,
+.hoursSection,
+.contactSection,
+.reservationSection {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.menuSection h2,
+.hoursSection h2,
+.contactSection h2,
+.reservationSection h2 {
+  font-size: 1.8rem;
+  color: #34495e;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.hoursSection h2 svg {
+  margin-right: 8px;
+  color: #e44d26;
+}
+
+.contactSection p,
+.reservationSection p {
+  font-size: 1.1rem;
+  color: #555;
+  display: flex;
+  align-items: center;
+}
+
+.contactSection p svg {
+  margin-right: 8px;
+  color: #e44d26;
+}
