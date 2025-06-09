@@ -69,7 +69,7 @@
 
 // export default regionsData
 
-export const regionsData = [
+const regionsData = [
   {
     "id": 1,
     "name": "Central Heartland",
@@ -131,3 +131,4 @@ export const regionsData = [
     "updated_at": "2025-06-04T12:57:41.000000Z"
   }
 ]
+export default regionsData;

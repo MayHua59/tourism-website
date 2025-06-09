@@ -1,7 +1,7 @@
  const carouselItems = [
   {
     id: "slide1",
-    image_url: "https://images.unsplash.com/photo-1584412370502-1dd6d55d1060?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image_url: "https://images.unsplash.com/photo-1580835246682-71506a0c3654?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     caption: "Discover breathtaking landscapes around the world.",
     url: "/destinations",
   },

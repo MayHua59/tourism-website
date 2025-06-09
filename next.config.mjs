@@ -8,6 +8,12 @@ const nextConfig = {
         port: '',
         pathname: '/**', // Allows any path under this hostname
       },
+       {
+        protocol: 'https',
+        hostname: 'kr.pinterest.com',
+        port: '',
+        pathname: '/**',
+      },
       {
         protocol: 'https',
         hostname: 'commondatastorage.googleapis.com',
