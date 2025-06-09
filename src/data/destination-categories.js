@@ -51,7 +51,7 @@
 //   }
 // ]
 
-export const destination_categories = [
+ const destination_categories = [
   {
     "id": 1,
     "name": "Beaches",
@@ -173,3 +173,4 @@ export const destination_categories = [
     "updated_at": "2025-06-06T12:00:11.000000Z"
   }
 ]
+export default destination_categories;

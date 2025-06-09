@@ -70,7 +70,7 @@
 // *** start Section with Static Data ***//
 import React from 'react';
 import EventList from '../../main-components/EventList/EventList';
-import { eventsData } from '../../data/events'; 
+import  eventsData  from '../../data/events'; 
 
 // export async function generateMetadata() {
 //   return {

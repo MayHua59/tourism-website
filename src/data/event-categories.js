@@ -1,4 +1,4 @@
-export const eventCategoriesData = [
+const eventCategoriesData = [
   {
     id: 1,
     name: "New Year Festivals",
@@ -29,3 +29,5 @@ export const eventCategoriesData = [
   }
   
 ];
+
+export default eventCategoriesData;

@@ -1,6 +1,6 @@
 import React from 'react';
 import ArticleCategoryList from '../../main-components/ArticleCategoryList/ArticleCategoryList';
-import { articleCategoriesData } from '../../data/article-categories'; 
+import  articleCategoriesData  from '../../data/article-categories'; 
 
 
 

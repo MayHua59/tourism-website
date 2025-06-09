@@ -79,7 +79,7 @@
 //   }
 // ];
 
-export const citiesData = [
+const citiesData = [
   {
     "id": 1,
     "name": "Yangon",
@@ -361,3 +361,5 @@ export const citiesData = [
     "updated_at": "2025-06-04T12:57:41.000000Z"
   }
 ]
+
+export default citiesData;

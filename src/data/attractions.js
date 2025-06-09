@@ -1,4 +1,4 @@
-export const attractions = [
+const attractions = [
     {
         "id": 1,
         "name": "Shwedagon Pagoda",
@@ -170,3 +170,5 @@ export const attractions = [
         "updated_at": "2025-05-30T17:42:12.000000Z"
     }
 ];
+
+export default attractions;

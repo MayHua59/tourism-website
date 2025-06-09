@@ -1,4 +1,4 @@
-export const hotelsData = [
+const hotelsData = [
   {
     id: 1,
     name: 'The Strand, Yangon',
@@ -65,3 +65,4 @@ export const hotelsData = [
   
   
 ];
+export default hotelsData;

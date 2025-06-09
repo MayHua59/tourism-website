@@ -1,4 +1,4 @@
-export const destinationsData = [
+ const destinationsData = [
   {
     "id": 1,
     "name": "Shwedagon Pagoda",
@@ -180,3 +180,4 @@ export const destinationsData = [
     "updated_at": "2025-06-06T12:00:11.000000Z"
   }
 ]
+export default destinationsData;

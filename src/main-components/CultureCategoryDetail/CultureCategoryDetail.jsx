@@ -4,8 +4,8 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './CultureCategoryDetail.module.css';
-import { cultureCategoriesData } from '../../data/culture-categories';
-import { myanmarCulturesData } from '../../data/cultures'; 
+import  cultureCategoriesData from '../../data/culture-categories';
+import  myanmarCulturesData from '../../data/cultures'; 
 import Breadcrumbs from '../../components/ui/Breadcrumbs/Breadcrumbs';
 
 const CultureCategoryDetailPage = ({ slug }) => {

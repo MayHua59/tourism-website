@@ -30,7 +30,7 @@
   
 // ];
 
-export const cultureCategoriesData = [
+const cultureCategoriesData = [
   {
     "id": 1,
     "name": "Traditional Festivals & Celebrations",
@@ -92,3 +92,5 @@ export const cultureCategoriesData = [
     "updated_at": "2025-06-06T12:00:11.000000Z"
   }
 ]
+
+export default cultureCategoriesData;

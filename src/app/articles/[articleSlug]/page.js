@@ -1,6 +1,6 @@
 import React from 'react';
 import ArticleDetailPage from '../../../main-components/ArticleDetail/ArticleDetail';
-import { articlesData } from '../../../data/articles';
+import  articlesData  from '../../../data/articles';
 
 // export async function generateMetadata({ params, searchParams }, parent) {
 //   // read route params

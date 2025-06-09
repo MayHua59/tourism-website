@@ -72,7 +72,7 @@
 // export default Page;
 // **** start Section with Static Data ***//
 import React from 'react';
-import { destinationsData } from '../../data/destinations';
+import  destinationsData  from '../../data/destinations';
 import DestinationListPage from '../../main-components/DestinationList/DestinationList';
 
 const Page = () => {

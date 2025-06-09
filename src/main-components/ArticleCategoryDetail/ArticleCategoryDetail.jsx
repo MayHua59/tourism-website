@@ -3,8 +3,8 @@ import React from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './ArticleCategoryDetail.module.css';
-import { articleCategoriesData } from '../../data/article-categories';
-import { articlesData } from '../../data/articles';
+import  articleCategoriesData  from '../../data/article-categories';
+import  articlesData  from '../../data/articles';
 import Breadcrumbs from '../../components/ui/Breadcrumbs/Breadcrumbs';
 const ArticleCategoryDetailPage = ({slug}) => {
     const currentCategory = articleCategoriesData.find(d => d.slug === slug);

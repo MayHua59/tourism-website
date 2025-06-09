@@ -1,5 +1,5 @@
 'use client';
-import { eventsData } from '../../data/homepage-data/events';
+import  eventsData  from '../../data/homepage-data/events';
 import EventCard from '../Cards/EventCard/EventCard';
 import styles from './EventSection.module.css';
 import Link from 'next/link';

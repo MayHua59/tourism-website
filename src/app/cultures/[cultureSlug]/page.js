@@ -106,11 +106,11 @@
 // ******* end Section with API ******//
 // *** start Section with Static Data *****//
 import React from 'react';
-import { myanmarCulturesData } from '../../../data/cultures';
+import  myanmarCulturesData  from '../../../data/cultures';
 import CultureDetail from '../../../main-components/CultureDetail/CultureDetail'; 
-import { citiesData } from '../../../data/cities';
-import { townshipsData } from '../../../data/townships';
-import { villagesData } from '../../../data/villages';
+import  citiesData  from '../../../data/cities';
+import  townshipsData  from '../../../data/townships';
+import  villagesData  from '../../../data/villages';
 const Page = ({ params }) => {
   const { cultureSlug } = params;
   const culture = myanmarCulturesData.find((culture) => culture.slug === cultureSlug);

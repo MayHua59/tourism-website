@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { articlesData } from '../../data/articles';
+import  articlesData  from '../../data/articles';
 import ArticleCard from '../../components/ui/ArticleCard/ArticleCard';
 import styles from './ArticleList.module.css';
 

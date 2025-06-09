@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { cultureCategoriesData } from '../../data/culture-categories';
+import  cultureCategoriesData  from '../../data/culture-categories';
 import styles from './CultureCategoryList.module.css';
 
 const CultureCategoryListPage = () => {

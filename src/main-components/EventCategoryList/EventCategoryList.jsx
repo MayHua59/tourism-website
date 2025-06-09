@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { eventCategoriesData } from '../../data/event-categories';
+import  eventCategoriesData  from '../../data/event-categories';
 import styles from './EventCategoryList.module.css';
 import EventCategoryCard from '../../components/ui/EventCategoryCard/EventCategoryCard';
 

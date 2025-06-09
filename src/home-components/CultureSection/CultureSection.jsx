@@ -1,4 +1,4 @@
-import { myanmarCulturesData } from '../../data/homepage-data/cultures'; 
+import  myanmarCulturesData  from '../../data/homepage-data/cultures'; 
 import CultureCard from '../Cards/CultureCard/CultureCard';
 import styles from './CultureSection.module.css';
 import Link from 'next/link';

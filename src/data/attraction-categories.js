@@ -1,4 +1,4 @@
-export const attraction_categories = [
+const attraction_categories = [
   {
     id: 1,
     name: "Pagodas & Temples",
@@ -50,3 +50,5 @@ export const attraction_categories = [
   }
   
 ];
+
+export default attraction_categories;

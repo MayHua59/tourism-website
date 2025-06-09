@@ -1,5 +1,5 @@
 import React from 'react';
-import { hotelsData } from '../../data/hotels';
+import  hotelsData  from '../../data/hotels';
 import styles from './HotelDetail.module.css';
 import Image from 'next/image';
 import Breadcrumbs from '../../components/ui/Breadcrumbs/Breadcrumbs';

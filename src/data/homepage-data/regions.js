@@ -1,4 +1,4 @@
-export const regionsData = [
+ const regionsData = [
   {
     "id": 1,
     "name": "Central Heartland",
@@ -299,3 +299,4 @@ export const regionsData = [
     ]
   }
 ]
+export default regionsData;

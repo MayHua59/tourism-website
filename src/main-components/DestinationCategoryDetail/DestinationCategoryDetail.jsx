@@ -114,8 +114,8 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './DestinationCategoryDetail.module.css';
-import { destination_categories } from '../../data/destination-categories';
-import { destinationsData } from '../../data/destinations';
+import  destination_categories  from '../../data/destination-categories';
+import  destinationsData  from '../../data/destinations';
 import Breadcrumbs from '../../components/ui/Breadcrumbs/Breadcrumbs';
 
 const DestinationCategoryDetailPage = ({slug}) => {

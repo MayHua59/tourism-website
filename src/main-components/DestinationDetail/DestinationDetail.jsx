@@ -157,7 +157,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { destinationsData } from '../../data/destinations';
+import  destinationsData  from '../../data/destinations';
 import styles from './DestinationDetail.module.css';
 import Breadcrumbs from '../../components/ui/Breadcrumbs/Breadcrumbs';
 

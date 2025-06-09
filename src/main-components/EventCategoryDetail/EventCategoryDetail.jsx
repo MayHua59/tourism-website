@@ -143,8 +143,8 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './EventCategoryDetail.module.css';
-import { eventCategoriesData } from '../../data/event-categories';
-import { eventsData } from '../../data/events';
+import  eventCategoriesData  from '../../data/event-categories';
+import  eventsData  from '../../data/events';
 import Breadcrumbs from '../../components/ui/Breadcrumbs/Breadcrumbs';
 
 const EventCategoryDetailPage = ({slug}) => {

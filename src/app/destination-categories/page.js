@@ -68,7 +68,7 @@
 // export default Page;
 import React from 'react';
 import DestinationCategoryListPage from '../../main-components/DestinationCategoryList/DestinationCategoryList';
-import { destination_categories } from '../../data/destination-categories';
+import  destination_categories  from '../../data/destination-categories';
 
 const Page = () => {
   return (

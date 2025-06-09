@@ -1,4 +1,4 @@
-export const articleCategoriesData = [
+ const articleCategoriesData = [
   {
     "id": 1,
     "name": "Cultural Heritage",
@@ -40,3 +40,4 @@ export const articleCategoriesData = [
     "is_active": true
   }
 ]
+export default articleCategoriesData;

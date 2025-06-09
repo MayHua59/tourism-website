@@ -37,7 +37,7 @@
 //   return Array.from(allCities).sort();
 // };
 
-export const articlesData = [
+ const articlesData = [
   {
     "id": 1,
     "name": "Exploring Yangon: The Gateway to Myanmar",
@@ -119,3 +119,4 @@ export const articlesData = [
   
  
 ]
+export default articlesData;

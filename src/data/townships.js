@@ -1,4 +1,4 @@
-export const townshipsData = [
+const townshipsData = [
   {
     "id": 1,
     "name": "Hpa-An",
@@ -260,3 +260,4 @@ export const townshipsData = [
     "updated_at": "2025-06-04T12:57:41.000000Z"
   }
 ]
+export default townshipsData;

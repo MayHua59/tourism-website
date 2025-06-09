@@ -1,6 +1,6 @@
 import React from 'react';
 import HotelCard from '../../components/ui/HotelCard/HotelCard'; 
-import { hotelsData } from '../../data/hotels'; 
+import  hotelsData  from '../../data/hotels'; 
 import styles from './HotelList.module.css'; 
 const HotelListPage = () => {
   

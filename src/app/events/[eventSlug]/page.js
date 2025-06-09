@@ -112,11 +112,11 @@
 // ** start with Static Data ***////
 import React from 'react';
 import EventDetailPage from '../../../main-components/EventDetail/EventDetail';
-import { eventsData } from '../../../data/events'; 
-import { regionsData } from '../../../data/regions';
-import { citiesData } from '../../../data/cities';
-import { townshipsData } from '../../../data/townships';
-import { villagesData } from '../../../data/villages';
+import  eventsData  from '../../../data/events'; 
+import  regionsData  from '../../../data/regions';
+import  citiesData  from '../../../data/cities';
+import  townshipsData  from '../../../data/townships';
+import  villagesData  from '../../../data/villages';
 
 // export async function generateStaticParams() {
 //   return eventsData.map((event) => ({

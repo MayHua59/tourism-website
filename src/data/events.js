@@ -47,7 +47,7 @@
   
 // ];
 
-export const eventsData = [
+ const eventsData = [
   {
     "id": 1,
     "name": "Thingyan Water Festival",
@@ -249,3 +249,4 @@ export const eventsData = [
     "updated_at": "2025-06-04T12:57:42.000000Z"
   }
 ]
+export default eventsData;

@@ -1,4 +1,4 @@
-import { articlesData } from '../../data/homepage-data/articles'; 
+import  articlesData  from '../../data/homepage-data/articles'; 
 import ArticleCard from '../Cards/ArticleCard/ArticleCard';
 import styles from './ArticleSection.module.css';
 import Link from 'next/link';

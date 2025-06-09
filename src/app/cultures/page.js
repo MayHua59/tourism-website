@@ -75,9 +75,9 @@
 // src/app/cultures/page.js
 import React from 'react';
 import CultureList from '../../main-components/CultureList/CultureList';
-import { myanmarCulturesData } from '../../data/cultures';
-import { villagesData } from '../../data/villages';
-import { townshipsData } from '../../data/townships'; 
+import  myanmarCulturesData  from '../../data/cultures';
+import  villagesData  from '../../data/villages';
+import  townshipsData  from '../../data/townships'; 
 
 export async function generateMetadata() {
   return {

@@ -1,4 +1,4 @@
-export const villagesData = [
+ const villagesData = [
   {
     "id": 1,
     "name": "Shwe Taung Village",
@@ -140,3 +140,5 @@ export const villagesData = [
     "is_active": true
   }
 ];
+
+export default villagesData;
