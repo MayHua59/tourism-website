@@ -46,7 +46,7 @@ const TransportationSection = () => {
       </div>
 
        <div className={styles.viewAllContainer}>
-        <Link href="/articles" className={styles.viewAllButton}>
+        <Link href="/transportations" className={styles.viewAllButton}>
           Explore All Transportation
         </Link>
       </div>

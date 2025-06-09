@@ -1,0 +1,118 @@
+.transportationPage {
+  padding: 30px;
+  max-width: 1200px;
+  margin: 20px auto;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); */
+}
+
+.pageTitle {
+  font-size: 2.8rem;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.sectionHeading {
+  font-size: 2.2rem;
+  color: #34495e;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ecf0f1;
+  padding-bottom: 10px;
+}
+
+.transportMode {
+  margin-bottom: 25px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  transition: all 0.3s ease;
+}
+
+.transportMode:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.transportIcon {
+  font-size: 2.5rem;
+  color: #3498db;
+  margin-bottom: 15px;
+}
+
+.transportMode h3 {
+  font-size: 1.8rem;
+  color: #2980b9;
+  margin-bottom: 10px;
+}
+
+.transportMode p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+.transportMode ul {
+  list-style: disc;
+  margin-left: 25px;
+  margin-top: 10px;
+}
+
+.transportMode li {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.visaInfo {
+  margin-top: 20px;
+  font-style: italic;
+  color: #777;
+}
+
+.visaInfo strong {
+  font-weight: bold;
+  color: #333;
+}
+
+.motorbikeWarning {
+  margin-top: 20px;
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.visaInfoContainer {
+  margin-top: 20px;
+}
+
+.visaInfo {
+  font-style: italic;
+  color: #777;
+  margin-bottom: 5px; /* Add some spacing between the paragraph and the link */
+}
+
+.visaInfo strong {
+  font-weight: bold;
+  color: #333;
+}
+
+.visaLink {
+  color: #0070f3; /* Or your preferred link color */
+  text-decoration: none;
+}
+
+.visaLink:hover {
+  text-decoration: underline;
+}
