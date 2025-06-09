@@ -1,0 +1,75 @@
+.transportationSection {
+  padding: 20px;
+  text-align: center;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  color: #343a40;
+  margin-bottom: 20px;
+}
+
+.introText {
+  font-size: 1.1rem;
+  color: #6c757d;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.transportModes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.transportMode {
+  width: 280px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.transportIcon {
+  font-size: 3rem;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.transportMode h3 {
+  font-size: 1.5rem;
+  color: #343a40;
+  margin-bottom: 10px;
+}
+
+.transportMode p {
+  font-size: 1rem;
+  color: #6c757d;
+  line-height: 1.5;
+}
+
+.viewAllContainer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.viewAllButton {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background-color: #007bff; 
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.viewAllButton:hover {
+  background-color: #0056b3; 
+}

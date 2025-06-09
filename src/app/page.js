@@ -5,6 +5,7 @@ import DestinationByRegion from "../home-components/DestinationByRegion/Destinat
 import EventsSection from "../home-components/EventSection/EventSection";
 import CultureSection from "../home-components/CultureSection/CultureSection";
 import HotelSection from "../home-components/HotelSection/HotelSection";
+import TransportationSection from "../home-components/TransportationSection/TransportationSection";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <EventsSection/>
       <CultureSection/>
       <HotelSection/>
+      <TransportationSection/>
     </div>
   );
 }
