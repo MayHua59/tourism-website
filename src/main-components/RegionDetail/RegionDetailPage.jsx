@@ -1,7 +1,7 @@
-import { getRegionById } from '@/utils/getItem'; 
+import { getRegionById } from '../../utils/getItem'; 
 import Image from 'next/image';
 import Link from 'next/link';
-import regionsData from '@/data/regions';
+import regionsData from '../../data/regions';
 import styles from './RegionDetailPage.module.css'
 
 import React from 'react'
