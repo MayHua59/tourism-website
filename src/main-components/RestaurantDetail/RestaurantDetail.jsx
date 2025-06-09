@@ -15,12 +15,12 @@ const RestaurantDetailPage = ({ slug }) => {
    const breadcrumbSegments = [
    
     { label: 'Restaurants', url: '/restaurants' },
-    { label: restaurant.name, url: `/restaurants/${slug}` },
+    { label: restaurant.name},
   ];
 
   return (
     <div className={styles.restaurantDetailPage}>
-        {/* <Breadcrumbs segments={breadcrumbSegments}/> */}
+        <Breadcrumbs segments={breadcrumbSegments}/>
       <h1 className={styles.restaurantName}>{restaurant.name}</h1>
 
       <div className={styles.imageGallery}>

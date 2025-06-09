@@ -2,10 +2,16 @@ import React from 'react';
 import styles from './TransportationList.module.css';
 import Link from 'next/link';
 import { FaPlane, FaBus, FaTrain, FaShip, FaCar } from 'react-icons/fa';
+import Breadcrumbs from '../../components/ui/Breadcrumbs/Breadcrumbs';
 
 const TransportationListPage = () => {
+  const breadcrumbSegments = [
+   
+    { label: 'Transportation'}
+  ];
   return (
     <div className={styles.transportationPage}>
+      <Breadcrumbs segments={breadcrumbSegments}/>
       <h1 className={styles.pageTitle}>Transportation in Myanmar</h1>
 
       {/* I. Getting To Myanmar (International Arrivals) */}

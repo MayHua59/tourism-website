@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import styles from './RestaurantList.module.css';
 import Link from 'next/link';
 import restaurantsData from '../../data/restaurants'; 
+import Breadcrumbs from '../../components/ui/Breadcrumbs/Breadcrumbs';
 
 const RestaurantListPage = () => {
   // State for filters and sorting
@@ -33,8 +34,14 @@ const RestaurantListPage = () => {
   const locations = [...new Set(restaurantsData.map((restaurant) => restaurant.location))];
   const cuisines = [...new Set(restaurantsData.map((restaurant) => restaurant.cuisine))];
 
+  const breadcrumbSegments = [
+   
+    { label: 'Restaurants'}
+  ];
+
   return (
     <div className={styles.restaurantListPage}>
+      <Breadcrumbs segments={breadcrumbSegments}/>
       <h1 className={styles.pageTitle}>All Restaurants in Myanmar</h1>
 
       {/* Filtering and Sorting Options */}
