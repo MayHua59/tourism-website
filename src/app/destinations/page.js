@@ -70,16 +70,30 @@
 // };
 
 // export default Page;
-// **** start Section with Static Data ***//
+
+
+
+// import React from 'react';
+// // import  destinationsData  from '../../data/destinations';
+// import DestinationListPage from '../../main-components/DestinationList/DestinationList';
+
+// const Page = () => {
+//   return (
+//     <DestinationListPage/>
+//   )
+// }
+
+// export default Page
+
 import React from 'react';
-import  destinationsData  from '../../data/destinations';
-import DestinationListPage from '../../main-components/DestinationList/DestinationList';
-
-const Page = () => {
+import DestinationListClient from './DestinationListClient'; 
+const DestinationsPage = () => {
   return (
-    <DestinationListPage destinations={destinationsData}/>
-  )
-}
+    <div>
+      <DestinationListClient />
+    </div>
+  );
+};
 
-export default Page
-// **** end Section with Static Data ***//
+export default DestinationsPage;
+
