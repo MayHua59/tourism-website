@@ -3,8 +3,8 @@ import { NextResponse } from 'next/server';
 const EXTERNAL_API_BASE_URL = process.env.EXTERNAL_ARTICLES_API_BASE_URL || 'https://hotel.software100.com.mm/api/v1/articles';
 
 export async function GET(request, { params }) {
-  const { slug } = params;
-  
+  const { slug } =  params;
+   console.log("API route called with slug:", slug); 
 
   try {
     const response = await fetch(`${EXTERNAL_API_BASE_URL}/${slug}`, {
@@ -33,9 +33,7 @@ export async function GET(request, { params }) {
   } catch (error) {
     console.error('Error in API route:', error);
     let errorMessage = 'An unexpected error occurred on the server.';
-    // if (error instanceof Error && process.env.NODE_ENV === 'development') {
-    //   errorMessage = error.message;
-    // }
+   
     return NextResponse.json({ message: errorMessage }, { status: 500 });
   }
 }

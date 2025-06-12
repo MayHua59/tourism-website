@@ -77,6 +77,8 @@ const ArticleDetailPage = ({ slug }) => {
 
   useEffect(() => {
     const fetchArticle = async () => {
+      const apiUrl = `/api/v1/articles/${slug}`;  
+      console.log("Fetching article from:", apiUrl);  
       try {
         const response = await fetch(`/api/v1/articles/${slug}`);
         if (!response.ok) {
@@ -128,7 +130,7 @@ const ArticleDetailPage = ({ slug }) => {
   }
 
   const segments = [
-    { label: 'Home', url: '/' },
+    
     { label: 'Articles', url: '/articles' },
     { label: article.name },
   ];
@@ -148,8 +150,7 @@ const ArticleDetailPage = ({ slug }) => {
             layout="fill"
             objectFit="cover"
             className={styles.articleImage}
-            width={800} 
-            height={400}
+            
           />
         </div>
       )}

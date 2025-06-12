@@ -21,15 +21,11 @@ import  articlesData  from '../../../data/articles';
 // }
 
 const Page = async ({ params }) => {
-  const { slug } = params;
-  const article = articlesData.find(article => article.slug === slug);
-
-  if (!article) {
-    return <div>Article not found</div>;
-  }
+  const  { slug }  =  params;
+ 
 
   return (
-    <ArticleDetailPage article={article} />
+    <ArticleDetailPage slug={slug} />
   );
 };
 
