@@ -154,8 +154,8 @@ import  villagesData  from '../../../data/villages';
 
 
 const Page = ({ params }) => {
-  const { eventSlug } = params;
-  const eventData = eventsData.find((event) => event.slug === eventSlug);
+  const { slug } = params;
+  const eventData = eventsData.find((event) => event.slug === slug);
 
   if (!eventData) {
     return (

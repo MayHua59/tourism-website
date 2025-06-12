@@ -112,7 +112,7 @@ import  citiesData  from '../../../data/cities';
 import  townshipsData  from '../../../data/townships';
 import  villagesData  from '../../../data/villages';
 const Page = ({ params }) => {
-  const { cultureSlug } = params;
+  const { slug } = params;
   const culture = myanmarCulturesData.find((culture) => culture.slug === cultureSlug);
 
   if (!culture) {

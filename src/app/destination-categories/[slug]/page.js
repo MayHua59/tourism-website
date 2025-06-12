@@ -110,9 +110,9 @@ import DestinationCategoryDetailPage from '../../../main-components/DestinationC
 
 
 const Page = ({params}) => {
-  const {categorySlug} = params
+  const {slug} = params
   return (
-    <DestinationCategoryDetailPage slug={categorySlug}/>
+    <DestinationCategoryDetailPage slug={slug}/>
   )
 }
 

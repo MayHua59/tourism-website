@@ -21,8 +21,8 @@ import  articlesData  from '../../../data/articles';
 // }
 
 const Page = async ({ params }) => {
-  const { articleSlug } = params;
-  const article = articlesData.find(article => article.slug === articleSlug);
+  const { slug } = params;
+  const article = articlesData.find(article => article.slug === slug);
 
   if (!article) {
     return <div>Article not found</div>;

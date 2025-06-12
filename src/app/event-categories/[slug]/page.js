@@ -98,9 +98,9 @@ import React from 'react';
 import EventCategoryDetailPage from '../../../main-components/EventCategoryDetail/EventCategoryDetail';
 
 const Page = ({params}) => {
-  const {categorySlug} = params
+  const {slug} = params
   return (
-    <EventCategoryDetailPage slug={categorySlug}/>
+    <EventCategoryDetailPage slug={slug}/>
   )
 }
 

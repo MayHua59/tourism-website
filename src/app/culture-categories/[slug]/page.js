@@ -108,9 +108,9 @@ import React from 'react';
 import CultureCategoryDetailPage from '../../../main-components/CultureCategoryDetail/CultureCategoryDetail';
 
 const Page = ({params}) => {
-  const {categorySlug} = params
+  const {slug} = params
   return (
-    <CultureCategoryDetailPage slug={categorySlug}/>
+    <CultureCategoryDetailPage slug={slug}/>
   )
 }
 
