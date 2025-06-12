@@ -122,6 +122,8 @@ const Page = ({ params }) => {
   return (
      <CultureDetail
       slug={slug}
+      // culture={cluture}
+      //I changed from culture from slug for api integration
       cities={citiesData}
       townships={townshipsData}
       villages={villagesData}

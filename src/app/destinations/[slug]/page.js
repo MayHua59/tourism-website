@@ -104,7 +104,7 @@ import React from 'react';
 import DestinationDetailPage from '../../../main-components/DestinationDetail/DestinationDetail';
 
 const Page = ({params}) => {
-  const {slug} = params;
+  const { slug } = params;
   return (
     <DestinationDetailPage slug={slug}/>
   )
