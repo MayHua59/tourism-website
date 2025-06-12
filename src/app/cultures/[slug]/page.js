@@ -113,15 +113,15 @@ import  townshipsData  from '../../../data/townships';
 import  villagesData  from '../../../data/villages';
 const Page = ({ params }) => {
   const { slug } = params;
-  const culture = myanmarCulturesData.find((culture) => culture.slug === cultureSlug);
+  // const culture = myanmarCulturesData.find((culture) => culture.slug === cultureSlug);
 
-  if (!culture) {
-    return <div>Culture not found</div>; 
-  }
+  // if (!culture) {
+  //   return <div>Culture not found</div>; 
+  // }
 
   return (
      <CultureDetail
-      culture={culture}
+      slug={slug}
       cities={citiesData}
       townships={townshipsData}
       villages={villagesData}
