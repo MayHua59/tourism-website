@@ -155,23 +155,24 @@ import  villagesData  from '../../../data/villages';
 
 const Page = ({ params }) => {
   const { slug } = params;
-  const eventData = eventsData.find((event) => event.slug === slug);
+  // const eventData = eventsData.find((event) => event.slug === slug);
 
-  if (!eventData) {
-    return (
-      <div style={{ textAlign: 'center', padding: '40px', fontFamily: 'sans-serif' }}>
-        <h1>Event Not Found</h1>
-        <p>The event you are looking for does not exist.</p>
-        {/* Add a Link back to the events page */}
-      </div>
-    );
-  }
-  const regionName = getRegionName(eventData.region_id);
-  const townshipName = getTownshipName(eventData.township_id);
-  const cityName = getCityName(eventData.city_id);
-  const villageName = getVillageName(eventData.village_id)
+  // if (!eventData) {
+  //   return (
+  //     <div style={{ textAlign: 'center', padding: '40px', fontFamily: 'sans-serif' }}>
+  //       <h1>Event Not Found</h1>
+  //       <p>The event you are looking for does not exist.</p>
+  //       {/* Add a Link back to the events page */}
+  //     </div>
+  //   );
+  // }
+  // const regionName = getRegionName(eventData.region_id);
+  // const townshipName = getTownshipName(eventData.township_id);
+  // const cityName = getCityName(eventData.city_id);
+  // const villageName = getVillageName(eventData.village_id)
 
-  return <EventDetailPage eventData={eventData} regionName={regionName} townshipName={townshipName} cityName={cityName} villageName={villageName}/>;
+  return <EventDetailPage slug={slug} />;
+  //regionName={regionName} townshipName={townshipName} cityName={cityName} villageName={villageName}
 };
 
 export default Page;
