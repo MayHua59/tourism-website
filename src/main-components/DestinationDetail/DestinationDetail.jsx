@@ -307,6 +307,7 @@ const DestinationDetailPage = ({ slug }) => {
               layout="fill"
               objectFit="cover"
               priority={true}
+              
             />
           </div>
         )}
