@@ -1,0 +1,38 @@
+import { NextResponse } from 'next/server';
+
+const EXTERNAL_API_BASE_URL = process.env.EXTERNAL_ARTICLE_CATEGORIES_API_BASE_URL || 'https://hotel.software100.com.mm/api/v1/article-categories';
+
+export async function GET() {
+  try {
+    const response = await fetch(EXTERNAL_API_BASE_URL, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        // Add any other necessary headers, like Authorization, if required by the external API
+        // 'Authorization': `Bearer YOUR_API_TOKEN`,
+      },
+      // Configure caching behavior if needed
+      // cache: 'no-store', // To always fetch fresh data
+      // next: { revalidate: 3600 } // Revalidate every hour (ISR)
+    });
+
+    if (!response.ok) {
+      console.error(`Error fetching from external API: ${response.status} ${response.statusText}`);
+      return NextResponse.json(
+        { message: `Failed to fetch article categories. Status: ${response.status}` },
+        { status: response.status }
+      );
+    }
+
+    const articleCategories = await response.json();
+    return NextResponse.json(articleCategories);
+
+  } catch (error) {
+    console.error('Error in API route:', error);
+    let errorMessage = 'An unexpected error occurred on the server.';
+    // if (error instanceof Error && process.env.NODE_ENV === 'development') {
+    //   errorMessage = error.message;
+    // }
+    return NextResponse.json({ message: errorMessage }, { status: 500 });
+  }
+}
