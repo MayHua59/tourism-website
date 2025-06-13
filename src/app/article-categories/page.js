@@ -21,7 +21,7 @@ const Page = async () => {
 
 
 
-  return <ArticleCategoryList categories={articleCategoriesData} />;
+  return <ArticleCategoryList/>;
 };
 
 export default Page;

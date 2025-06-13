@@ -2,9 +2,15 @@ import { NextResponse } from 'next/server';
 
 const EXTERNAL_API_BASE_URL = process.env.EXTERNAL_ARTICLE_CATEGORIES_API_BASE_URL || 'https://hotel.software100.com.mm/api/v1/article-categories';
 
-export async function GET() {
+export async function GET(request) {
   try {
-    const response = await fetch(EXTERNAL_API_BASE_URL, {
+    const { searchParams } = new URL(request.url);
+    const page = parseInt(searchParams.get('page') || '1');
+    const perPage = parseInt(searchParams.get('per_page') || '10');
+
+    const url = `${EXTERNAL_API_BASE_URL}?page=${page}&per_page=${perPage}`;
+
+    const response = await fetch(url, {
       method: 'GET',
       headers: {
         'Accept': 'application/json',
@@ -30,9 +36,6 @@ export async function GET() {
   } catch (error) {
     console.error('Error in API route:', error);
     let errorMessage = 'An unexpected error occurred on the server.';
-    // if (error instanceof Error && process.env.NODE_ENV === 'development') {
-    //   errorMessage = error.message;
-    // }
     return NextResponse.json({ message: errorMessage }, { status: 500 });
   }
 }

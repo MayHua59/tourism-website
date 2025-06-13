@@ -1,0 +1,101 @@
+.paginationContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 1rem;
+  background: linear-gradient(to right, #e6f7ff, #ffffff); 
+  border: 1px solid #cde4ff; 
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.paginationInfo {
+  font-size: 0.875rem;
+  color: #777; 
+  order: 1;
+}
+
+.paginationControls { 
+  display: flex;
+  gap: 0.5rem;
+  order: 2;
+}
+
+.paginationButton {
+  padding: 0.5rem 0.75rem;
+  background-color: #ffffff; 
+  color: #007bff; 
+  border: 1px solid #007bff; 
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.paginationButton:hover:enabled {
+  background-color: #007bff; 
+  color: #ffffff; 
+  border-color: #0056b3; 
+}
+
+.paginationButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  color: #ccc; 
+  border-color: #ddd; 
+}
+
+.paginationButton.active {
+  background-color: #007bff; 
+  color: #ffffff; 
+  border-color: #007bff;
+}
+
+.perPageSelector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  order: 3;
+  align-self: self-end;
+}
+
+.perPageSelector label {
+  font-size: 0.875rem;
+  color: #777;
+}
+
+.perPageSelector select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  appearance: none;
+  color: #555; 
+  background-image: url("/down-arrow.svg"); 
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 1em;
+  padding-right: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .paginationContainer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .paginationInfo,
+  .paginationControls,
+  .perPageSelector {
+    margin-bottom: 0.5rem;
+    order: initial;
+  }
+
+  .paginationControls {
+    justify-content: center;
+  }
+}
