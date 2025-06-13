@@ -41,7 +41,7 @@ export async function GET(request) {
   try {
     const { searchParams } = new URL(request.url);
     const page = parseInt(searchParams.get('page') || '1');
-    const perPage = parseInt(searchParams.get('per_page') || '2');
+    const perPage = parseInt(searchParams.get('per_page') || '10');
 
     const url = `${EXTERNAL_API_BASE_URL}?page=${page}&per_page=${perPage}`;
 
