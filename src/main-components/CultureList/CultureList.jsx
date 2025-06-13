@@ -205,7 +205,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './CultureList.module.css';
-import Loading from '../../components/ui/Loading/Loading'; // Import the Loading component
+import Loading from '../../components/ui/Loading/Loading';
 
 const CultureList = () => {
   const [cultures, setCultures] = useState([]);
