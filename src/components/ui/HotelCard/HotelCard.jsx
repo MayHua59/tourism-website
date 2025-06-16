@@ -25,7 +25,7 @@ const HotelCard = ({ hotel }) => {
           </Link>
         </h3>
         <p className={styles.hotelLocation}>{hotel.location}</p>
-        <p className={styles.hotelPrice}>From ${hotel.price}</p>
+        {/* <p className={styles.hotelPrice}>From ${hotel.price}</p> */}
         <p className={styles.hotelDescription}>{hotel.description}</p>
         <Link href={`/hotels/${hotel.slug}`} className={styles.viewMoreButton}>
           View More
