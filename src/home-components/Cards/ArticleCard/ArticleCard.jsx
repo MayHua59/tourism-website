@@ -15,7 +15,7 @@ const ArticleCard = ({article}) => {
         <div className={styles.imageContainer}>
           <Image
             src={article.image_url}
-            alt={article.title}
+            alt={article.title ?? 'article'}
             layout="fill"
             objectFit="cover"
           />

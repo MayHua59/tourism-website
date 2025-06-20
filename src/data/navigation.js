@@ -10,10 +10,10 @@ const navItems = [
     label: "Places To Go",
     href: "/destinations", 
     dropdown: [
-      { label: "Top Destinations", href: "destination-categories/top-destinations" },
+      { label: "Top Destinations", href: "/destination-categories/top-destinations" },
       { label: "Destination Categories", href: "/destination-categories" ,
         dropdown: [
-          { label: "Culture", href: "destination-categories/cultures" },
+          { label: "Culture", href: "/destination-categories/cultures" },
           { label: "Historical & Museum", href: "/destination-categories/historical-and-museum" },
           { label: "Nature & Beaches", href: "/destination-categories/nature-and-beaches" },
           { label: "Adventure", href: "/destination-categories/adventures" },
