@@ -32,14 +32,14 @@ const navItems = [
     href: "/plan-your-trip",
     dropdown: [
         
-        { label: "Stays", href: "/stays" ,
+        { label: "Stays", href: "/hotel-categories" ,
           dropdown: [
             {label: "Hotels", 
-            href: "/stays/hotels"},
+            href: "/hotel-categories/hotels"},
             {label: "Guest House", 
-            href: "/stays/guest-house"},
+            href: "/hotel-categories/guest-houses"},
             {label: "Hostels", 
-            href: "/stays/hostels"},
+            href: "/hotel-categories/hostels"},
             
           ]
         },

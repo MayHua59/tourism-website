@@ -12,7 +12,13 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ကျန်တဲ့ destination category တွေ ဆက်ထည့်မယ်။
 
 
-- [ ] Destination Detail
+- [x] Destination Detail
+- [ ] hotel category listing, detail 
+- [ ] hotel listing , detail 
+
+ဒီအပိုင်း ဆက်လုပ်၇မယ်။
+
+
 
 
 ## All in Local
