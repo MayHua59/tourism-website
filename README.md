@@ -5,9 +5,19 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 404 pages
 
-- [ ] /top-destinations ,this is destination category detail page, show  destination list ပြပေး၇န်။ 
+- [x] /top-destinations ,this is destination category detail page, show  destination list ပြပေး၇န်။ 
 
 ဒါကိုလည်း destination category အောက်မှာ ထည့်ထားလိုက်မယ်။
+
+ကျန်တဲ့ destination category တွေ ဆက်ထည့်မယ်။
+
+
+- [ ] Destination Detail
+
+
+## All in Local
+
+- easy update
 
 
 ### Tasks

@@ -1,6 +1,8 @@
-// import React from 'react';
-// import DestinationDetailDisplay from '../../../main-components/DestinationDetail/DestinationDetail';
-// import Link from 'next/link';
+import React from 'react';
+import DestinationDetailDisplay from '../../../main-components/DestinationDetail/DestinationDetail';
+import Link from 'next/link';
+
+import  destinationsData  from '../../../data/destinations';
 
 // async function getDestinationData(slug) {
 //   const baseApiUrl = process.env.EXTERNAL_DESTINATIONS_API_BASE_URL || 'https://hotel.software100.com.mm/api/v1';
@@ -25,7 +27,7 @@
 //   }
 // }
 
-// // Optional: generateMetadata for SEO
+// Optional: generateMetadata for SEO
 // export async function generateMetadata({ params }) {
 //   const { destinationSlug } = params; // Ensure this matches your folder name [destinationSlug]
 //   try {
@@ -61,53 +63,56 @@
 //   }
 // }
 
-// const Page = async ({ params }) => {
-//   const { destinationSlug } = params; 
+const Page = async ({ params }) => {
+  const { slug } = params; 
 
-//   try {
-//     const destinationData = await getDestinationData(destinationSlug);
+  try {
+    // const destinationData = await getDestinationData(destinationSlug);
 
-//     if (!destinationData) {
-//       return (
-//         <div style={{ textAlign: 'center', padding: '40px', fontFamily: 'sans-serif' }}>
-//           <h1>Destination Not Found</h1>
-//           <p>{`Sorry, we couldn't find the destination: "${destinationSlug}".`}</p>
-//           <Link href="/destination-categories" style={{ color: '#0070f3', textDecoration: 'underline' }}>
-//             &larr; Back to Destination Categories
-//           </Link>
-//         </div>
-//       );
-//     }
+    // const destinationData = destinationsData.filter(d => d.slug === slug)
 
-//     // Pass the fetched data to the presentation component
-//     return <DestinationDetailDisplay destinationData={destinationData} />;
+    // if (!destinationData) {
+    //   return (
+    //     <div style={{ textAlign: 'center', padding: '40px', fontFamily: 'sans-serif' }}>
+    //       <h1>Destination Not Found</h1>
+    //       <p>{`Sorry, we couldn't find the destination: "${destinationSlug}".`}</p>
+    //       <Link href="/destination-categories" style={{ color: '#0070f3', textDecoration: 'underline' }}>
+    //         &larr; Back to Destination Categories
+    //       </Link>
+    //     </div>
+    //   );
+    // }
 
-//   } catch (error) {
-//     console.error(`Page rendering error for destination ${destinationSlug}:`, error);
-//     return (
-//       <div style={{ textAlign: 'center', padding: '40px', fontFamily: 'sans-serif' }}>
-//         <h1>Error Loading Destination</h1>
-//         <p>There was an issue loading the details for this destination. Please try again later.</p>
-//         {process.env.NODE_ENV === 'development' && (
-//           <p style={{ color: 'red', fontSize: '0.9em' }}><i>Error details (dev only): {error.message}</i></p>
-//         )}
-//         <Link href="/destination-categories" style={{ color: '#0070f3', textDecoration: 'underline' }}>
-//           &larr; Back to Destination Categories
-//         </Link>
-//       </div>
-//     );
-//   }
-// };
+    // Pass the fetched data to the presentation component
+    // return <h2>{JSON.stringify(destinationData)}</h2>; 
+    return <DestinationDetailDisplay slug={slug} />;
 
-// export default Page;
-import React from 'react';
-import DestinationDetailPage from '../../../main-components/DestinationDetail/DestinationDetail';
+  } catch (error) {
+    console.error(`Page rendering error for destination ${destinationSlug}:`, error);
+    return (
+      <div style={{ textAlign: 'center', padding: '40px', fontFamily: 'sans-serif' }}>
+        <h1>Error Loading Destination</h1>
+        <p>There was an issue loading the details for this destination. Please try again later.</p>
+        {process.env.NODE_ENV === 'development' && (
+          <p style={{ color: 'red', fontSize: '0.9em' }}><i>Error details (dev only): {error.message}</i></p>
+        )}
+        <Link href="/destination-categories" style={{ color: '#0070f3', textDecoration: 'underline' }}>
+          &larr; Back to Destination Categories
+        </Link>
+      </div>
+    );
+  }
+};
 
-const Page = ({params}) => {
-  const { slug } = params;
-  return (
-    <DestinationDetailPage slug={slug}/>
-  )
-}
+export default Page;
+// import React from 'react';
+// import DestinationDetailPage from '../../../main-components/DestinationDetail/DestinationDetail';
 
-export default Page
+// const Page = ({params}) => {
+//   const { slug } = params;
+//   return (
+//     <DestinationDetailPage slug={slug}/>
+//   )
+// }
+
+// export default Page
