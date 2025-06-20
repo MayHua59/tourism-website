@@ -6,6 +6,17 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 404 pages
 
 - [ ] /top-destinations ,this is destination category detail page, show  destination list ပြပေး၇န်။ 
+
+ဒါကိုလည်း destination category အောက်မှာ ထည့်ထားလိုက်မယ်။
+
+
+### Tasks
+
+- [ ] Destination Category Listing ကို API က ခေါ်ပြီး detail ကို local က ခေါ်ထားတာ ဖြစ်နေတယ်။
+
+အ၇င်လို အကုန်လုံး local ကပဲ ခေါ်ကြတာပေါ့။
+
+
 ## Getting Started
 
 First, run the development server:

@@ -10,7 +10,7 @@ const navItems = [
     label: "Places To Go",
     href: "/destinations", 
     dropdown: [
-      { label: "Top Destinations", href: "/top-destinations" },
+      { label: "Top Destinations", href: "destination-categories/top-destinations" },
       { label: "Destination Categories", href: "/destination-categories" ,
         dropdown: [
           { label: "Culture", href: "destination-categories/cultures" },
