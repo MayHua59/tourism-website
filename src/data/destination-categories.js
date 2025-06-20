@@ -195,6 +195,66 @@
     "deleted_at": null,
     "created_at": "2025-06-06T12:00:11.000000Z",
     "updated_at": "2025-06-06T12:00:11.000000Z"
+  },
+  {
+    "id": 13,
+    "name": "Historical and Museum",
+    "slug": "historical-and-museum",
+    "image_url": "https://i.pinimg.com/736x/76/d1/5c/76d15c6764619fd0669a3b44106cd600.jpg",
+    "description": "Explore Myanmar's Historical and Museum",
+    "is_featured": true,
+    "is_active": true,
+    "deleted_at": null,
+    "created_at": "2025-06-06T12:00:11.000000Z",
+    "updated_at": "2025-06-06T12:00:11.000000Z"
+  },
+  {
+    "id": 14,
+    "name": "Nature and Beaches",
+    "slug": "nature-and-beaches",
+    "image_url": "https://i.pinimg.com/736x/76/d1/5c/76d15c6764619fd0669a3b44106cd600.jpg",
+    "description": "Explore Myanmar's Nature and Beaches",
+    "is_featured": true,
+    "is_active": true,
+    "deleted_at": null,
+    "created_at": "2025-06-06T12:00:11.000000Z",
+    "updated_at": "2025-06-06T12:00:11.000000Z"
+  },
+  {
+    "id": 15,
+    "name": "Adventures",
+    "slug": "adventures",
+    "image_url": "https://i.pinimg.com/736x/76/d1/5c/76d15c6764619fd0669a3b44106cd600.jpg",
+    "description": "Explore Myanmar's Adventures",
+    "is_featured": true,
+    "is_active": true,
+    "deleted_at": null,
+    "created_at": "2025-06-06T12:00:11.000000Z",
+    "updated_at": "2025-06-06T12:00:11.000000Z"
+  },
+  {
+    "id": 16,
+    "name": "Unesco",
+    "slug": "unesco",
+    "image_url": "https://i.pinimg.com/736x/76/d1/5c/76d15c6764619fd0669a3b44106cd600.jpg",
+    "description": "Explore Myanmar's Unesco",
+    "is_featured": true,
+    "is_active": true,
+    "deleted_at": null,
+    "created_at": "2025-06-06T12:00:11.000000Z",
+    "updated_at": "2025-06-06T12:00:11.000000Z"
+  },
+  {
+    "id": 17,
+    "name": "Eco Tourism",
+    "slug": "eco-tourism",
+    "image_url": "https://i.pinimg.com/736x/76/d1/5c/76d15c6764619fd0669a3b44106cd600.jpg",
+    "description": "Explore Myanmar's Eco Tourism",
+    "is_featured": true,
+    "is_active": true,
+    "deleted_at": null,
+    "created_at": "2025-06-06T12:00:11.000000Z",
+    "updated_at": "2025-06-06T12:00:11.000000Z"
   }
 ]
 export default destination_categories;
