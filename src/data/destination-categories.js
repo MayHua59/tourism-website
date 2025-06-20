@@ -171,6 +171,18 @@
     "deleted_at": null,
     "created_at": "2025-06-06T12:00:11.000000Z",
     "updated_at": "2025-06-06T12:00:11.000000Z"
+  },
+  {
+    "id": 11,
+    "name": "Cultures",
+    "slug": "cultures",
+    "image_url": "https://i.pinimg.com/736x/76/d1/5c/76d15c6764619fd0669a3b44106cd600.jpg",
+    "description": "Explore Myanmar's beautiful Cultures.",
+    "is_featured": true,
+    "is_active": true,
+    "deleted_at": null,
+    "created_at": "2025-06-06T12:00:11.000000Z",
+    "updated_at": "2025-06-06T12:00:11.000000Z"
   }
 ]
 export default destination_categories;

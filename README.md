@@ -5,7 +5,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 404 pages
 
-- [ ] 
+- [ ] /top-destinations ,this is destination category detail page, show  destination list ပြပေး၇န်။ 
 ## Getting Started
 
 First, run the development server:

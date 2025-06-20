@@ -178,6 +178,24 @@
     "deleted_at": null,
     "created_at": "2025-06-06T12:00:11.000000Z",
     "updated_at": "2025-06-06T12:00:11.000000Z"
+  },
+  {
+    "id": 11,
+    "name": "Culture One",
+    "slug": "culture-one",
+    "image_url": "https://i.pinimg.com/736x/76/50/ec/7650eccdce372934819bee9e94744907.jpg",
+    "description": "This is culture one description.Pindaya Caves stands as a testament to Myanmar's rich cultural and religious heritage. This iconic landmark has been a beacon for pilgrims and tourists alike, drawing countless visitors each year. It is deeply embedded in the history and spiritual life of the local people, offering a profound glimpse into their traditions.\n\nThe architecture of Pindaya Caves is a harmonious blend of traditional Burmese design and intricate craftsmanship. Its towering spires and gilded surfaces shimmer under the sun, creating a mesmerizing spectacle. Every detail, from the ornate carvings to the glittering mosaics, tells a story of devotion and artistic mastery passed down through generations.\n\nBeyond its physical beauty, Pindaya Caves holds deep spiritual significance. It is believed to house sacred relics, making it one of the most revered sites in the country. Many come here to meditate, offer prayers, and seek blessings, contributing to the tranquil and pious atmosphere that pervades the area.\n\nSurrounding the main structure are numerous smaller shrines, pavilions, and statues, each telling a story of devotion and artistry. The ambiance is serene, offering a peaceful retreat from the bustling city life. Visitors can spend hours exploring the grounds, discovering hidden gems and enjoying moments of quiet contemplation.\n\nVisiting Pindaya Caves provides not just a visual feast but also an opportunity to immerse oneself in the spiritual and historical tapestry of Myanmar. It's a place where ancient traditions meet contemporary life, leaving a lasting impression on all who experience its timeless charm and profound spirituality.",
+    "is_active": true,
+    "is_featured": true,
+    "division_id": 5,
+    "region_id": 7,
+    "city_id": null,
+    "township_id": null,
+    "village_id": null,
+    "destination_category_id": 11,
+    "deleted_at": null,
+    "created_at": "2025-06-06T12:00:11.000000Z",
+    "updated_at": "2025-06-06T12:00:11.000000Z"
   }
 ]
 export default destinationsData;
