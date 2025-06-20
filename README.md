@@ -1,5 +1,11 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+
+## 2025-06-20 Fri, up and running with static routes
+
+404 pages
+
+- [ ] 
 ## Getting Started
 
 First, run the development server:
