@@ -113,14 +113,17 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from './DestinationCategoryDetail.module.css';
+import styles from './HotelCategoryDetail.module.css';
 import  hotel_categories  from '../../data/hotel-categories';
 import  destinationsData  from '../../data/destinations';
 import Breadcrumbs from '../../components/ui/Breadcrumbs/Breadcrumbs';
+import hotels from '@/data/hotels';
 
 const HotelCategoryDetailPage = ({slug}) => {
   const currentCategory = hotel_categories.find(d => d.slug === slug);
   if(!currentCategory){
+    return slug;
+
     return (
        <div className={styles.pageContainer} style={{ textAlign: 'center' }}>
         <h1>Hotel Category Data Missing</h1>
@@ -130,10 +133,10 @@ const HotelCategoryDetailPage = ({slug}) => {
       </div>
     )
   }
-  const categoryDestinations = destinationsData.filter(d => d.destination_category_id === currentCategory.id)
+  const categoryDestinations = hotels.filter(d => d.hotel_category_id === currentCategory.id)
   const segments = [
     
-    { label: 'Destination Categories', url: '/destination-categories' },
+    { label: 'Hotel Categories', url: '/hotel-categories' },
     { label: currentCategory.name },
   ];
   return (
@@ -163,12 +166,12 @@ const HotelCategoryDetailPage = ({slug}) => {
 
       <section className={styles.itemsSection}>
         <h2 className={styles.sectionTitle}>
-          Destinations in {currentCategory.name}
+          Accomodations in {currentCategory.name}
         </h2>
         {categoryDestinations.length > 0 ? (
           <ul className={styles.itemsGrid}>
             {categoryDestinations.map(item => {
-              const itemLink = `/destinations/${item.slug}`;
+              const itemLink = `/hotels/${item.slug}`;
               return (
                 <li key={item.id} className={styles.itemCard}>
                   <Link href={itemLink} className={styles.itemLink}>
@@ -212,5 +215,5 @@ const HotelCategoryDetailPage = ({slug}) => {
   )
 }
 
-export default DestinationCategoryDetailPage
+export default HotelCategoryDetailPage
 // *** end Section with Static Data ***//

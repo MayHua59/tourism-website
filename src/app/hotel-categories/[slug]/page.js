@@ -106,13 +106,14 @@
 
 
 import React from 'react';
-import DestinationCategoryDetailPage from '../../../main-components/DestinationCategoryDetail/DestinationCategoryDetail';
+// import DestinationCategoryDetailPage from '../../../main-components/DestinationCategoryDetail/DestinationCategoryDetail';
+import HotelCategoryDetailPage from '@/main-components/HotelCategoryDetail/HotelCategoryDetail';
 
 
 const Page = ({params}) => {
   const {slug} = params
   return (
-    <DestinationCategoryDetailPage slug={slug}/>
+    <HotelCategoryDetailPage slug={slug}/>
   )
 }
 

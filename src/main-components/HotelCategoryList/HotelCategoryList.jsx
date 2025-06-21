@@ -21,7 +21,7 @@ const HotelCategoryListPage = ({ categories }) => {
       <p className={styles.pageSubtitle}>Find destinations based on your interests and travel style.</p>
       <div className={styles.categoriesGrid}>
         {categories.map(category => (
-          <Link key={category.id} href={`/destination-categories/${category.slug}`} className={styles.categoryCardLink}>
+          <Link key={category.id} href={`/hotel-categories/${category.slug}`} className={styles.categoryCardLink}>
             <div className={styles.categoryCard}>
               {category.image_url && (
                 <div className={styles.categoryImageWrapper}>

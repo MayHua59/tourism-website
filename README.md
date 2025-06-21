@@ -33,6 +33,14 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 အ၇င်လို အကုန်လုံး local ကပဲ ခေါ်ကြတာပေါ့။
 
 
+
+## 2025-06-21 All Pages are UP.
+
+
+- [x] Hotel Category Detail
+- [x] Hotel Detail
+
+
 ## Getting Started
 
 First, run the development server:

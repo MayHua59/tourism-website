@@ -6,6 +6,7 @@ const hotelsData = [
     description: 'A historic luxury hotel offering colonial charm and modern comforts in the heart of Yangon.',
     imageUrl: 'https://i.pinimg.com/736x/aa/a2/b2/aaa2b29b92282a591af2636e5c44eaf7.jpg',
     price: 280,
+    hotel_category_id : 1,
     location: 'Yangon',
   },
   {
@@ -15,6 +16,7 @@ const hotelsData = [
     description: 'Nestled amidst ancient temples, this resort provides breathtaking views of the Bagan plains.',
     imageUrl: 'https://i.pinimg.com/736x/28/6d/c7/286dc71ff8024c880668747a9990de17.jpg',
     price: 200,
+    hotel_category_id : 2,
     location: 'Bagan',
   },
   {
@@ -24,6 +26,7 @@ const hotelsData = [
     description: 'Eco-friendly bungalows on stilts, offering serene lake views and a tranquil escape.',
     imageUrl: 'https://i.pinimg.com/736x/f9/52/43/f952438b33adf3bdc85bb3998791004a.jpg',
     price: 180,
+    hotel_category_id : 3,
     location: 'Inle Lake',
   },
   {
@@ -33,6 +36,7 @@ const hotelsData = [
     description: 'Modern and spacious accommodation in Myanmar\'s capital, ideal for business and leisure travelers.',
     imageUrl: 'https://i.pinimg.com/736x/56/2e/02/562e0289eb201d4d64aeef1bf1615e1a.jpg',
     price: 150,
+    hotel_category_id : 1,
     location: 'Nay Pyi Taw',
   },
   {
@@ -42,6 +46,7 @@ const hotelsData = [
     description: 'Located at the foot of Mandalay Hill, offering panoramic city views and a relaxing atmosphere.',
     imageUrl: 'https://i.pinimg.com/736x/7c/78/74/7c7874c3a10dbfdb7e43a97647f4c297.jpg',
     price: 120,
+    hotel_category_id : 1,
     location: 'Mandalay',
   },
   {
@@ -51,6 +56,7 @@ const hotelsData = [
     description: 'A comfortable and well-appointed hotel in Mawlamyine, perfect for exploring the Mon State.',
     imageUrl: 'https://i.pinimg.com/736x/4d/21/cf/4d21cf200def7252ace579093a6071dd.jpg',
     price: 90,
+    hotel_category_id : 2,
     location: 'Mawlamyine',
   },
   {
@@ -60,6 +66,7 @@ const hotelsData = [
     description: 'Beachfront luxury with a private marina, perfect for water sports and relaxation on Ngwe Saung Beach.',
     imageUrl: 'https://i.pinimg.com/736x/43/d3/71/43d371d39a8ebaf12f0783c12afc853f.jpg',
     price: 160,
+    hotel_category_id : 2,
     location: 'Ngwe Saung Beach',
   },
   
