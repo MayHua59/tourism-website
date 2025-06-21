@@ -115,7 +115,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from './HotelCategoryDetail.module.css';
 import  hotel_categories  from '../../data/hotel-categories';
-import  destinationsData  from '../../data/destinations';
 import Breadcrumbs from '../../components/ui/Breadcrumbs/Breadcrumbs';
 import hotels from '@/data/hotels';
 
