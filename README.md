@@ -41,6 +41,9 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 - [x] Hotel Detail
 
 
+ES Lint , we need to open ES Lint 
+
+
 ## Getting Started
 
 First, run the development server:

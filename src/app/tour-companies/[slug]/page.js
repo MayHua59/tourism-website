@@ -111,22 +111,19 @@ import CultureDetail from '../../../main-components/CultureDetail/CultureDetail'
 import  citiesData  from '../../../data/cities';
 import  townshipsData  from '../../../data/townships';
 import  villagesData  from '../../../data/villages';
+import tourCompaniesData from '@/data/tour-companies';
+import TourCompanyDetail from '@/main-components/TourCompanyDetail/TourCompanyDetail';
 const Page = ({ params }) => {
   const { slug } = params;
-  // const culture = myanmarCulturesData.find((culture) => culture.slug === cultureSlug);
+  // const culture = tourCompaniesData.find((culture) => culture.slug === slug);
 
   // if (!culture) {
   //   return <div>Culture not found</div>; 
   // }
 
   return (
-     <CultureDetail
-      slug={slug}
-      // culture={cluture}
-      //I changed from culture from slug for api integration
-      cities={citiesData}
-      townships={townshipsData}
-      villages={villagesData}
+    <TourCompanyDetail 
+    slug={slug}
     />
   );
 };
